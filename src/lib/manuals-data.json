@@ -1,0 +1,2730 @@
+{
+  "manuals": [
+    {
+      "id": "emerson-delta-v",
+      "title": "DeltaV Distributed Control System Reference Manual",
+      "manufacturer": "Emerson",
+      "deviceType": "Controller",
+      "model": "DeltaV v15",
+      "series": "DeltaV DCS",
+      "version": "15.3",
+      "language": "English",
+      "pages": 712,
+      "category": "System Architecture & Configuration",
+      "tags": [
+        "DeltaV Live",
+        "SIS",
+        "Historian",
+        "OPC",
+        "Batch",
+        "Advanced Control",
+        "Cybersecurity"
+      ],
+      "lastUpdated": "2024-03-15",
+      "content": [
+        {
+          "id": "overview",
+          "title": "DeltaV System Overview",
+          "level": 1,
+          "content": "DeltaV is a distributed control system for process industries. Architecture: controllers (MX, PK, SX), I/O cards (CHARMs, traditional), workstations, servers, network. DeltaV Live: HTML5 web interface. DeltaV SIS: separate safety system (SIL 3). Integrated historian, batch, advanced control. Cybersecurity: DeltaV Secure.",
+          "pageStart": 1,
+          "pageEnd": 34
+        },
+        {
+          "id": "controllers",
+          "title": "Controller Platform",
+          "level": 1,
+          "content": "MX Controller: high-capacity, redundancy (hot standby), 4000 I/O per pair. PK Controller: process, 1600 I/O. SX Controller: small systems, 400 I/O. All: function blocks (Control, Logic, Arithmetic, Signal Processing), sequential function charts, custom algorithms (C/C++). Deterministic scan: 100ms-1s.",
+          "pageStart": 35,
+          "pageEnd": 98
+        },
+        {
+          "id": "charm",
+          "title": "CHARMs I/O",
+          "level": 1,
+          "content": "Characterization Module (CHARM): one per field device. Universal I/O: AI, AO, DI, DO, HART, pulse, RTD, TC. Electronic marshalling: software-defined wiring. HART pass-through. Intrinsically safe options. Hot-swappable. Reduces wiring by 50%. Auto-discovery.",
+          "pageStart": 99,
+          "pageEnd": 167
+        },
+        {
+          "id": "delta-v-live",
+          "title": "DeltaV Live (HTML5 Interface)",
+          "level": 1,
+          "content": "Web-based operations interface. No client install. Responsive design. Graphics: SVGs, situational awareness. Faceplates: standard, custom. Alarm management: ISA-18.2. Trends, historian integration. Mobile: iOS/Android app. Authentication: Windows, LDAP, SAML. Role-based access.",
+          "pageStart": 168,
+          "pageEnd": 245
+        },
+        {
+          "id": "sis",
+          "title": "DeltaV SIS (Safety Instrumented System)",
+          "level": 1,
+          "content": "Separate safety architecture. SLS 1508 controller (SIL 3). SISnet protocol (deterministic, redundant). SIF: Safety Instrumented Functions. Proof testing wizard. Bypass management. Integration with DeltaV for alarms, events, historian. Partial stroke testing. SIL verification.",
+          "pageStart": 246,
+          "pageEnd": 323
+        },
+        {
+          "id": "batch",
+          "title": "DeltaV Batch",
+          "level": 1,
+          "content": "ISA-88 compliant batch management. Recipe: procedures, unit procedures, operations, phases. Equipment model: units, equipment modules, control modules. Recipe editor: graphical (SFC-based). Execution: promoter, operator prompts, electronic signatures. Material tracking. Integration with MES/ERP.",
+          "pageStart": 324,
+          "pageEnd": 389
+        },
+        {
+          "id": "advanced-control",
+          "title": "Advanced Control (MPC)",
+          "level": 1,
+          "content": "DeltaV PredictPro: Model Predictive Control. Dynamic matrix control (DMC). Constraint handling: manipulated, controlled, auxiliary. Adaptive models. Integration with DeltaV controls. Configuration: Identify, Test, Implement, Monitor. Applications: distillation, reactor, FCC, blending.",
+          "pageStart": 390,
+          "pageEnd": 456
+        },
+        {
+          "id": "cybersecurity",
+          "title": "DeltaV Cybersecurity",
+          "level": 1,
+          "content": "DeltaV Secure: whitelisting, patch management, antivirus, backup, audit. Defense-in-depth: network segmentation, firewalls, DMZ. IEC 62443 compliance. User authentication: Windows, PKI, smart cards. Privilege management. Security zones. Incident response. Patch validation on test system.",
+          "pageStart": 457,
+          "pageEnd": 523
+        }
+      ]
+    },
+    {
+      "id": "honeywell-experion",
+      "title": "Experion PKS Reference Manual",
+      "manufacturer": "Honeywell Process Solutions",
+      "deviceType": "Controller",
+      "model": "C300, C200, FIM, LIM",
+      "series": "Experion PKS",
+      "version": "R520",
+      "language": "English",
+      "pages": 689,
+      "category": "System Configuration & Operations",
+      "tags": [
+        "Station",
+        "Server",
+        "Historian",
+        "Safety Manager",
+        "Batch",
+        "APC",
+        "Cybersecurity"
+      ],
+      "lastUpdated": "2024-02-20",
+      "content": [
+        {
+          "id": "overview",
+          "title": "Experion PKS Overview",
+          "level": 1,
+          "content": "Process Knowledge System (PKS) for process automation. Architecture: C300 controller, FIM (Fieldbus Interface Module), LIM (Local I/O Module), Server, Station (HMI), Historian. Experion Station: unified operations interface. Safety Manager: SIL 3 separate system. APC: Advanced Process Control. Uniformance: integration platform.",
+          "pageStart": 1,
+          "pageEnd": 28
+        },
+        {
+          "id": "c300",
+          "title": "C300 Controller",
+          "level": 1,
+          "content": "High-performance redundant controller. 1000+ function blocks. Control: PID, cascade, ratio, override, split-range. Logic: IEC 61131-3 (FBD, LD, ST, SFC). Redundancy: hot standby <1s switchover. Peer-to-peer communication. OPC UA server. Cybersecurity: signed firmware, secure boot.",
+          "pageStart": 29,
+          "pageEnd": 98
+        },
+        {
+          "id": "station",
+          "title": "Experion Station (HMI/SCADA)",
+          "level": 1,
+          "content": "Unified operations: process, safety, batch, APC, historian. HTML5 web client (Station Web). Situational awareness graphics. Alarm management: ISA-18.2, EEMUA 191. Faceplates: standard library, custom. Trends: real-time, historical, comparison. Reports: automatic, on-demand. Mobile: Station Mobile app.",
+          "pageStart": 99,
+          "pageEnd": 189
+        },
+        {
+          "id": "safety-manager",
+          "title": "Safety Manager",
+          "level": 1,
+          "content": "Separate safety system (SIL 3). TMR (Triple Modular Redundancy) or duplex. Safety logic: FBD, LD. SIF management. Proof test wizard. Bypass/override management. Integration: Experion Station for alarms, faceplates. Fieldbus: Safety Fieldbus (Honeywell), PROFIsafe. Partial stroke testing.",
+          "pageStart": 190,
+          "pageEnd": 267
+        },
+        {
+          "id": "uniformance",
+          "title": "Uniformance Platform",
+          "level": 1,
+          "content": "Integration platform: historian (PHD), analytics, reporting, MES connectivity. PHD: high-performance time-series. Analytics: Golden Batch, PCA, anomaly detection. Reporting: automated, web-based. Connectors: PI, SQL, OPC, REST. Pharma: 21 CFR Part 11 compliance.",
+          "pageStart": 268,
+          "pageEnd": 345
+        }
+      ]
+    },
+    {
+      "id": "yokogawa-centum",
+      "title": "CENTUM VP DCS Reference Manual",
+      "manufacturer": "Yokogawa Electric Corporation",
+      "deviceType": "Controller",
+      "model": "FCN/FCJ, FCS, FIO, Vnet/IP",
+      "series": "CENTUM VP",
+      "version": "R6.10",
+      "language": "English",
+      "pages": 567,
+      "category": "System Architecture & Engineering",
+      "tags": [
+        "FCN/FCJ",
+        "FCS",
+        "Vnet/IP",
+        "Exaopc",
+        "Exapilot",
+        "ProSafe-RS",
+        "PRM"
+      ],
+      "lastUpdated": "2024-01-30",
+      "content": [
+        {
+          "id": "overview",
+          "title": "CENTUM VP Overview",
+          "level": 1,
+          "content": "Integrated production control system. Architecture: FCN/FCJ (control), FCS (safety), FIO (I/O), Vnet/IP (plant network), HIS (historian), ENG (engineering station), OPS (operator station). ProSafe-RS: separate safety system. Exaopc: OPC server. Exapilot: HMI/SCADA. PRM: Plant Resource Manager (asset management).",
+          "pageStart": 1,
+          "pageEnd": 22
+        },
+        {
+          "id": "fcn-fcj",
+          "title": "FCN/FCJ Controllers",
+          "level": 1,
+          "content": "FCN-RTU: field controller. FCN-DCS: DCS controller. FCJ: high-performance. Function blocks: control, logic, sequence, arithmetic. Redundancy: hot standby (FCN), TMR (FCJ). Vnet/IP: dual redundant Ethernet. Scan: 100ms-1s. Online download. Capacity: 10,000 blocks (FCJ).",
+          "pageStart": 23,
+          "pageEnd": 89
+        },
+        {
+          "id": "prosafe-rs",
+          "title": "ProSafe-RS (Safety System)",
+          "level": 1,
+          "content": "Separate safety architecture (SIL 3). TMR controllers. Safety logic: FBD, SFC. Vnet/IP safety network. Integration with CENTUM VP: shared engineering, unified HMI. Proof testing. Bypass management. Partial stroke testing. Field devices: PROFIsafe, HART safety.",
+          "pageStart": 90,
+          "pageEnd": 156
+        },
+        {
+          "id": "exapilot",
+          "title": "Exapilot HMI/SCADA",
+          "level": 1,
+          "content": "Web-based operator interface. Graphics: vector, situational awareness. Alarm: ISA-18.2, EEMUA 191. Faceplates: standard, custom. Trends: real-time, historical. Reports. Mobile: Exapilot Mobile. Security: Windows, LDAP, SAML. Redundancy: hot standby servers.",
+          "pageStart": 157,
+          "pageEnd": 234
+        },
+        {
+          "id": "prm",
+          "title": "PRM (Plant Resource Manager)",
+          "level": 1,
+          "content": "Asset management: device configuration, diagnostics, calibration, maintenance. HART, FOUNDATION Fieldbus, PROFIBUS PA. Device DTMs. Calibration management. Maintenance scheduling. Integration with CMMS/EAM. Mobile: PRM Mobile. Cloud: PRM Cloud.",
+          "pageStart": 235,
+          "pageEnd": 312
+        }
+      ]
+    },
+    {
+      "id": "ab-panelview-5000",
+      "title": "PanelView 5000 Series Reference Manual",
+      "manufacturer": "Allen-Bradley (Rockwell Automation)",
+      "deviceType": "HMI",
+      "model": "2715P-B7CD, 2715P-B10CD, 2715P-B12CD, 2715P-B15CD",
+      "series": "PanelView 5000",
+      "version": "Rev 2.1",
+      "language": "English",
+      "pages": 287,
+      "category": "Configuration & Runtime",
+      "tags": [
+        "FactoryTalk View",
+        "Studio 5000",
+        "EtherNet/IP",
+        "VNC",
+        "PDF Viewer",
+        "Alarm/Events"
+      ],
+      "lastUpdated": "2024-01-20",
+      "content": [
+        {
+          "id": "overview",
+          "title": "Product Overview",
+          "level": 1,
+          "content": "PanelView 5000 terminals are industrial operator interfaces with 7\", 10\", 12\", and 15\" widescreen displays. Capacitive multi-touch, 1280x800 resolution. Runs Windows 10 IoT Enterprise. FactoryTalk View Site Edition (SE) runtime pre-installed. Dual EtherNet/IP ports with switch. No moving parts (fanless).",
+          "pageStart": 1,
+          "pageEnd": 14
+        },
+        {
+          "id": "factorytalk-view-se",
+          "title": "FactoryTalk View SE Runtime",
+          "level": 1,
+          "content": "Full-featured HMI/SCADA runtime. Features: vector graphics, faceplates, parameterized displays, alarm & event server, historical trending, recipes, security (Windows/FT), redundancy, VNC remote access. Supports 150+ drivers for PLC connectivity. Tag-based architecture with direct controller tag browsing.",
+          "pageStart": 15,
+          "pageEnd": 67,
+          "subsections": [
+            {
+              "id": "displays",
+              "title": "Display Types",
+              "level": 2,
+              "content": "Base displays, popup displays, faceplates (reusable parametric), global objects. Animation: visibility, color, position, rotation, fill, text. VBA scripting for complex logic. State-based visibility for security.",
+              "pageStart": 20,
+              "pageEnd": 35
+            },
+            {
+              "id": "alarms",
+              "title": "Alarm & Event System",
+              "level": 2,
+              "content": "Server-based alarming with acknowledgment, shelving, escalation. Alarm areas for organization. Rich alarm attributes: priority, category, help URL, custom fields. Alarm banner, summary, history displays. Email/SMS notification via FactoryTalk Notification.",
+              "pageStart": 36,
+              "pageEnd": 50
+            }
+          ]
+        },
+        {
+          "id": "connectivity",
+          "title": "PLC Connectivity",
+          "level": 1,
+          "content": "Direct tag browsing for ControlLogix/CompactLogix (EtherNet/IP). Supports: MicroLogix, SLC, PLC-5 via drivers. Tag substitution for scalable displays. Data logging to local SQL Express or remote SQL Server. Recipe management with PLC tag synchronization.",
+          "pageStart": 68,
+          "pageEnd": 112
+        },
+        {
+          "id": "security",
+          "title": "Security & User Management",
+          "level": 1,
+          "content": "Integrated with FactoryTalk Security. Windows authentication or FT Directory. Roles: Operator, Maintenance, Engineer, Administrator. Area-based security for displays. Electronic signatures for critical actions (21 CFR Part 11). Audit trail for all operator actions.",
+          "pageStart": 113,
+          "pageEnd": 145
+        },
+        {
+          "id": "remote-access",
+          "title": "Remote Access & Mobility",
+          "level": 1,
+          "content": "Built-in VNC server for remote desktop. FactoryTalk ViewPoint for web/mobile access (HTML5). Mobile app for iOS/Android. Remote expert assistance with screen sharing. Secure connectivity via FactoryTalk Remote Access (VPN).",
+          "pageStart": 146,
+          "pageEnd": 178
+        },
+        {
+          "id": "installation",
+          "title": "Installation & Maintenance",
+          "level": 1,
+          "content": "Panel cutout dimensions: 7\" (172x112mm), 10\" (258x168mm), 12\" (306x198mm), 15\" (368x238mm). IP66 front, IP20 rear. Operating temp: 0-55°C. DC power (18-32 VDC). SD card for backup/restore. Factory reset via hardware button.",
+          "pageStart": 179,
+          "pageEnd": 203
+        }
+      ]
+    },
+    {
+      "id": "siemens-tp1500",
+      "title": "SIMATIC TP1500 Comfort Manual",
+      "manufacturer": "Siemens",
+      "deviceType": "HMI",
+      "model": "6AV2124-0QC02-0AX1",
+      "series": "Comfort Panels",
+      "version": "V18",
+      "language": "English",
+      "pages": 312,
+      "category": "Configuration & Operation",
+      "tags": [
+        "WinCC Unified",
+        "TIA Portal",
+        "PROFINET",
+        "OPC UA",
+        "HTML5",
+        "PDF Viewer"
+      ],
+      "lastUpdated": "2024-02-25",
+      "content": [
+        {
+          "id": "overview",
+          "title": "TP1500 Comfort Overview",
+          "level": 1,
+          "content": "15.6\" widescreen multi-touch (capacitive), 1366x768 resolution. Windows 10 IoT Enterprise LTSC. WinCC Unified PC Runtime pre-installed. 2x PROFINET (IRT), 2x USB, 1x SD, 1x DisplayPort. Fanless, IP65 front. Extended temperature: 0-50°C.",
+          "pageStart": 1,
+          "pageEnd": 12
+        },
+        {
+          "id": "wincc-unified",
+          "title": "WinCC Unified System",
+          "level": 1,
+          "content": "Next-gen visualization in TIA Portal. Web-based (HTML5/JS/CSS3) - runs in any modern browser. Unified engineering for panels, PC, web. Features: faceplates, screen window, user administration, alarms, logging, recipes, reports. Client-server architecture. High-performance graphics with SVG.",
+          "pageStart": 13,
+          "pageEnd": 78,
+          "subsections": [
+            {
+              "id": "faceplates",
+              "title": "Faceplates & Types",
+              "level": 2,
+              "content": "Reusable typed faceplates with interface parameters. Inheritance and composition. Dynamic faceplate instances. Faceplate types in project library. Versioning and change management.",
+              "pageStart": 25,
+              "pageEnd": 42
+            },
+            {
+              "id": "scripts",
+              "title": "JavaScript Scripting",
+              "level": 2,
+              "content": "Client-side and server-side JavaScript. Access to tags, alarms, logs, recipes via API. Async/await support. Custom widgets via Web Components. Debugging in browser DevTools.",
+              "pageStart": 43,
+              "pageEnd": 58
+            }
+          ]
+        },
+        {
+          "id": "connectivity",
+          "title": "Connectivity & Communication",
+          "level": 1,
+          "content": "Native S7 protocol (optimized block access). OPC UA client/server (DA/HA/AC). MQTT client for IoT. HTTP/REST API for third-party. PROFINET IO Device for HMI as device. Shared device for multiple controllers. S7 routing through HMI.",
+          "pageStart": 79,
+          "pageEnd": 134
+        },
+        {
+          "id": "edge",
+          "title": "Edge Computing",
+          "level": 1,
+          "content": "WinCC Unified PC Runtime on same hardware. Edge apps via Docker containers. Siemens Industrial Edge integration. Data preprocessing, analytics, ML inference at edge. Secure connectivity to cloud (MindSphere, Azure, AWS).",
+          "pageStart": 135,
+          "pageEnd": 189
+        },
+        {
+          "id": "security",
+          "title": "Security Hardening",
+          "level": 1,
+          "content": "Secure boot, TPM 2.0, BitLocker encryption. User management: local, LDAP, RADIUS. Role-based access control (RBAC). Communication: HTTPS, OPC UA security, certificate management. Audit trail, electronic signature. Compliance: IEC 62443, ISA/IEC 62443-4-2.",
+          "pageStart": 190,
+          "pageEnd": 234
+        }
+      ]
+    },
+    {
+      "id": "schneider-hmi-gto",
+      "title": "Magelis GT/GTU Series Advanced HMI Manual",
+      "manufacturer": "Schneider Electric",
+      "deviceType": "HMI",
+      "model": "HMIGTO1300, HMIGTO2310, HMIGTO3310",
+      "series": "Magelis GT Advanced",
+      "version": "Rev 3.0",
+      "language": "English",
+      "pages": 256,
+      "category": "Configuration & Runtime",
+      "tags": [
+        "Vijeo Designer",
+        "EtherNet/IP",
+        "Modbus",
+        "FTP",
+        "Email",
+        "Video"
+      ],
+      "lastUpdated": "2024-03-05",
+      "content": [
+        {
+          "id": "overview",
+          "title": "Magelis GT Advanced Overview",
+          "level": 1,
+          "content": "Advanced HMIs with 5.7\" to 15\" displays. Resistive touch (GT) or capacitive multi-touch (GTU). Windows Embedded Compact 7. Vijeo Designer runtime. Video input (1 channel composite/HDMI). 2x Ethernet, 2x USB, SD card, CFast. Fanless, IP66 front.",
+          "pageStart": 1,
+          "pageEnd": 18
+        },
+        {
+          "id": "vijeo-designer",
+          "title": "Vijeo Designer Software",
+          "level": 1,
+          "content": "HMI development environment. Features: vector graphics, animations, scripts (JavaScript/VB), recipes, alarms, trends, reports. Multi-language with runtime switching. Project simulation on PC. Version control integration. Library of 4000+ symbols.",
+          "pageStart": 19,
+          "pageEnd": 89
+        },
+        {
+          "id": "video",
+          "title": "Video Integration",
+          "level": 1,
+          "content": "Single video input (NTSC/PAL/HDMI). Display camera feeds on HMI. Picture-in-picture, full-screen, quad view. Snapshot to SD card. Motion detection trigger. Supports IP cameras via Ethernet (MJPEG/H.264). Recording to local storage.",
+          "pageStart": 90,
+          "pageEnd": 123
+        }
+      ]
+    },
+    {
+      "id": "ab-controllogix-5000",
+      "title": "ControlLogix 5000 Series Reference Manual",
+      "manufacturer": "Allen-Bradley (Rockwell Automation)",
+      "deviceType": "PLC",
+      "model": "1756-L7x, 1756-L8x",
+      "series": "ControlLogix 5570/5580",
+      "version": "Rev 3.2",
+      "language": "English",
+      "pages": 452,
+      "category": "Programming & Configuration",
+      "tags": [
+        "ladder logic",
+        "structured text",
+        "function block",
+        "motion control",
+        "safety",
+        "EtherNet/IP"
+      ],
+      "lastUpdated": "2024-01-15",
+      "content": [
+        {
+          "id": "overview",
+          "title": "System Overview",
+          "level": 1,
+          "content": "The ControlLogix 5000 series is a high-performance modular PLC platform designed for complex automation applications. It supports up to 32,000 I/O points, 100+ communication modules, and integrated motion control. The platform uses a common control engine across all controllers, enabling seamless migration and code reuse.",
+          "pageStart": 1,
+          "pageEnd": 12
+        },
+        {
+          "id": "hardware-architecture",
+          "title": "Hardware Architecture",
+          "level": 1,
+          "content": "The ControlLogix chassis uses a high-speed backplane (1.5 Gbps) supporting up to 17 slots. Controllers (1756-L7x/L8x) feature dual-core processors, 4-80 MB user memory, and integrated EtherNet/IP ports. I/O modules are hot-swappable with electronic keying. Redundancy modules (1756-RM2) provide bumpless failover.",
+          "pageStart": 13,
+          "pageEnd": 45,
+          "subsections": [
+            {
+              "id": "chassis-types",
+              "title": "Chassis Types",
+              "level": 2,
+              "content": "Available chassis: 1756-A4 (4-slot), 1756-A7 (7-slot), 1756-A10 (10-slot), 1756-A13 (13-slot), 1756-A17 (17-slot). All support standard and controlled environment ratings.",
+              "pageStart": 15,
+              "pageEnd": 18
+            },
+            {
+              "id": "controller-comparison",
+              "title": "Controller Comparison",
+              "level": 2,
+              "content": "1756-L71 (2MB), L72 (4MB), L73 (8MB), L74 (16MB), L75 (32MB) - 5570 series. 1756-L81E (4MB), L82E (8MB), L83E (16MB), L84E (32MB), L85E (80MB) - 5580 series with integrated safety.",
+              "pageStart": 19,
+              "pageEnd": 28
+            }
+          ]
+        },
+        {
+          "id": "programming-languages",
+          "title": "Supported Programming Languages",
+          "level": 1,
+          "content": "ControlLogix supports four IEC 61131-3 languages: Ladder Diagram (LD), Structured Text (ST), Function Block Diagram (FBD), and Sequential Function Chart (SFC). Also supports C/C++ via the Open Development Kit (ODK) for custom algorithms.",
+          "pageStart": 46,
+          "pageEnd": 89,
+          "subsections": [
+            {
+              "id": "ladder-logic",
+              "title": "Ladder Diagram (LD)",
+              "level": 2,
+              "content": "Primary language for boolean logic. Supports branches, subroutines, AOI (Add-On Instructions), and online editing. Use XIC, XIO, OTE, OTL, OTU, TON, TOF, RTO, CTU, CTD, RES instructions.",
+              "pageStart": 48,
+              "pageEnd": 62
+            },
+            {
+              "id": "structured-text",
+              "title": "Structured Text (ST)",
+              "level": 2,
+              "content": "Pascal-like language for complex math, string handling, and algorithms. Supports IF-THEN-ELSE, CASE, FOR, WHILE, REPEAT loops. Ideal for recipes, data manipulation, and motion profiles.",
+              "pageStart": 63,
+              "pageEnd": 75
+            }
+          ]
+        },
+        {
+          "id": "communication",
+          "title": "Communication Protocols",
+          "level": 1,
+          "content": "Native EtherNet/IP (CIP) on controller. Supports DeviceNet, ControlNet, DH+, Remote I/O via communication modules. CIP Motion, CIP Safety, CIP Sync for time synchronization. OPC UA server built-in (5580 series).",
+          "pageStart": 90,
+          "pageEnd": 134
+        },
+        {
+          "id": "motion-control",
+          "title": "Integrated Motion Control",
+          "level": 1,
+          "content": "CIP Motion supports up to 100 axes per controller. Supports servo, stepper, and induction motors. Features: electronic gearing, camming, position capture, coordinated motion (linear/circular interpolation), safety-rated monitored stop.",
+          "pageStart": 135,
+          "pageEnd": 198
+        },
+        {
+          "id": "safety",
+          "title": "Integrated Safety (GuardLogix)",
+          "level": 1,
+          "content": "5580 series controllers (L8xE) include SIL 3 / PLe safety. Separate safety memory, safety task, and safety I/O. Safety instructions: E-stop, guard monitoring, safety mat, two-hand control, speed monitoring. Safety signature for validation.",
+          "pageStart": 199,
+          "pageEnd": 267
+        },
+        {
+          "id": "troubleshooting",
+          "title": "Troubleshooting & Diagnostics",
+          "level": 1,
+          "content": "Controller status indicators: RUN (green), I/O (green), FORCE (amber), FAULT (red). Major faults: Type 01-0F (hardware), Type 10-1F (I/O), Type 20-2F (communication), Type 30-3F (program). Use GSV/SSV for system values. Fault routine executes on major faults.",
+          "pageStart": 268,
+          "pageEnd": 312
+        },
+        {
+          "id": "best-practices",
+          "title": "Best Practices",
+          "level": 1,
+          "content": "Use AOIs for reusable code. Organize with programs/routines. Use UDTs for structured data. Enable keying on I/O modules. Document with rung comments. Version control with Studio 5000 project files. Regular backup with .ACD files.",
+          "pageStart": 313,
+          "pageEnd": 345
+        }
+      ]
+    },
+    {
+      "id": "siemens-s7-1500",
+      "title": "SIMATIC S7-1500 System Manual",
+      "manufacturer": "Siemens",
+      "deviceType": "PLC",
+      "model": "CPU 151x, 152x, 153x",
+      "series": "S7-1500",
+      "version": "V3.0",
+      "language": "English",
+      "pages": 512,
+      "category": "System Configuration & Programming",
+      "tags": [
+        "TIA Portal",
+        "PROFINET",
+        "PROFIBUS",
+        "OPC UA",
+        "Web Server",
+        "Motion Control"
+      ],
+      "lastUpdated": "2024-02-20",
+      "content": [
+        {
+          "id": "overview",
+          "title": "System Overview",
+          "level": 1,
+          "content": "The S7-1500 is Siemens' high-end modular controller for demanding automation tasks. Features: up to 20 MB program memory, 1 ns bit processing, integrated PROFINET (2-port switch), web server, OPC UA server, display, and SIMATIC memory card. Scalable from compact to high-performance CPUs.",
+          "pageStart": 1,
+          "pageEnd": 18
+        },
+        {
+          "id": "cpu-portfolio",
+          "title": "CPU Portfolio",
+          "level": 1,
+          "content": "Standard CPUs: 1511-1 PN (150 KB), 1513-1 PN (300 KB), 1515-2 PN (500 KB), 1516-3 PN/DP (1 MB), 1517-3 PN/DP (2 MB), 1518-4 PN/DP (4 MB). Compact CPUs: 1511C, 1512C with onboard I/O. Technology CPUs: 1511T, 1515T, 1517T with motion control. F-CPU variants for safety (SIL 3).",
+          "pageStart": 19,
+          "pageEnd": 56
+        },
+        {
+          "id": "tia-portal",
+          "title": "TIA Portal Engineering",
+          "level": 1,
+          "content": "Total Integrated Automation Portal for unified engineering. Hardware configuration, programming (LAD, FBD, STL, SCL, GRAPH), diagnostics, commissioning. Multi-user engineering, version control integration, libraries, hardware detection.",
+          "pageStart": 57,
+          "pageEnd": 124
+        },
+        {
+          "id": "profinet",
+          "title": "PROFINET Communication",
+          "level": 1,
+          "content": "Integrated 2-port PROFINET switch (RT/IRT). Supports: IO Controller, IO Device, I-Device, Media Redundancy Protocol (MRP), Shared Device, Isochronous Real Time (IRT) for motion. Up to 256 IO Devices. Topology: line, star, ring.",
+          "pageStart": 125,
+          "pageEnd": 189
+        },
+        {
+          "id": "web-server",
+          "title": "Integrated Web Server",
+          "level": 1,
+          "content": "Access via standard browser (HTTP/HTTPS). Features: CPU status, diagnostics buffer, module info, firmware update, file browser, user pages (HTML/JavaScript), watch tables, trace. Custom web applications via Web API. Authentication: user management with roles.",
+          "pageStart": 190,
+          "pageEnd": 234
+        },
+        {
+          "id": "opc-ua",
+          "title": "OPC UA Server",
+          "level": 1,
+          "content": "Built-in OPC UA server (DA/HA/AC). Companion specifications: ADI, Robotics, PackML. Security: certificates, signing, encryption. Information modeling with nodesets. Alarms & Conditions, Historical Access, PubSub. Performance: up to 10,000 monitored items.",
+          "pageStart": 235,
+          "pageEnd": 289
+        },
+        {
+          "id": "motion-control",
+          "title": "Technology Objects & Motion Control",
+          "level": 1,
+          "content": "Technology objects: positioning axis, synchronous axis, external encoder, measuring input, output cam, cam track. PLCopen Motion Control instructions (MC_Power, MC_MoveAbsolute, MC_GearIn, MC_CamIn). Up to 128 axes (CPU dependent). Kinematics for robots.",
+          "pageStart": 290,
+          "pageEnd": 367
+        },
+        {
+          "id": "safety",
+          "title": "Safety Integrated (F-CPU)",
+          "level": 1,
+          "content": "Fail-safe CPUs up to SIL 3 (IEC 61508) / PL e (ISO 13849). Safety program in separate memory area. PROFIsafe for distributed safety I/O. Safety instructions: ESTOP, Two-Hand, Safety Door, Light Curtain, Muting, Speed Monitoring. Safety administration: password, validation, CRC.",
+          "pageStart": 368,
+          "pageEnd": 432
+        }
+      ]
+    },
+    {
+      "id": "schneider-m580",
+      "title": "Modicon M580 ePAC Reference Manual",
+      "manufacturer": "Schneider Electric",
+      "deviceType": "PLC",
+      "model": "BMEP58xxxx",
+      "series": "M580",
+      "version": "Rev 4.1",
+      "language": "English",
+      "pages": 398,
+      "category": "Programming & Network Configuration",
+      "tags": [
+        "Unity Pro",
+        "EcoStruxure",
+        "EtherNet/IP",
+        "Modbus TCP",
+        "Hot Standby",
+        "Cybersecurity"
+      ],
+      "lastUpdated": "2024-03-10",
+      "content": [
+        {
+          "id": "overview",
+          "title": "M580 ePAC Overview",
+          "level": 1,
+          "content": "The Modicon M580 is an Ethernet PAC (Programmable Automation Controller) with unified Ethernet backbone. Features: dual-core CPU, 16-64 MB memory, integrated Ethernet switch, cybersecurity (Achilles Level 2), hot standby redundancy, 4000+ I/O. Programmed with Unity Pro / EcoStruxure Control Expert.",
+          "pageStart": 1,
+          "pageEnd": 15
+        },
+        {
+          "id": "ethernet-architecture",
+          "title": "Ethernet Architecture",
+          "level": 1,
+          "content": "Single Ethernet network for I/O, HMI, SCADA, IT. RSTP ring topology (<50ms recovery). DIO (Distributed I/O) via EtherNet/IP and Modbus TCP. CIP Safety for safety I/O. QoS for traffic prioritization. Network Time Protocol (NTP) synchronization.",
+          "pageStart": 16,
+          "pageEnd": 67
+        },
+        {
+          "id": "hot-standby",
+          "title": "Hot Standby Redundancy",
+          "level": 1,
+          "content": "Primary/Standby CPU pair with automatic switchover (<50ms). Shared memory for state synchronization. Redundant Ethernet modules (BMEH582040). Supports: bumpless transfer, configuration sync, online modification. Requires: matched CPUs, same firmware, redundant power supplies.",
+          "pageStart": 68,
+          "pageEnd": 112
+        },
+        {
+          "id": "unity-pro",
+          "title": "Unity Pro / EcoStruxure Control Expert",
+          "level": 1,
+          "content": "IEC 61131-3 languages: Ladder (LD), Structured Text (ST), Function Block (FBD), Instruction List (IL), Sequential Function Chart (SFC). Advanced: DFBs (Derived Function Blocks), EFBs (Elementary Function Blocks), DDTs (Derived Data Types). Features: simulation, online changes, cross-references, documentation generator.",
+          "pageStart": 113,
+          "pageEnd": 178
+        },
+        {
+          "id": "cybersecurity",
+          "title": "Cybersecurity Features",
+          "level": 1,
+          "content": "Achilles Level 2 certified. Features: signed firmware, secure boot, port disabling, IP filtering, user authentication (local/RADIUS/LDAP), role-based access (RBAC), audit logging, encrypted communication (TLS), certificate management. Compliance: IEC 62443, NERC CIP.",
+          "pageStart": 179,
+          "pageEnd": 223
+        },
+        {
+          "id": "safety",
+          "title": "Integrated Safety",
+          "level": 1,
+          "content": "M580 Safety (BMEP58xx040) with SIL 3 / PL e. Separate safety CPU core. Safety I/O via CIP Safety on Ethernet. Safety programming in Unity Pro with safety library. Safety functions: E-stop, guard monitoring, safety mat, two-hand, speed/position monitoring. Safety signature and validation.",
+          "pageStart": 224,
+          "pageEnd": 278
+        }
+      ]
+    },
+    {
+      "id": "ignition-scada",
+      "title": "Ignition SCADA Platform Reference Manual",
+      "manufacturer": "Inductive Automation",
+      "deviceType": "SCADA",
+      "model": "Ignition 8.1",
+      "series": "Ignition Platform",
+      "version": "8.1.30",
+      "language": "English",
+      "pages": 624,
+      "category": "Platform Architecture & Configuration",
+      "tags": [
+        "Perspective",
+        "Vision",
+        "Tag Historian",
+        "MQTT",
+        "OPC UA",
+        "Docker",
+        "Kubernetes"
+      ],
+      "lastUpdated": "2024-04-01",
+      "content": [
+        {
+          "id": "overview",
+          "title": "Platform Overview",
+          "level": 1,
+          "content": "Ignition is a cross-platform SCADA system built on Java. Unlimited licensing model (tags, clients, servers). Modules: Perspective (web), Vision (desktop), Tag Historian, Alarm Notification, Reporting, OPC UA, MQTT Engine, Device Drivers. Runs on Windows, Linux, macOS. Docker/Kubernetes deployment ready.",
+          "pageStart": 1,
+          "pageEnd": 28
+        },
+        {
+          "id": "architecture",
+          "title": "System Architecture",
+          "level": 1,
+          "content": "Gateway (central server) + Designer (development) + Clients (Perspective/Vision/Mobile). Gateway: web server (Jetty), servlet container, tag providers, alarm pipelines, historian, device connections. Clustering for HA/load balancing. Gateway backup/restore (.gwbk). Module system for extensibility.",
+          "pageStart": 29,
+          "pageEnd": 76
+        },
+        {
+          "id": "perspective",
+          "title": "Perspective Module (Web/Mobile)",
+          "level": 1,
+          "content": "React-based web framework for modern HMIs. Runs in browser (no client install). Responsive design (mobile/desktop/tablet). Components: charts, tables, maps, gauges, input. Session management, authentication (IdP/SAML/OIDC). Offline mode with service workers. WebSockets for real-time updates.",
+          "pageStart": 77,
+          "pageEnd": 189,
+          "subsections": [
+            {
+              "id": "views",
+              "title": "Views & Layouts",
+              "level": 2,
+              "content": "Coordinate, flex, breakpoint, column, tab containers. View parameters for reusable views. Navigation: tabs, menus, drawer, breadcrumbs. Popups, docked views. URL-based deep linking. Browser history integration.",
+              "pageStart": 85,
+              "pageEnd": 112
+            },
+            {
+              "id": "binding",
+              "title": "Property Binding System",
+              "level": 2,
+              "content": "Declarative bindings: tag, expression, transform, script. Transforms: map, format, script, expression. Structure bindings for arrays/objects. Bidirectional bindings for input. Polling vs subscription modes.",
+              "pageStart": 113,
+              "pageEnd": 145
+            }
+          ]
+        },
+        {
+          "id": "tag-system",
+          "title": "Tag System & Historian",
+          "level": 1,
+          "content": "Unified tag model: OPC, memory, expression, query, UDT. UDTs with inheritance, parameters, overrides. Tag historian: partitioned storage, compression, aggregation. SQL backend (PostgreSQL, MySQL, MSSQL, Oracle, SQLite). Tag groups for scan classes. Derived tags.",
+          "pageStart": 190,
+          "pageEnd": 267
+        },
+        {
+          "id": "alarming",
+          "title": "Alarm Notification",
+          "level": 1,
+          "content": "Alarm pipelines with drop-down design. Notification profiles: email, SMS, voice, push, webhook. Escalation, acknowledgment, shelving. Alarm shelving with auto-unshelve. Alarm history with query API. ISA-18.2 compliance features.",
+          "pageStart": 268,
+          "pageEnd": 334
+        },
+        {
+          "id": "mqtt",
+          "title": "MQTT Engine & Sparkplug B",
+          "level": 1,
+          "content": "Native MQTT broker (Mosquitto) or external. Sparkplug B spec for state management. Edge-of-network nodes, devices, metrics. Birth/death certificates. Tag provider integration. MQTT Transmission for store-and-forward. TLS authentication.",
+          "pageStart": 335,
+          "pageEnd": 389
+        },
+        {
+          "id": "deployment",
+          "title": "Deployment & DevOps",
+          "level": 1,
+          "content": "Docker images (official). Kubernetes Helm charts. Gateway backup/restore automation. Project export/import (.zip). Git integration for projects. CI/CD pipelines. Blue-green deployments. Gateway network for multi-site.",
+          "pageStart": 390,
+          "pageEnd": 445
+        }
+      ]
+    },
+    {
+      "id": "aveva-system-platform",
+      "title": "AVEVA System Platform (Wonderware) Reference",
+      "manufacturer": "AVEVA",
+      "deviceType": "SCADA",
+      "model": "System Platform 2023",
+      "series": "AVEVA System Platform",
+      "version": "2023 R2",
+      "language": "English",
+      "pages": 589,
+      "category": "Platform Configuration & Deployment",
+      "tags": [
+        "ArchestrA",
+        "InTouch",
+        "Historian",
+        "MES",
+        "Galaxy",
+        "Deployment Server"
+      ],
+      "lastUpdated": "2024-03-28",
+      "content": [
+        {
+          "id": "overview",
+          "title": "System Platform Overview",
+          "level": 1,
+          "content": "Industrial software platform with ArchestrA object-based architecture. Components: Galaxy (object repository), InTouch (HMI/SCADA), Historian, MES, Communication Drivers. Single namespace for all objects. .NET-based with COM interop. Windows Server deployment.",
+          "pageStart": 1,
+          "pageEnd": 22
+        },
+        {
+          "id": "archestra",
+          "title": "ArchestrA IDE & Object Model",
+          "level": 1,
+          "content": "Object-oriented automation: templates, instances, inheritance, containment. Graphic symbols linked to objects. Scripting: C#/.NET in ArchestrA IDE. Attributes: intrinsic, custom, reference. Alarm/Event integration. Security model with areas, roles, users.",
+          "pageStart": 23,
+          "pageEnd": 134
+        },
+        {
+          "id": "intouch",
+          "title": "InTouch HMI/SCADA",
+          "level": 1,
+          "content": "Situational awareness graphics (high-performance). Symbol library with Situational Awareness Library. Trending, alarming, reporting built-in. Web Client for browser access. Mobile app. QuickScript for logic. Window management: replace, overlay, popup, tile.",
+          "pageStart": 135,
+          "pageEnd": 234
+        },
+        {
+          "id": "historian",
+          "title": "AVEVA Historian",
+          "level": 1,
+          "content": "High-performance time-series database. Compression: swinging door, Box-Car. Collection: unsolicited, polled, calculated. Retrieval: raw, interpolated, aggregated (avg, min, max, count). OPC HDA server. Redundancy. Integration with PI System.",
+          "pageStart": 235,
+          "pageEnd": 312
+        },
+        {
+          "id": "deployment",
+          "title": "Deployment Server & Galaxy",
+          "level": 1,
+          "content": "Centralized deployment: Galaxy repository, Deployment Server, Console. Version control for objects. Check-in/check-out. Remote deployment to nodes. Rollback capability. Disaster recovery. Multi-site Galaxy replication.",
+          "pageStart": 313,
+          "pageEnd": 389
+        }
+      ]
+    },
+    {
+      "id": "vt-scada",
+      "title": "VTScada Reference Manual",
+      "manufacturer": "Trihedral",
+      "deviceType": "SCADA",
+      "model": "VTScada 12",
+      "series": "VTScada",
+      "version": "12.0.12",
+      "language": "English",
+      "pages": 412,
+      "category": "Configuration & Application Development",
+      "tags": [
+        "Tag-based",
+        "Historian",
+        "Alarm",
+        "Web Client",
+        "Mobile",
+        "IoT"
+      ],
+      "lastUpdated": "2024-02-15",
+      "content": [
+        {
+          "id": "overview",
+          "title": "VTScada Overview",
+          "level": 1,
+          "content": "Tag-based SCADA with integrated historian, alarming, reporting. Single executable (~100MB). No SQL database required (built-in historian). Unlimited tags/clients licensing. Runs on Windows. Web Client (HTML5), Mobile app. Hot redundancy. PLC drivers: 150+ protocols.",
+          "pageStart": 1,
+          "pageEnd": 18
+        },
+        {
+          "id": "tag-system",
+          "title": "Tag System",
+          "level": 1,
+          "content": "Tag types: analog, digital, string, array, structure. Tag properties: scaling, alarming, logging, security, scripting. Tag groups for scan rates. Derived tags with expressions. Tag import/export (CSV, Excel). Online tag browsing for supported drivers.",
+          "pageStart": 19,
+          "pageEnd": 78
+        },
+        {
+          "id": "application",
+          "title": "Application Development",
+          "level": 1,
+          "content": "Pages: graphics, trends, alarms, reports. Widgets: 200+ built-in. Scripting: VBScript, JavaScript, Python. Faceplates with parameters. Multi-language (runtime switching). Security: 32 levels, area-based. Version control integration.",
+          "pageStart": 79,
+          "pageEnd": 189
+        },
+        {
+          "id": "historian",
+          "title": "Integrated Historian",
+          "level": 1,
+          "content": "Proprietary time-series database. Compression algorithms. Automatic partitioning. Retention policies. Fast retrieval: raw, calculated. Historian tags auto-configured. Redundancy with sync. Export to CSV/Excel. OPC HDA not required.",
+          "pageStart": 190,
+          "pageEnd": 245
+        },
+        {
+          "id": "iot",
+          "title": "IoT & Cloud Integration",
+          "level": 1,
+          "content": "MQTT client (publisher/subscriber). Sparkplug B support. REST API for tag read/write. Cloud connectors: AWS IoT, Azure IoT, Google Cloud. Edge gateway for store-and-forward. OPC UA server/client. Data historian replication to cloud.",
+          "pageStart": 246,
+          "pageEnd": 289
+        }
+      ]
+    },
+    {
+      "id": "ifm-io-link",
+      "title": "IO-Link Master & Sensor Portfolio Manual",
+      "manufacturer": "ifm electronic",
+      "deviceType": "Sensor",
+      "model": "AL1100, AL1120, AL1140, AL1300 Series",
+      "series": "IO-Link Masters & Sensors",
+      "version": "Rev 4.0",
+      "language": "English",
+      "pages": 278,
+      "category": "Configuration & Integration",
+      "tags": [
+        "IO-Link",
+        "Profinet",
+        "EtherNet/IP",
+        "EtherCAT",
+        "LR DEVICE",
+        "LR AGENT",
+        "moneo"
+      ],
+      "lastUpdated": "2024-03-22",
+      "content": [
+        {
+          "id": "overview",
+          "title": "IO-Link System Overview",
+          "level": 1,
+          "content": "IO-Link: point-to-point communication (IEC 61131-9). Master connects to PLC via fieldbus (PROFINET, EtherNet/IP, EtherCAT). Up to 8 ports per master. Sensors/actuators with IO-Link interface. Parameter server for automatic backup/restore. LR DEVICE for device description (IODD). LR AGENT for master configuration.",
+          "pageStart": 1,
+          "pageEnd": 22
+        },
+        {
+          "id": "master-types",
+          "title": "Master Types",
+          "level": 1,
+          "content": "Compact: AL1100 (4-port, IP67), AL1120 (8-port, IP67). Cabinet: AL1140 (8-port, IP20), AL1300 (16-port, IP20). Fieldbus: PROFINET (IRT/RT), EtherNet/IP, EtherCAT, CC-Link IE Field. Power: Class A (24V), Class B (24V + actuator supply). Diagnostics: per-port LED, web server, JSON REST API.",
+          "pageStart": 23,
+          "pageEnd": 67
+        },
+        {
+          "id": "sensor-types",
+          "title": "Smart Sensor Portfolio",
+          "level": 1,
+          "content": "Position: inductive, capacitive, magnetic, photoelectric. Process: pressure, temperature, flow, level. Identification: RFID, 1D/2D code readers. Condition monitoring: vibration, oil quality. All with IO-Link: parameterization, diagnostics, process data, events. IODD files for integration.",
+          "pageStart": 68,
+          "pageEnd": 134
+        },
+        {
+          "id": "parameter-server",
+          "title": "Parameter Server & Data Storage",
+          "level": 1,
+          "content": "Automatic parameter backup when device connected. Restore on device replacement (plug & play). Data storage index (0-3) for multiple configurations. Vendor-specific vs standard parameters. Block parameterization for commissioning. LR AGENT for bulk configuration.",
+          "pageStart": 135,
+          "pageEnd": 189
+        },
+        {
+          "id": "moneo",
+          "title": "moneo Software Suite",
+          "level": 1,
+          "content": "moneo|configure: parameter management, IODD library. moneo|monitor: real-time visualization, dashboards. moneo|analyze: historical analysis, reports. moneo|remote: secure remote access. Cloud or on-premise. Integration with IT systems via REST API, OPC UA, MQTT.",
+          "pageStart": 190,
+          "pageEnd": 234
+        }
+      ]
+    },
+    {
+      "id": "sick-sensors",
+      "title": "SICK Sensor Intelligence Reference Manual",
+      "manufacturer": "SICK AG",
+      "deviceType": "Sensor",
+      "model": "Various Series",
+      "series": "Sensor Portfolio",
+      "version": "2024.1",
+      "language": "English",
+      "pages": 445,
+      "category": "Selection & Integration",
+      "tags": [
+        "IO-Link",
+        "PROFINET",
+        "EtherNet/IP",
+        "EtherCAT",
+        "Safety",
+        "Vision",
+        "LiDAR",
+        "RFID"
+      ],
+      "lastUpdated": "2024-04-05",
+      "content": [
+        {
+          "id": "overview",
+          "title": "SICK Sensor Portfolio",
+          "level": 1,
+          "content": "Comprehensive industrial sensors: photoelectric, proximity, registration, distance, vision, LiDAR, RFID, safety. Communication: IO-Link, PROFINET, EtherNet/IP, EtherCAT, PROFIsafe, CIP Safety. Software: SOPAS ET (Engineering Tool), SICK AppSpace, SICK AppPool. Cloud: SICK Cloud Services.",
+          "pageStart": 1,
+          "pageEnd": 28
+        },
+        {
+          "id": "vision",
+          "title": "Vision Sensors & Cameras",
+          "level": 1,
+          "content": "Inspector series: 2D vision (Inspector P, I, 83x). Lector series: code reading (1D/2D/DPM). Ranger: 3D vision. InspectorP: deep learning. Configuration: SOPAS ET, web server. Interface: EtherNet/IP, PROFINET, EtherCAT, TCP/IP. Trigger: hardware, software, free-run. Output: results, images, statistics.",
+          "pageStart": 29,
+          "pageEnd": 134
+        },
+        {
+          "id": "lidar",
+          "title": "LiDAR Sensors",
+          "level": 1,
+          "content": "TiM series: 2D LiDAR (indoor/outdoor). LMS: industrial 2D. MRS: multi-layer 3D. OutdoorScan: long-range. Navigation, collision avoidance, area monitoring. Interface: Ethernet, CAN, USB. ROS driver. Safe variants (SIL 2/PL d). Configuration: SOPAS ET.",
+          "pageStart": 135,
+          "pageEnd": 212
+        },
+        {
+          "id": "safety",
+          "title": "Safe Sensors & Systems",
+          "level": 1,
+          "content": "Safety light curtains (deTec, C4000). Safety laser scanners (S3000, microScan3). Safety switches (i100, i110). Safety controllers (Flexi Soft, FX3-CPU). PROFIsafe, CIP Safety, FSoE. Safety Designer for configuration. Safe networking via safety PLC or safety gateway.",
+          "pageStart": 213,
+          "pageEnd": 312
+        },
+        {
+          "id": "app-space",
+          "title": "SICK AppSpace & AppPool",
+          "level": 1,
+          "content": "AppSpace: develop custom sensor apps (C++, Python). Run on sensor (edge computing). AppPool: marketplace for pre-built apps. Apps for: quality inspection, logistics, robotics, condition monitoring. Deployment via SOPAS ET or cloud. Licensing per sensor/app.",
+          "pageStart": 313,
+          "pageEnd": 378
+        }
+      ]
+    },
+    {
+      "id": "banner-engineering",
+      "title": "Banner Engineering Sensor Catalog & Integration Guide",
+      "manufacturer": "Banner Engineering",
+      "deviceType": "Sensor",
+      "model": "Q4X, Q3X, Q2X, R-GAGE, QS18, QS30 Series",
+      "series": "Photoelectric & Measurement Sensors",
+      "version": "Rev 3.1",
+      "language": "English",
+      "pages": 234,
+      "category": "Selection & Application",
+      "tags": [
+        "IO-Link",
+        "EtherNet/IP",
+        "Modbus TCP",
+        "PROFINET",
+        "Wireless",
+        "Radar",
+        "Lidar"
+      ],
+      "lastUpdated": "2024-02-28",
+      "content": [
+        {
+          "id": "overview",
+          "title": "Sensor Portfolio",
+          "level": 1,
+          "content": "Photoelectric: opposed, retro-reflective, diffuse, background suppression. Measurement: laser distance (Q4X, R-GAGE), ultrasonic, radar. Vision: iVu, VE series. Wireless: SureCross (900 MHz, 2.4 GHz). Safety: light curtains, E-stops. IO-Link on most models. Banner CDS (Configuration & Diagnostic Software).",
+          "pageStart": 1,
+          "pageEnd": 24
+        },
+        {
+          "id": "q4x",
+          "title": "Q4X Laser Distance Sensor",
+          "level": 1,
+          "content": "Time-of-flight laser: 300mm-10m (class 1), 300mm-50m (class 2). mm resolution. IO-Link, 4-20mA, NPN/PNP. Background suppression. Multi-segment display. Teach-in via button or IO-Link. Applications: positioning, level, loop control, web break detection. Temperature compensation.",
+          "pageStart": 25,
+          "pageEnd": 78
+        },
+        {
+          "id": "radar",
+          "title": "Radar Sensors (R-GAGE)",
+          "level": 1,
+          "content": "FMCW radar: 24 GHz (ISM band). Range: 0.3-40m. Penetrates: rain, fog, dust, plastic, glass. IO-Link, CAN, Modbus. Configurable field of view. Multi-target tracking. Applications: vehicle detection, level (solids/liquids), collision avoidance, bulk solids. No moving parts.",
+          "pageStart": 79,
+          "pageEnd": 134
+        },
+        {
+          "id": "wireless",
+          "title": "SureCross Wireless",
+          "level": 1,
+          "content": "Industrial wireless I/O. Gateway (DX80) + Nodes (inputs/outputs). 900 MHz (long range) or 2.4 GHz (global). FHSS (frequency hopping). Range: up to 3km (900 MHz), 1km (2.4 GHz). Self-healing mesh. Battery life: years. Security: AES-128. Modbus/TCP, EtherNet/IP gateway.",
+          "pageStart": 135,
+          "pageEnd": 189
+        }
+      ]
+    },
+    {
+      "id": "ab-pf755",
+      "title": "PowerFlex 755 AC Drive Programming Manual",
+      "manufacturer": "Allen-Bradley (Rockwell Automation)",
+      "deviceType": "VFD",
+      "model": "20G/21G Series",
+      "series": "PowerFlex 755",
+      "version": "Rev 5.0",
+      "language": "English",
+      "pages": 367,
+      "category": "Programming & Configuration",
+      "tags": [
+        "DriveExplorer",
+        "Connected Components Workbench",
+        "EtherNet/IP",
+        "DeviceLogix",
+        "Safe Torque Off",
+        "Positioning"
+      ],
+      "lastUpdated": "2024-01-28",
+      "content": [
+        {
+          "id": "overview",
+          "title": "Drive Overview",
+          "level": 1,
+          "content": "PowerFlex 755 is a high-performance AC drive (0.75-2000 HP). Features: integrated EtherNet/IP, DeviceLogix (embedded logic), Safe Torque Off (STO SIL 3), positioning/indexing, predictive diagnostics, automatic device configuration (ADC). Frame sizes 1-10. Input: 200-690V AC.",
+          "pageStart": 1,
+          "pageEnd": 18
+        },
+        {
+          "id": "device-logix",
+          "title": "DeviceLogix Embedded Logic",
+          "level": 1,
+          "content": "Programmable logic inside the drive (no PLC needed). 50 function blocks: boolean, math, compare, timer, counter, latch, multiplexer. 1ms scan time. Access to drive parameters, I/O, network data. Programmed via DriveExplorer or CCW. Use for: local control, sequencing, protection logic, pump/ fan staging.",
+          "pageStart": 19,
+          "pageEnd": 78
+        },
+        {
+          "id": "safety",
+          "title": "Integrated Safety",
+          "level": 1,
+          "content": "Safe Torque Off (STO) SIL 3/PLe standard. Optional: Safe Speed Monitor (SSM), Safe Stop 1 (SS1), Safe Brake Control (SBC), Safe Direction (SDI). Safety option module 20-750-S. Safety configuration via DriveExplorer. Safety signature. Reaction time: <10ms for STO.",
+          "pageStart": 79,
+          "pageEnd": 134
+        },
+        {
+          "id": "positioning",
+          "title": "Positioning & Indexing",
+          "level": 1,
+          "content": "Point-to-point positioning with encoder feedback. Modes: absolute, relative, registration, homing. Profile: trapezoidal, S-curve. Electronic gearing (follower ratio). Camming with profile tables. Encoder: incremental, absolute (Hiperface, EnDat, SSI). Position capture (latch).",
+          "pageStart": 135,
+          "pageEnd": 198
+        },
+        {
+          "id": "predictive",
+          "title": "Predictive Diagnostics",
+          "level": 1,
+          "content": "Drive health monitoring: heatsink temp, bus capacitor life, fan hours, bearing hours, IGBT thermal model. Remaining life estimation. Alarm thresholds configurable. Data logged to internal memory. Access via EtherNet/IP or web server. Integration with FactoryTalk Analytics.",
+          "pageStart": 199,
+          "pageEnd": 245
+        },
+        {
+          "id": "communication",
+          "title": "Communication & Configuration",
+          "level": 1,
+          "content": "Dual-port EtherNet/IP (DLR, linear, star). Device Level Ring (DLR) for redundancy. Embedded web server for configuration. ADC (Automatic Device Configuration) from Logix controller. Parameter groups: motor, speed, torque, position, I/O, communication, safety, application.",
+          "pageStart": 246,
+          "pageEnd": 298
+        }
+      ]
+    },
+    {
+      "id": "siemens-g120",
+      "title": "SINAMICS G120 Operating Instructions",
+      "manufacturer": "Siemens",
+      "deviceType": "VFD",
+      "model": "CU250S-2, CU250S-2 DP, CU250S-2 PN",
+      "series": "SINAMICS G120",
+      "version": "V5.2",
+      "language": "English",
+      "pages": 423,
+      "category": "Commissioning & Parameterization",
+      "tags": [
+        "Startdrive",
+        "TIA Portal",
+        "PROFINET",
+        "PROFIBUS",
+        "EtherNet/IP",
+        "Safety Integrated",
+        "Basic Positioner"
+      ],
+      "lastUpdated": "2024-02-10",
+      "content": [
+        {
+          "id": "overview",
+          "title": "G120 Overview",
+          "level": 1,
+          "content": "Modular drive system: Control Unit (CU) + Power Module (PM). Power range 0.37-250 kW. Control Units: CU250S-2 (EtherNet/IP), CU250S-2 DP (PROFIBUS), CU250S-2 PN (PROFINET). Safety Integrated: STO, SS1, SBC, SSM, SDI, SLS (SIL 2/PL d). Basic Positioner (EPos) included.",
+          "pageStart": 1,
+          "pageEnd": 22
+        },
+        {
+          "id": "startdrive",
+          "title": "Startdrive Commissioning Tool",
+          "level": 1,
+          "content": "Integrated in TIA Portal. Wizard-based commissioning. Motor identification (rotating/standstill). Speed controller optimization. Safety commissioning with validation. Trace function for diagnostics. Parameter comparison. Offline/online modes. Project download/upload.",
+          "pageStart": 23,
+          "pageEnd": 89
+        },
+        {
+          "id": "safety",
+          "title": "Safety Integrated",
+          "level": 1,
+          "content": "Functions: STO, SS1, SBC, SSM, SDI, SLS (up to 4 speed stages). Safe Brake Test. PROFIsafe via PROFINET/PROFIBUS. Safety parameters password-protected. Forced dormant error detection. Safety logbook. Acceptance test wizard with report generation.",
+          "pageStart": 90,
+          "pageEnd": 156
+        },
+        {
+          "id": "epos",
+          "title": "Basic Positioner (EPos)",
+          "level": 1,
+          "content": "Positioning modes: absolute, relative, referencing, flying referencing, jog. Traversing blocks (up to 64). Traversing profiles: trapezoidal, S-curve. Jerk limitation. Direct setpoint specification (MDI). Modulo offset for rotary axes. Encoder: HTL/TTL, DRIVE-CLiQ, SSI.",
+          "pageStart": 157,
+          "pageEnd": 223
+        },
+        {
+          "id": "communication",
+          "title": "Fieldbus Communication",
+          "level": 1,
+          "content": "PROFINET (IRT/RT), PROFIBUS DP, EtherNet/IP, CANopen, USS, Modbus RTU. Telegram selection (standard/safety). Shared device. Media Redundancy Protocol (MRP). Isochronous mode for motion. Web server for diagnostics. OPC UA server (CU250S-2 PN).",
+          "pageStart": 224,
+          "pageEnd": 289
+        }
+      ]
+    },
+    {
+      "id": "schneider-altivar",
+      "title": "Altivar Process ATV900 Programming Manual",
+      "manufacturer": "Schneider Electric",
+      "deviceType": "VFD",
+      "model": "ATV930, ATV950, ATV980",
+      "series": "Altivar Process",
+      "version": "Rev 2.3",
+      "language": "English",
+      "pages": 334,
+      "category": "Programming & Services",
+      "tags": [
+        "EcoStruxure",
+        "Device Type Manager",
+        "EtherNet/IP",
+        "Modbus TCP",
+        "PROFINET",
+        "Web Server",
+        "Pump/Fan"
+      ],
+      "lastUpdated": "2024-03-18",
+      "content": [
+        {
+          "id": "overview",
+          "title": "Altivar Process Overview",
+          "level": 1,
+          "content": "Process drives for pumps, fans, compressors (0.75-2500 kW). Services-oriented: energy monitoring, asset management, process optimization. Embedded Ethernet (dual port). Web server. Device Type Manager (DTM) for FDT frameworks. Cybersecurity: Achilles Level 2.",
+          "pageStart": 1,
+          "pageEnd": 15
+        },
+        {
+          "id": "services",
+          "title": "Embedded Services",
+          "level": 1,
+          "content": "Energy: consumption, efficiency, kWh, CO2. Asset: operating hours, starts, temperature, vibration. Process: flow, pressure, level control (PID). Pump: multi-pump staging, anti-jam, pipe fill, dry run. Fan: stall detection, filter monitoring. Compressor: load/unload, sequencing.",
+          "pageStart": 16,
+          "pageEnd": 89
+        },
+        {
+          "id": "dtm",
+          "title": "Device Type Manager (DTM)",
+          "level": 1,
+          "content": "FDT/DTM standard for configuration. Works with: EcoStruxure Control Expert, PACTware, FieldCare, other FDT frames. Online/offline parameterization. Diagnostics: oscilloscope, trending, alarm history. Firmware update via DTM. DTMs available for all Altivar models.",
+          "pageStart": 90,
+          "pageEnd": 145
+        }
+      ]
+    }
+  ],
+  "searchIndex": [
+    {
+      "manualId": "emerson-delta-v",
+      "manualTitle": "DeltaV Distributed Control System Reference Manual",
+      "manufacturer": "Emerson",
+      "deviceType": "Controller",
+      "model": "DeltaV v15",
+      "series": "DeltaV DCS",
+      "version": "15.3",
+      "sectionId": "overview",
+      "sectionTitle": "DeltaV System Overview",
+      "sectionContent": "DeltaV is a distributed control system for process industries. Architecture: controllers (MX, PK, SX), I/O cards (CHARMs, traditional), workstations, servers, network. DeltaV Live: HTML5 web interface. DeltaV SIS: separate safety system (SIL 3). Integrated historian, batch, advanced control. Cybersecurity: DeltaV Secure.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "emerson-delta-v",
+      "manualTitle": "DeltaV Distributed Control System Reference Manual",
+      "manufacturer": "Emerson",
+      "deviceType": "Controller",
+      "model": "DeltaV v15",
+      "series": "DeltaV DCS",
+      "version": "15.3",
+      "sectionId": "controllers",
+      "sectionTitle": "Controller Platform",
+      "sectionContent": "MX Controller: high-capacity, redundancy (hot standby), 4000 I/O per pair. PK Controller: process, 1600 I/O. SX Controller: small systems, 400 I/O. All: function blocks (Control, Logic, Arithmetic, Signal Processing), sequential function charts, custom algorithms (C/C++). Deterministic scan: 100ms-1s.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "emerson-delta-v",
+      "manualTitle": "DeltaV Distributed Control System Reference Manual",
+      "manufacturer": "Emerson",
+      "deviceType": "Controller",
+      "model": "DeltaV v15",
+      "series": "DeltaV DCS",
+      "version": "15.3",
+      "sectionId": "charm",
+      "sectionTitle": "CHARMs I/O",
+      "sectionContent": "Characterization Module (CHARM): one per field device. Universal I/O: AI, AO, DI, DO, HART, pulse, RTD, TC. Electronic marshalling: software-defined wiring. HART pass-through. Intrinsically safe options. Hot-swappable. Reduces wiring by 50%. Auto-discovery.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "emerson-delta-v",
+      "manualTitle": "DeltaV Distributed Control System Reference Manual",
+      "manufacturer": "Emerson",
+      "deviceType": "Controller",
+      "model": "DeltaV v15",
+      "series": "DeltaV DCS",
+      "version": "15.3",
+      "sectionId": "delta-v-live",
+      "sectionTitle": "DeltaV Live (HTML5 Interface)",
+      "sectionContent": "Web-based operations interface. No client install. Responsive design. Graphics: SVGs, situational awareness. Faceplates: standard, custom. Alarm management: ISA-18.2. Trends, historian integration. Mobile: iOS/Android app. Authentication: Windows, LDAP, SAML. Role-based access.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "emerson-delta-v",
+      "manualTitle": "DeltaV Distributed Control System Reference Manual",
+      "manufacturer": "Emerson",
+      "deviceType": "Controller",
+      "model": "DeltaV v15",
+      "series": "DeltaV DCS",
+      "version": "15.3",
+      "sectionId": "sis",
+      "sectionTitle": "DeltaV SIS (Safety Instrumented System)",
+      "sectionContent": "Separate safety architecture. SLS 1508 controller (SIL 3). SISnet protocol (deterministic, redundant). SIF: Safety Instrumented Functions. Proof testing wizard. Bypass management. Integration with DeltaV for alarms, events, historian. Partial stroke testing. SIL verification.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "emerson-delta-v",
+      "manualTitle": "DeltaV Distributed Control System Reference Manual",
+      "manufacturer": "Emerson",
+      "deviceType": "Controller",
+      "model": "DeltaV v15",
+      "series": "DeltaV DCS",
+      "version": "15.3",
+      "sectionId": "batch",
+      "sectionTitle": "DeltaV Batch",
+      "sectionContent": "ISA-88 compliant batch management. Recipe: procedures, unit procedures, operations, phases. Equipment model: units, equipment modules, control modules. Recipe editor: graphical (SFC-based). Execution: promoter, operator prompts, electronic signatures. Material tracking. Integration with MES/ERP.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "emerson-delta-v",
+      "manualTitle": "DeltaV Distributed Control System Reference Manual",
+      "manufacturer": "Emerson",
+      "deviceType": "Controller",
+      "model": "DeltaV v15",
+      "series": "DeltaV DCS",
+      "version": "15.3",
+      "sectionId": "advanced-control",
+      "sectionTitle": "Advanced Control (MPC)",
+      "sectionContent": "DeltaV PredictPro: Model Predictive Control. Dynamic matrix control (DMC). Constraint handling: manipulated, controlled, auxiliary. Adaptive models. Integration with DeltaV controls. Configuration: Identify, Test, Implement, Monitor. Applications: distillation, reactor, FCC, blending.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "emerson-delta-v",
+      "manualTitle": "DeltaV Distributed Control System Reference Manual",
+      "manufacturer": "Emerson",
+      "deviceType": "Controller",
+      "model": "DeltaV v15",
+      "series": "DeltaV DCS",
+      "version": "15.3",
+      "sectionId": "cybersecurity",
+      "sectionTitle": "DeltaV Cybersecurity",
+      "sectionContent": "DeltaV Secure: whitelisting, patch management, antivirus, backup, audit. Defense-in-depth: network segmentation, firewalls, DMZ. IEC 62443 compliance. User authentication: Windows, PKI, smart cards. Privilege management. Security zones. Incident response. Patch validation on test system.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "honeywell-experion",
+      "manualTitle": "Experion PKS Reference Manual",
+      "manufacturer": "Honeywell Process Solutions",
+      "deviceType": "Controller",
+      "model": "C300, C200, FIM, LIM",
+      "series": "Experion PKS",
+      "version": "R520",
+      "sectionId": "overview",
+      "sectionTitle": "Experion PKS Overview",
+      "sectionContent": "Process Knowledge System (PKS) for process automation. Architecture: C300 controller, FIM (Fieldbus Interface Module), LIM (Local I/O Module), Server, Station (HMI), Historian. Experion Station: unified operations interface. Safety Manager: SIL 3 separate system. APC: Advanced Process Control. Uniformance: integration platform.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "honeywell-experion",
+      "manualTitle": "Experion PKS Reference Manual",
+      "manufacturer": "Honeywell Process Solutions",
+      "deviceType": "Controller",
+      "model": "C300, C200, FIM, LIM",
+      "series": "Experion PKS",
+      "version": "R520",
+      "sectionId": "c300",
+      "sectionTitle": "C300 Controller",
+      "sectionContent": "High-performance redundant controller. 1000+ function blocks. Control: PID, cascade, ratio, override, split-range. Logic: IEC 61131-3 (FBD, LD, ST, SFC). Redundancy: hot standby <1s switchover. Peer-to-peer communication. OPC UA server. Cybersecurity: signed firmware, secure boot.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "honeywell-experion",
+      "manualTitle": "Experion PKS Reference Manual",
+      "manufacturer": "Honeywell Process Solutions",
+      "deviceType": "Controller",
+      "model": "C300, C200, FIM, LIM",
+      "series": "Experion PKS",
+      "version": "R520",
+      "sectionId": "station",
+      "sectionTitle": "Experion Station (HMI/SCADA)",
+      "sectionContent": "Unified operations: process, safety, batch, APC, historian. HTML5 web client (Station Web). Situational awareness graphics. Alarm management: ISA-18.2, EEMUA 191. Faceplates: standard library, custom. Trends: real-time, historical, comparison. Reports: automatic, on-demand. Mobile: Station Mobile app.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "honeywell-experion",
+      "manualTitle": "Experion PKS Reference Manual",
+      "manufacturer": "Honeywell Process Solutions",
+      "deviceType": "Controller",
+      "model": "C300, C200, FIM, LIM",
+      "series": "Experion PKS",
+      "version": "R520",
+      "sectionId": "safety-manager",
+      "sectionTitle": "Safety Manager",
+      "sectionContent": "Separate safety system (SIL 3). TMR (Triple Modular Redundancy) or duplex. Safety logic: FBD, LD. SIF management. Proof test wizard. Bypass/override management. Integration: Experion Station for alarms, faceplates. Fieldbus: Safety Fieldbus (Honeywell), PROFIsafe. Partial stroke testing.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "honeywell-experion",
+      "manualTitle": "Experion PKS Reference Manual",
+      "manufacturer": "Honeywell Process Solutions",
+      "deviceType": "Controller",
+      "model": "C300, C200, FIM, LIM",
+      "series": "Experion PKS",
+      "version": "R520",
+      "sectionId": "uniformance",
+      "sectionTitle": "Uniformance Platform",
+      "sectionContent": "Integration platform: historian (PHD), analytics, reporting, MES connectivity. PHD: high-performance time-series. Analytics: Golden Batch, PCA, anomaly detection. Reporting: automated, web-based. Connectors: PI, SQL, OPC, REST. Pharma: 21 CFR Part 11 compliance.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "yokogawa-centum",
+      "manualTitle": "CENTUM VP DCS Reference Manual",
+      "manufacturer": "Yokogawa Electric Corporation",
+      "deviceType": "Controller",
+      "model": "FCN/FCJ, FCS, FIO, Vnet/IP",
+      "series": "CENTUM VP",
+      "version": "R6.10",
+      "sectionId": "overview",
+      "sectionTitle": "CENTUM VP Overview",
+      "sectionContent": "Integrated production control system. Architecture: FCN/FCJ (control), FCS (safety), FIO (I/O), Vnet/IP (plant network), HIS (historian), ENG (engineering station), OPS (operator station). ProSafe-RS: separate safety system. Exaopc: OPC server. Exapilot: HMI/SCADA. PRM: Plant Resource Manager (asset management).",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "yokogawa-centum",
+      "manualTitle": "CENTUM VP DCS Reference Manual",
+      "manufacturer": "Yokogawa Electric Corporation",
+      "deviceType": "Controller",
+      "model": "FCN/FCJ, FCS, FIO, Vnet/IP",
+      "series": "CENTUM VP",
+      "version": "R6.10",
+      "sectionId": "fcn-fcj",
+      "sectionTitle": "FCN/FCJ Controllers",
+      "sectionContent": "FCN-RTU: field controller. FCN-DCS: DCS controller. FCJ: high-performance. Function blocks: control, logic, sequence, arithmetic. Redundancy: hot standby (FCN), TMR (FCJ). Vnet/IP: dual redundant Ethernet. Scan: 100ms-1s. Online download. Capacity: 10,000 blocks (FCJ).",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "yokogawa-centum",
+      "manualTitle": "CENTUM VP DCS Reference Manual",
+      "manufacturer": "Yokogawa Electric Corporation",
+      "deviceType": "Controller",
+      "model": "FCN/FCJ, FCS, FIO, Vnet/IP",
+      "series": "CENTUM VP",
+      "version": "R6.10",
+      "sectionId": "prosafe-rs",
+      "sectionTitle": "ProSafe-RS (Safety System)",
+      "sectionContent": "Separate safety architecture (SIL 3). TMR controllers. Safety logic: FBD, SFC. Vnet/IP safety network. Integration with CENTUM VP: shared engineering, unified HMI. Proof testing. Bypass management. Partial stroke testing. Field devices: PROFIsafe, HART safety.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "yokogawa-centum",
+      "manualTitle": "CENTUM VP DCS Reference Manual",
+      "manufacturer": "Yokogawa Electric Corporation",
+      "deviceType": "Controller",
+      "model": "FCN/FCJ, FCS, FIO, Vnet/IP",
+      "series": "CENTUM VP",
+      "version": "R6.10",
+      "sectionId": "exapilot",
+      "sectionTitle": "Exapilot HMI/SCADA",
+      "sectionContent": "Web-based operator interface. Graphics: vector, situational awareness. Alarm: ISA-18.2, EEMUA 191. Faceplates: standard, custom. Trends: real-time, historical. Reports. Mobile: Exapilot Mobile. Security: Windows, LDAP, SAML. Redundancy: hot standby servers.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "yokogawa-centum",
+      "manualTitle": "CENTUM VP DCS Reference Manual",
+      "manufacturer": "Yokogawa Electric Corporation",
+      "deviceType": "Controller",
+      "model": "FCN/FCJ, FCS, FIO, Vnet/IP",
+      "series": "CENTUM VP",
+      "version": "R6.10",
+      "sectionId": "prm",
+      "sectionTitle": "PRM (Plant Resource Manager)",
+      "sectionContent": "Asset management: device configuration, diagnostics, calibration, maintenance. HART, FOUNDATION Fieldbus, PROFIBUS PA. Device DTMs. Calibration management. Maintenance scheduling. Integration with CMMS/EAM. Mobile: PRM Mobile. Cloud: PRM Cloud.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "ab-panelview-5000",
+      "manualTitle": "PanelView 5000 Series Reference Manual",
+      "manufacturer": "Allen-Bradley (Rockwell Automation)",
+      "deviceType": "HMI",
+      "model": "2715P-B7CD, 2715P-B10CD, 2715P-B12CD, 2715P-B15CD",
+      "series": "PanelView 5000",
+      "version": "Rev 2.1",
+      "sectionId": "overview",
+      "sectionTitle": "Product Overview",
+      "sectionContent": "PanelView 5000 terminals are industrial operator interfaces with 7\", 10\", 12\", and 15\" widescreen displays. Capacitive multi-touch, 1280x800 resolution. Runs Windows 10 IoT Enterprise. FactoryTalk View Site Edition (SE) runtime pre-installed. Dual EtherNet/IP ports with switch. No moving parts (fanless).",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "ab-panelview-5000",
+      "manualTitle": "PanelView 5000 Series Reference Manual",
+      "manufacturer": "Allen-Bradley (Rockwell Automation)",
+      "deviceType": "HMI",
+      "model": "2715P-B7CD, 2715P-B10CD, 2715P-B12CD, 2715P-B15CD",
+      "series": "PanelView 5000",
+      "version": "Rev 2.1",
+      "sectionId": "factorytalk-view-se",
+      "sectionTitle": "FactoryTalk View SE Runtime",
+      "sectionContent": "Full-featured HMI/SCADA runtime. Features: vector graphics, faceplates, parameterized displays, alarm & event server, historical trending, recipes, security (Windows/FT), redundancy, VNC remote access. Supports 150+ drivers for PLC connectivity. Tag-based architecture with direct controller tag browsing.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "ab-panelview-5000",
+      "manualTitle": "PanelView 5000 Series Reference Manual",
+      "manufacturer": "Allen-Bradley (Rockwell Automation)",
+      "deviceType": "HMI",
+      "model": "2715P-B7CD, 2715P-B10CD, 2715P-B12CD, 2715P-B15CD",
+      "series": "PanelView 5000",
+      "version": "Rev 2.1",
+      "sectionId": "displays",
+      "sectionTitle": "Display Types",
+      "sectionContent": "Base displays, popup displays, faceplates (reusable parametric), global objects. Animation: visibility, color, position, rotation, fill, text. VBA scripting for complex logic. State-based visibility for security.",
+      "sectionLevel": 2
+    },
+    {
+      "manualId": "ab-panelview-5000",
+      "manualTitle": "PanelView 5000 Series Reference Manual",
+      "manufacturer": "Allen-Bradley (Rockwell Automation)",
+      "deviceType": "HMI",
+      "model": "2715P-B7CD, 2715P-B10CD, 2715P-B12CD, 2715P-B15CD",
+      "series": "PanelView 5000",
+      "version": "Rev 2.1",
+      "sectionId": "alarms",
+      "sectionTitle": "Alarm & Event System",
+      "sectionContent": "Server-based alarming with acknowledgment, shelving, escalation. Alarm areas for organization. Rich alarm attributes: priority, category, help URL, custom fields. Alarm banner, summary, history displays. Email/SMS notification via FactoryTalk Notification.",
+      "sectionLevel": 2
+    },
+    {
+      "manualId": "ab-panelview-5000",
+      "manualTitle": "PanelView 5000 Series Reference Manual",
+      "manufacturer": "Allen-Bradley (Rockwell Automation)",
+      "deviceType": "HMI",
+      "model": "2715P-B7CD, 2715P-B10CD, 2715P-B12CD, 2715P-B15CD",
+      "series": "PanelView 5000",
+      "version": "Rev 2.1",
+      "sectionId": "connectivity",
+      "sectionTitle": "PLC Connectivity",
+      "sectionContent": "Direct tag browsing for ControlLogix/CompactLogix (EtherNet/IP). Supports: MicroLogix, SLC, PLC-5 via drivers. Tag substitution for scalable displays. Data logging to local SQL Express or remote SQL Server. Recipe management with PLC tag synchronization.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "ab-panelview-5000",
+      "manualTitle": "PanelView 5000 Series Reference Manual",
+      "manufacturer": "Allen-Bradley (Rockwell Automation)",
+      "deviceType": "HMI",
+      "model": "2715P-B7CD, 2715P-B10CD, 2715P-B12CD, 2715P-B15CD",
+      "series": "PanelView 5000",
+      "version": "Rev 2.1",
+      "sectionId": "security",
+      "sectionTitle": "Security & User Management",
+      "sectionContent": "Integrated with FactoryTalk Security. Windows authentication or FT Directory. Roles: Operator, Maintenance, Engineer, Administrator. Area-based security for displays. Electronic signatures for critical actions (21 CFR Part 11). Audit trail for all operator actions.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "ab-panelview-5000",
+      "manualTitle": "PanelView 5000 Series Reference Manual",
+      "manufacturer": "Allen-Bradley (Rockwell Automation)",
+      "deviceType": "HMI",
+      "model": "2715P-B7CD, 2715P-B10CD, 2715P-B12CD, 2715P-B15CD",
+      "series": "PanelView 5000",
+      "version": "Rev 2.1",
+      "sectionId": "remote-access",
+      "sectionTitle": "Remote Access & Mobility",
+      "sectionContent": "Built-in VNC server for remote desktop. FactoryTalk ViewPoint for web/mobile access (HTML5). Mobile app for iOS/Android. Remote expert assistance with screen sharing. Secure connectivity via FactoryTalk Remote Access (VPN).",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "ab-panelview-5000",
+      "manualTitle": "PanelView 5000 Series Reference Manual",
+      "manufacturer": "Allen-Bradley (Rockwell Automation)",
+      "deviceType": "HMI",
+      "model": "2715P-B7CD, 2715P-B10CD, 2715P-B12CD, 2715P-B15CD",
+      "series": "PanelView 5000",
+      "version": "Rev 2.1",
+      "sectionId": "installation",
+      "sectionTitle": "Installation & Maintenance",
+      "sectionContent": "Panel cutout dimensions: 7\" (172x112mm), 10\" (258x168mm), 12\" (306x198mm), 15\" (368x238mm). IP66 front, IP20 rear. Operating temp: 0-55°C. DC power (18-32 VDC). SD card for backup/restore. Factory reset via hardware button.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "siemens-tp1500",
+      "manualTitle": "SIMATIC TP1500 Comfort Manual",
+      "manufacturer": "Siemens",
+      "deviceType": "HMI",
+      "model": "6AV2124-0QC02-0AX1",
+      "series": "Comfort Panels",
+      "version": "V18",
+      "sectionId": "overview",
+      "sectionTitle": "TP1500 Comfort Overview",
+      "sectionContent": "15.6\" widescreen multi-touch (capacitive), 1366x768 resolution. Windows 10 IoT Enterprise LTSC. WinCC Unified PC Runtime pre-installed. 2x PROFINET (IRT), 2x USB, 1x SD, 1x DisplayPort. Fanless, IP65 front. Extended temperature: 0-50°C.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "siemens-tp1500",
+      "manualTitle": "SIMATIC TP1500 Comfort Manual",
+      "manufacturer": "Siemens",
+      "deviceType": "HMI",
+      "model": "6AV2124-0QC02-0AX1",
+      "series": "Comfort Panels",
+      "version": "V18",
+      "sectionId": "wincc-unified",
+      "sectionTitle": "WinCC Unified System",
+      "sectionContent": "Next-gen visualization in TIA Portal. Web-based (HTML5/JS/CSS3) - runs in any modern browser. Unified engineering for panels, PC, web. Features: faceplates, screen window, user administration, alarms, logging, recipes, reports. Client-server architecture. High-performance graphics with SVG.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "siemens-tp1500",
+      "manualTitle": "SIMATIC TP1500 Comfort Manual",
+      "manufacturer": "Siemens",
+      "deviceType": "HMI",
+      "model": "6AV2124-0QC02-0AX1",
+      "series": "Comfort Panels",
+      "version": "V18",
+      "sectionId": "faceplates",
+      "sectionTitle": "Faceplates & Types",
+      "sectionContent": "Reusable typed faceplates with interface parameters. Inheritance and composition. Dynamic faceplate instances. Faceplate types in project library. Versioning and change management.",
+      "sectionLevel": 2
+    },
+    {
+      "manualId": "siemens-tp1500",
+      "manualTitle": "SIMATIC TP1500 Comfort Manual",
+      "manufacturer": "Siemens",
+      "deviceType": "HMI",
+      "model": "6AV2124-0QC02-0AX1",
+      "series": "Comfort Panels",
+      "version": "V18",
+      "sectionId": "scripts",
+      "sectionTitle": "JavaScript Scripting",
+      "sectionContent": "Client-side and server-side JavaScript. Access to tags, alarms, logs, recipes via API. Async/await support. Custom widgets via Web Components. Debugging in browser DevTools.",
+      "sectionLevel": 2
+    },
+    {
+      "manualId": "siemens-tp1500",
+      "manualTitle": "SIMATIC TP1500 Comfort Manual",
+      "manufacturer": "Siemens",
+      "deviceType": "HMI",
+      "model": "6AV2124-0QC02-0AX1",
+      "series": "Comfort Panels",
+      "version": "V18",
+      "sectionId": "connectivity",
+      "sectionTitle": "Connectivity & Communication",
+      "sectionContent": "Native S7 protocol (optimized block access). OPC UA client/server (DA/HA/AC). MQTT client for IoT. HTTP/REST API for third-party. PROFINET IO Device for HMI as device. Shared device for multiple controllers. S7 routing through HMI.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "siemens-tp1500",
+      "manualTitle": "SIMATIC TP1500 Comfort Manual",
+      "manufacturer": "Siemens",
+      "deviceType": "HMI",
+      "model": "6AV2124-0QC02-0AX1",
+      "series": "Comfort Panels",
+      "version": "V18",
+      "sectionId": "edge",
+      "sectionTitle": "Edge Computing",
+      "sectionContent": "WinCC Unified PC Runtime on same hardware. Edge apps via Docker containers. Siemens Industrial Edge integration. Data preprocessing, analytics, ML inference at edge. Secure connectivity to cloud (MindSphere, Azure, AWS).",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "siemens-tp1500",
+      "manualTitle": "SIMATIC TP1500 Comfort Manual",
+      "manufacturer": "Siemens",
+      "deviceType": "HMI",
+      "model": "6AV2124-0QC02-0AX1",
+      "series": "Comfort Panels",
+      "version": "V18",
+      "sectionId": "security",
+      "sectionTitle": "Security Hardening",
+      "sectionContent": "Secure boot, TPM 2.0, BitLocker encryption. User management: local, LDAP, RADIUS. Role-based access control (RBAC). Communication: HTTPS, OPC UA security, certificate management. Audit trail, electronic signature. Compliance: IEC 62443, ISA/IEC 62443-4-2.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "schneider-hmi-gto",
+      "manualTitle": "Magelis GT/GTU Series Advanced HMI Manual",
+      "manufacturer": "Schneider Electric",
+      "deviceType": "HMI",
+      "model": "HMIGTO1300, HMIGTO2310, HMIGTO3310",
+      "series": "Magelis GT Advanced",
+      "version": "Rev 3.0",
+      "sectionId": "overview",
+      "sectionTitle": "Magelis GT Advanced Overview",
+      "sectionContent": "Advanced HMIs with 5.7\" to 15\" displays. Resistive touch (GT) or capacitive multi-touch (GTU). Windows Embedded Compact 7. Vijeo Designer runtime. Video input (1 channel composite/HDMI). 2x Ethernet, 2x USB, SD card, CFast. Fanless, IP66 front.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "schneider-hmi-gto",
+      "manualTitle": "Magelis GT/GTU Series Advanced HMI Manual",
+      "manufacturer": "Schneider Electric",
+      "deviceType": "HMI",
+      "model": "HMIGTO1300, HMIGTO2310, HMIGTO3310",
+      "series": "Magelis GT Advanced",
+      "version": "Rev 3.0",
+      "sectionId": "vijeo-designer",
+      "sectionTitle": "Vijeo Designer Software",
+      "sectionContent": "HMI development environment. Features: vector graphics, animations, scripts (JavaScript/VB), recipes, alarms, trends, reports. Multi-language with runtime switching. Project simulation on PC. Version control integration. Library of 4000+ symbols.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "schneider-hmi-gto",
+      "manualTitle": "Magelis GT/GTU Series Advanced HMI Manual",
+      "manufacturer": "Schneider Electric",
+      "deviceType": "HMI",
+      "model": "HMIGTO1300, HMIGTO2310, HMIGTO3310",
+      "series": "Magelis GT Advanced",
+      "version": "Rev 3.0",
+      "sectionId": "video",
+      "sectionTitle": "Video Integration",
+      "sectionContent": "Single video input (NTSC/PAL/HDMI). Display camera feeds on HMI. Picture-in-picture, full-screen, quad view. Snapshot to SD card. Motion detection trigger. Supports IP cameras via Ethernet (MJPEG/H.264). Recording to local storage.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "ab-controllogix-5000",
+      "manualTitle": "ControlLogix 5000 Series Reference Manual",
+      "manufacturer": "Allen-Bradley (Rockwell Automation)",
+      "deviceType": "PLC",
+      "model": "1756-L7x, 1756-L8x",
+      "series": "ControlLogix 5570/5580",
+      "version": "Rev 3.2",
+      "sectionId": "overview",
+      "sectionTitle": "System Overview",
+      "sectionContent": "The ControlLogix 5000 series is a high-performance modular PLC platform designed for complex automation applications. It supports up to 32,000 I/O points, 100+ communication modules, and integrated motion control. The platform uses a common control engine across all controllers, enabling seamless migration and code reuse.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "ab-controllogix-5000",
+      "manualTitle": "ControlLogix 5000 Series Reference Manual",
+      "manufacturer": "Allen-Bradley (Rockwell Automation)",
+      "deviceType": "PLC",
+      "model": "1756-L7x, 1756-L8x",
+      "series": "ControlLogix 5570/5580",
+      "version": "Rev 3.2",
+      "sectionId": "hardware-architecture",
+      "sectionTitle": "Hardware Architecture",
+      "sectionContent": "The ControlLogix chassis uses a high-speed backplane (1.5 Gbps) supporting up to 17 slots. Controllers (1756-L7x/L8x) feature dual-core processors, 4-80 MB user memory, and integrated EtherNet/IP ports. I/O modules are hot-swappable with electronic keying. Redundancy modules (1756-RM2) provide bumpless failover.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "ab-controllogix-5000",
+      "manualTitle": "ControlLogix 5000 Series Reference Manual",
+      "manufacturer": "Allen-Bradley (Rockwell Automation)",
+      "deviceType": "PLC",
+      "model": "1756-L7x, 1756-L8x",
+      "series": "ControlLogix 5570/5580",
+      "version": "Rev 3.2",
+      "sectionId": "chassis-types",
+      "sectionTitle": "Chassis Types",
+      "sectionContent": "Available chassis: 1756-A4 (4-slot), 1756-A7 (7-slot), 1756-A10 (10-slot), 1756-A13 (13-slot), 1756-A17 (17-slot). All support standard and controlled environment ratings.",
+      "sectionLevel": 2
+    },
+    {
+      "manualId": "ab-controllogix-5000",
+      "manualTitle": "ControlLogix 5000 Series Reference Manual",
+      "manufacturer": "Allen-Bradley (Rockwell Automation)",
+      "deviceType": "PLC",
+      "model": "1756-L7x, 1756-L8x",
+      "series": "ControlLogix 5570/5580",
+      "version": "Rev 3.2",
+      "sectionId": "controller-comparison",
+      "sectionTitle": "Controller Comparison",
+      "sectionContent": "1756-L71 (2MB), L72 (4MB), L73 (8MB), L74 (16MB), L75 (32MB) - 5570 series. 1756-L81E (4MB), L82E (8MB), L83E (16MB), L84E (32MB), L85E (80MB) - 5580 series with integrated safety.",
+      "sectionLevel": 2
+    },
+    {
+      "manualId": "ab-controllogix-5000",
+      "manualTitle": "ControlLogix 5000 Series Reference Manual",
+      "manufacturer": "Allen-Bradley (Rockwell Automation)",
+      "deviceType": "PLC",
+      "model": "1756-L7x, 1756-L8x",
+      "series": "ControlLogix 5570/5580",
+      "version": "Rev 3.2",
+      "sectionId": "programming-languages",
+      "sectionTitle": "Supported Programming Languages",
+      "sectionContent": "ControlLogix supports four IEC 61131-3 languages: Ladder Diagram (LD), Structured Text (ST), Function Block Diagram (FBD), and Sequential Function Chart (SFC). Also supports C/C++ via the Open Development Kit (ODK) for custom algorithms.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "ab-controllogix-5000",
+      "manualTitle": "ControlLogix 5000 Series Reference Manual",
+      "manufacturer": "Allen-Bradley (Rockwell Automation)",
+      "deviceType": "PLC",
+      "model": "1756-L7x, 1756-L8x",
+      "series": "ControlLogix 5570/5580",
+      "version": "Rev 3.2",
+      "sectionId": "ladder-logic",
+      "sectionTitle": "Ladder Diagram (LD)",
+      "sectionContent": "Primary language for boolean logic. Supports branches, subroutines, AOI (Add-On Instructions), and online editing. Use XIC, XIO, OTE, OTL, OTU, TON, TOF, RTO, CTU, CTD, RES instructions.",
+      "sectionLevel": 2
+    },
+    {
+      "manualId": "ab-controllogix-5000",
+      "manualTitle": "ControlLogix 5000 Series Reference Manual",
+      "manufacturer": "Allen-Bradley (Rockwell Automation)",
+      "deviceType": "PLC",
+      "model": "1756-L7x, 1756-L8x",
+      "series": "ControlLogix 5570/5580",
+      "version": "Rev 3.2",
+      "sectionId": "structured-text",
+      "sectionTitle": "Structured Text (ST)",
+      "sectionContent": "Pascal-like language for complex math, string handling, and algorithms. Supports IF-THEN-ELSE, CASE, FOR, WHILE, REPEAT loops. Ideal for recipes, data manipulation, and motion profiles.",
+      "sectionLevel": 2
+    },
+    {
+      "manualId": "ab-controllogix-5000",
+      "manualTitle": "ControlLogix 5000 Series Reference Manual",
+      "manufacturer": "Allen-Bradley (Rockwell Automation)",
+      "deviceType": "PLC",
+      "model": "1756-L7x, 1756-L8x",
+      "series": "ControlLogix 5570/5580",
+      "version": "Rev 3.2",
+      "sectionId": "communication",
+      "sectionTitle": "Communication Protocols",
+      "sectionContent": "Native EtherNet/IP (CIP) on controller. Supports DeviceNet, ControlNet, DH+, Remote I/O via communication modules. CIP Motion, CIP Safety, CIP Sync for time synchronization. OPC UA server built-in (5580 series).",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "ab-controllogix-5000",
+      "manualTitle": "ControlLogix 5000 Series Reference Manual",
+      "manufacturer": "Allen-Bradley (Rockwell Automation)",
+      "deviceType": "PLC",
+      "model": "1756-L7x, 1756-L8x",
+      "series": "ControlLogix 5570/5580",
+      "version": "Rev 3.2",
+      "sectionId": "motion-control",
+      "sectionTitle": "Integrated Motion Control",
+      "sectionContent": "CIP Motion supports up to 100 axes per controller. Supports servo, stepper, and induction motors. Features: electronic gearing, camming, position capture, coordinated motion (linear/circular interpolation), safety-rated monitored stop.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "ab-controllogix-5000",
+      "manualTitle": "ControlLogix 5000 Series Reference Manual",
+      "manufacturer": "Allen-Bradley (Rockwell Automation)",
+      "deviceType": "PLC",
+      "model": "1756-L7x, 1756-L8x",
+      "series": "ControlLogix 5570/5580",
+      "version": "Rev 3.2",
+      "sectionId": "safety",
+      "sectionTitle": "Integrated Safety (GuardLogix)",
+      "sectionContent": "5580 series controllers (L8xE) include SIL 3 / PLe safety. Separate safety memory, safety task, and safety I/O. Safety instructions: E-stop, guard monitoring, safety mat, two-hand control, speed monitoring. Safety signature for validation.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "ab-controllogix-5000",
+      "manualTitle": "ControlLogix 5000 Series Reference Manual",
+      "manufacturer": "Allen-Bradley (Rockwell Automation)",
+      "deviceType": "PLC",
+      "model": "1756-L7x, 1756-L8x",
+      "series": "ControlLogix 5570/5580",
+      "version": "Rev 3.2",
+      "sectionId": "troubleshooting",
+      "sectionTitle": "Troubleshooting & Diagnostics",
+      "sectionContent": "Controller status indicators: RUN (green), I/O (green), FORCE (amber), FAULT (red). Major faults: Type 01-0F (hardware), Type 10-1F (I/O), Type 20-2F (communication), Type 30-3F (program). Use GSV/SSV for system values. Fault routine executes on major faults.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "ab-controllogix-5000",
+      "manualTitle": "ControlLogix 5000 Series Reference Manual",
+      "manufacturer": "Allen-Bradley (Rockwell Automation)",
+      "deviceType": "PLC",
+      "model": "1756-L7x, 1756-L8x",
+      "series": "ControlLogix 5570/5580",
+      "version": "Rev 3.2",
+      "sectionId": "best-practices",
+      "sectionTitle": "Best Practices",
+      "sectionContent": "Use AOIs for reusable code. Organize with programs/routines. Use UDTs for structured data. Enable keying on I/O modules. Document with rung comments. Version control with Studio 5000 project files. Regular backup with .ACD files.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "siemens-s7-1500",
+      "manualTitle": "SIMATIC S7-1500 System Manual",
+      "manufacturer": "Siemens",
+      "deviceType": "PLC",
+      "model": "CPU 151x, 152x, 153x",
+      "series": "S7-1500",
+      "version": "V3.0",
+      "sectionId": "overview",
+      "sectionTitle": "System Overview",
+      "sectionContent": "The S7-1500 is Siemens' high-end modular controller for demanding automation tasks. Features: up to 20 MB program memory, 1 ns bit processing, integrated PROFINET (2-port switch), web server, OPC UA server, display, and SIMATIC memory card. Scalable from compact to high-performance CPUs.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "siemens-s7-1500",
+      "manualTitle": "SIMATIC S7-1500 System Manual",
+      "manufacturer": "Siemens",
+      "deviceType": "PLC",
+      "model": "CPU 151x, 152x, 153x",
+      "series": "S7-1500",
+      "version": "V3.0",
+      "sectionId": "cpu-portfolio",
+      "sectionTitle": "CPU Portfolio",
+      "sectionContent": "Standard CPUs: 1511-1 PN (150 KB), 1513-1 PN (300 KB), 1515-2 PN (500 KB), 1516-3 PN/DP (1 MB), 1517-3 PN/DP (2 MB), 1518-4 PN/DP (4 MB). Compact CPUs: 1511C, 1512C with onboard I/O. Technology CPUs: 1511T, 1515T, 1517T with motion control. F-CPU variants for safety (SIL 3).",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "siemens-s7-1500",
+      "manualTitle": "SIMATIC S7-1500 System Manual",
+      "manufacturer": "Siemens",
+      "deviceType": "PLC",
+      "model": "CPU 151x, 152x, 153x",
+      "series": "S7-1500",
+      "version": "V3.0",
+      "sectionId": "tia-portal",
+      "sectionTitle": "TIA Portal Engineering",
+      "sectionContent": "Total Integrated Automation Portal for unified engineering. Hardware configuration, programming (LAD, FBD, STL, SCL, GRAPH), diagnostics, commissioning. Multi-user engineering, version control integration, libraries, hardware detection.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "siemens-s7-1500",
+      "manualTitle": "SIMATIC S7-1500 System Manual",
+      "manufacturer": "Siemens",
+      "deviceType": "PLC",
+      "model": "CPU 151x, 152x, 153x",
+      "series": "S7-1500",
+      "version": "V3.0",
+      "sectionId": "profinet",
+      "sectionTitle": "PROFINET Communication",
+      "sectionContent": "Integrated 2-port PROFINET switch (RT/IRT). Supports: IO Controller, IO Device, I-Device, Media Redundancy Protocol (MRP), Shared Device, Isochronous Real Time (IRT) for motion. Up to 256 IO Devices. Topology: line, star, ring.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "siemens-s7-1500",
+      "manualTitle": "SIMATIC S7-1500 System Manual",
+      "manufacturer": "Siemens",
+      "deviceType": "PLC",
+      "model": "CPU 151x, 152x, 153x",
+      "series": "S7-1500",
+      "version": "V3.0",
+      "sectionId": "web-server",
+      "sectionTitle": "Integrated Web Server",
+      "sectionContent": "Access via standard browser (HTTP/HTTPS). Features: CPU status, diagnostics buffer, module info, firmware update, file browser, user pages (HTML/JavaScript), watch tables, trace. Custom web applications via Web API. Authentication: user management with roles.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "siemens-s7-1500",
+      "manualTitle": "SIMATIC S7-1500 System Manual",
+      "manufacturer": "Siemens",
+      "deviceType": "PLC",
+      "model": "CPU 151x, 152x, 153x",
+      "series": "S7-1500",
+      "version": "V3.0",
+      "sectionId": "opc-ua",
+      "sectionTitle": "OPC UA Server",
+      "sectionContent": "Built-in OPC UA server (DA/HA/AC). Companion specifications: ADI, Robotics, PackML. Security: certificates, signing, encryption. Information modeling with nodesets. Alarms & Conditions, Historical Access, PubSub. Performance: up to 10,000 monitored items.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "siemens-s7-1500",
+      "manualTitle": "SIMATIC S7-1500 System Manual",
+      "manufacturer": "Siemens",
+      "deviceType": "PLC",
+      "model": "CPU 151x, 152x, 153x",
+      "series": "S7-1500",
+      "version": "V3.0",
+      "sectionId": "motion-control",
+      "sectionTitle": "Technology Objects & Motion Control",
+      "sectionContent": "Technology objects: positioning axis, synchronous axis, external encoder, measuring input, output cam, cam track. PLCopen Motion Control instructions (MC_Power, MC_MoveAbsolute, MC_GearIn, MC_CamIn). Up to 128 axes (CPU dependent). Kinematics for robots.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "siemens-s7-1500",
+      "manualTitle": "SIMATIC S7-1500 System Manual",
+      "manufacturer": "Siemens",
+      "deviceType": "PLC",
+      "model": "CPU 151x, 152x, 153x",
+      "series": "S7-1500",
+      "version": "V3.0",
+      "sectionId": "safety",
+      "sectionTitle": "Safety Integrated (F-CPU)",
+      "sectionContent": "Fail-safe CPUs up to SIL 3 (IEC 61508) / PL e (ISO 13849). Safety program in separate memory area. PROFIsafe for distributed safety I/O. Safety instructions: ESTOP, Two-Hand, Safety Door, Light Curtain, Muting, Speed Monitoring. Safety administration: password, validation, CRC.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "schneider-m580",
+      "manualTitle": "Modicon M580 ePAC Reference Manual",
+      "manufacturer": "Schneider Electric",
+      "deviceType": "PLC",
+      "model": "BMEP58xxxx",
+      "series": "M580",
+      "version": "Rev 4.1",
+      "sectionId": "overview",
+      "sectionTitle": "M580 ePAC Overview",
+      "sectionContent": "The Modicon M580 is an Ethernet PAC (Programmable Automation Controller) with unified Ethernet backbone. Features: dual-core CPU, 16-64 MB memory, integrated Ethernet switch, cybersecurity (Achilles Level 2), hot standby redundancy, 4000+ I/O. Programmed with Unity Pro / EcoStruxure Control Expert.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "schneider-m580",
+      "manualTitle": "Modicon M580 ePAC Reference Manual",
+      "manufacturer": "Schneider Electric",
+      "deviceType": "PLC",
+      "model": "BMEP58xxxx",
+      "series": "M580",
+      "version": "Rev 4.1",
+      "sectionId": "ethernet-architecture",
+      "sectionTitle": "Ethernet Architecture",
+      "sectionContent": "Single Ethernet network for I/O, HMI, SCADA, IT. RSTP ring topology (<50ms recovery). DIO (Distributed I/O) via EtherNet/IP and Modbus TCP. CIP Safety for safety I/O. QoS for traffic prioritization. Network Time Protocol (NTP) synchronization.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "schneider-m580",
+      "manualTitle": "Modicon M580 ePAC Reference Manual",
+      "manufacturer": "Schneider Electric",
+      "deviceType": "PLC",
+      "model": "BMEP58xxxx",
+      "series": "M580",
+      "version": "Rev 4.1",
+      "sectionId": "hot-standby",
+      "sectionTitle": "Hot Standby Redundancy",
+      "sectionContent": "Primary/Standby CPU pair with automatic switchover (<50ms). Shared memory for state synchronization. Redundant Ethernet modules (BMEH582040). Supports: bumpless transfer, configuration sync, online modification. Requires: matched CPUs, same firmware, redundant power supplies.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "schneider-m580",
+      "manualTitle": "Modicon M580 ePAC Reference Manual",
+      "manufacturer": "Schneider Electric",
+      "deviceType": "PLC",
+      "model": "BMEP58xxxx",
+      "series": "M580",
+      "version": "Rev 4.1",
+      "sectionId": "unity-pro",
+      "sectionTitle": "Unity Pro / EcoStruxure Control Expert",
+      "sectionContent": "IEC 61131-3 languages: Ladder (LD), Structured Text (ST), Function Block (FBD), Instruction List (IL), Sequential Function Chart (SFC). Advanced: DFBs (Derived Function Blocks), EFBs (Elementary Function Blocks), DDTs (Derived Data Types). Features: simulation, online changes, cross-references, documentation generator.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "schneider-m580",
+      "manualTitle": "Modicon M580 ePAC Reference Manual",
+      "manufacturer": "Schneider Electric",
+      "deviceType": "PLC",
+      "model": "BMEP58xxxx",
+      "series": "M580",
+      "version": "Rev 4.1",
+      "sectionId": "cybersecurity",
+      "sectionTitle": "Cybersecurity Features",
+      "sectionContent": "Achilles Level 2 certified. Features: signed firmware, secure boot, port disabling, IP filtering, user authentication (local/RADIUS/LDAP), role-based access (RBAC), audit logging, encrypted communication (TLS), certificate management. Compliance: IEC 62443, NERC CIP.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "schneider-m580",
+      "manualTitle": "Modicon M580 ePAC Reference Manual",
+      "manufacturer": "Schneider Electric",
+      "deviceType": "PLC",
+      "model": "BMEP58xxxx",
+      "series": "M580",
+      "version": "Rev 4.1",
+      "sectionId": "safety",
+      "sectionTitle": "Integrated Safety",
+      "sectionContent": "M580 Safety (BMEP58xx040) with SIL 3 / PL e. Separate safety CPU core. Safety I/O via CIP Safety on Ethernet. Safety programming in Unity Pro with safety library. Safety functions: E-stop, guard monitoring, safety mat, two-hand, speed/position monitoring. Safety signature and validation.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "ignition-scada",
+      "manualTitle": "Ignition SCADA Platform Reference Manual",
+      "manufacturer": "Inductive Automation",
+      "deviceType": "SCADA",
+      "model": "Ignition 8.1",
+      "series": "Ignition Platform",
+      "version": "8.1.30",
+      "sectionId": "overview",
+      "sectionTitle": "Platform Overview",
+      "sectionContent": "Ignition is a cross-platform SCADA system built on Java. Unlimited licensing model (tags, clients, servers). Modules: Perspective (web), Vision (desktop), Tag Historian, Alarm Notification, Reporting, OPC UA, MQTT Engine, Device Drivers. Runs on Windows, Linux, macOS. Docker/Kubernetes deployment ready.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "ignition-scada",
+      "manualTitle": "Ignition SCADA Platform Reference Manual",
+      "manufacturer": "Inductive Automation",
+      "deviceType": "SCADA",
+      "model": "Ignition 8.1",
+      "series": "Ignition Platform",
+      "version": "8.1.30",
+      "sectionId": "architecture",
+      "sectionTitle": "System Architecture",
+      "sectionContent": "Gateway (central server) + Designer (development) + Clients (Perspective/Vision/Mobile). Gateway: web server (Jetty), servlet container, tag providers, alarm pipelines, historian, device connections. Clustering for HA/load balancing. Gateway backup/restore (.gwbk). Module system for extensibility.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "ignition-scada",
+      "manualTitle": "Ignition SCADA Platform Reference Manual",
+      "manufacturer": "Inductive Automation",
+      "deviceType": "SCADA",
+      "model": "Ignition 8.1",
+      "series": "Ignition Platform",
+      "version": "8.1.30",
+      "sectionId": "perspective",
+      "sectionTitle": "Perspective Module (Web/Mobile)",
+      "sectionContent": "React-based web framework for modern HMIs. Runs in browser (no client install). Responsive design (mobile/desktop/tablet). Components: charts, tables, maps, gauges, input. Session management, authentication (IdP/SAML/OIDC). Offline mode with service workers. WebSockets for real-time updates.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "ignition-scada",
+      "manualTitle": "Ignition SCADA Platform Reference Manual",
+      "manufacturer": "Inductive Automation",
+      "deviceType": "SCADA",
+      "model": "Ignition 8.1",
+      "series": "Ignition Platform",
+      "version": "8.1.30",
+      "sectionId": "views",
+      "sectionTitle": "Views & Layouts",
+      "sectionContent": "Coordinate, flex, breakpoint, column, tab containers. View parameters for reusable views. Navigation: tabs, menus, drawer, breadcrumbs. Popups, docked views. URL-based deep linking. Browser history integration.",
+      "sectionLevel": 2
+    },
+    {
+      "manualId": "ignition-scada",
+      "manualTitle": "Ignition SCADA Platform Reference Manual",
+      "manufacturer": "Inductive Automation",
+      "deviceType": "SCADA",
+      "model": "Ignition 8.1",
+      "series": "Ignition Platform",
+      "version": "8.1.30",
+      "sectionId": "binding",
+      "sectionTitle": "Property Binding System",
+      "sectionContent": "Declarative bindings: tag, expression, transform, script. Transforms: map, format, script, expression. Structure bindings for arrays/objects. Bidirectional bindings for input. Polling vs subscription modes.",
+      "sectionLevel": 2
+    },
+    {
+      "manualId": "ignition-scada",
+      "manualTitle": "Ignition SCADA Platform Reference Manual",
+      "manufacturer": "Inductive Automation",
+      "deviceType": "SCADA",
+      "model": "Ignition 8.1",
+      "series": "Ignition Platform",
+      "version": "8.1.30",
+      "sectionId": "tag-system",
+      "sectionTitle": "Tag System & Historian",
+      "sectionContent": "Unified tag model: OPC, memory, expression, query, UDT. UDTs with inheritance, parameters, overrides. Tag historian: partitioned storage, compression, aggregation. SQL backend (PostgreSQL, MySQL, MSSQL, Oracle, SQLite). Tag groups for scan classes. Derived tags.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "ignition-scada",
+      "manualTitle": "Ignition SCADA Platform Reference Manual",
+      "manufacturer": "Inductive Automation",
+      "deviceType": "SCADA",
+      "model": "Ignition 8.1",
+      "series": "Ignition Platform",
+      "version": "8.1.30",
+      "sectionId": "alarming",
+      "sectionTitle": "Alarm Notification",
+      "sectionContent": "Alarm pipelines with drop-down design. Notification profiles: email, SMS, voice, push, webhook. Escalation, acknowledgment, shelving. Alarm shelving with auto-unshelve. Alarm history with query API. ISA-18.2 compliance features.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "ignition-scada",
+      "manualTitle": "Ignition SCADA Platform Reference Manual",
+      "manufacturer": "Inductive Automation",
+      "deviceType": "SCADA",
+      "model": "Ignition 8.1",
+      "series": "Ignition Platform",
+      "version": "8.1.30",
+      "sectionId": "mqtt",
+      "sectionTitle": "MQTT Engine & Sparkplug B",
+      "sectionContent": "Native MQTT broker (Mosquitto) or external. Sparkplug B spec for state management. Edge-of-network nodes, devices, metrics. Birth/death certificates. Tag provider integration. MQTT Transmission for store-and-forward. TLS authentication.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "ignition-scada",
+      "manualTitle": "Ignition SCADA Platform Reference Manual",
+      "manufacturer": "Inductive Automation",
+      "deviceType": "SCADA",
+      "model": "Ignition 8.1",
+      "series": "Ignition Platform",
+      "version": "8.1.30",
+      "sectionId": "deployment",
+      "sectionTitle": "Deployment & DevOps",
+      "sectionContent": "Docker images (official). Kubernetes Helm charts. Gateway backup/restore automation. Project export/import (.zip). Git integration for projects. CI/CD pipelines. Blue-green deployments. Gateway network for multi-site.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "aveva-system-platform",
+      "manualTitle": "AVEVA System Platform (Wonderware) Reference",
+      "manufacturer": "AVEVA",
+      "deviceType": "SCADA",
+      "model": "System Platform 2023",
+      "series": "AVEVA System Platform",
+      "version": "2023 R2",
+      "sectionId": "overview",
+      "sectionTitle": "System Platform Overview",
+      "sectionContent": "Industrial software platform with ArchestrA object-based architecture. Components: Galaxy (object repository), InTouch (HMI/SCADA), Historian, MES, Communication Drivers. Single namespace for all objects. .NET-based with COM interop. Windows Server deployment.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "aveva-system-platform",
+      "manualTitle": "AVEVA System Platform (Wonderware) Reference",
+      "manufacturer": "AVEVA",
+      "deviceType": "SCADA",
+      "model": "System Platform 2023",
+      "series": "AVEVA System Platform",
+      "version": "2023 R2",
+      "sectionId": "archestra",
+      "sectionTitle": "ArchestrA IDE & Object Model",
+      "sectionContent": "Object-oriented automation: templates, instances, inheritance, containment. Graphic symbols linked to objects. Scripting: C#/.NET in ArchestrA IDE. Attributes: intrinsic, custom, reference. Alarm/Event integration. Security model with areas, roles, users.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "aveva-system-platform",
+      "manualTitle": "AVEVA System Platform (Wonderware) Reference",
+      "manufacturer": "AVEVA",
+      "deviceType": "SCADA",
+      "model": "System Platform 2023",
+      "series": "AVEVA System Platform",
+      "version": "2023 R2",
+      "sectionId": "intouch",
+      "sectionTitle": "InTouch HMI/SCADA",
+      "sectionContent": "Situational awareness graphics (high-performance). Symbol library with Situational Awareness Library. Trending, alarming, reporting built-in. Web Client for browser access. Mobile app. QuickScript for logic. Window management: replace, overlay, popup, tile.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "aveva-system-platform",
+      "manualTitle": "AVEVA System Platform (Wonderware) Reference",
+      "manufacturer": "AVEVA",
+      "deviceType": "SCADA",
+      "model": "System Platform 2023",
+      "series": "AVEVA System Platform",
+      "version": "2023 R2",
+      "sectionId": "historian",
+      "sectionTitle": "AVEVA Historian",
+      "sectionContent": "High-performance time-series database. Compression: swinging door, Box-Car. Collection: unsolicited, polled, calculated. Retrieval: raw, interpolated, aggregated (avg, min, max, count). OPC HDA server. Redundancy. Integration with PI System.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "aveva-system-platform",
+      "manualTitle": "AVEVA System Platform (Wonderware) Reference",
+      "manufacturer": "AVEVA",
+      "deviceType": "SCADA",
+      "model": "System Platform 2023",
+      "series": "AVEVA System Platform",
+      "version": "2023 R2",
+      "sectionId": "deployment",
+      "sectionTitle": "Deployment Server & Galaxy",
+      "sectionContent": "Centralized deployment: Galaxy repository, Deployment Server, Console. Version control for objects. Check-in/check-out. Remote deployment to nodes. Rollback capability. Disaster recovery. Multi-site Galaxy replication.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "vt-scada",
+      "manualTitle": "VTScada Reference Manual",
+      "manufacturer": "Trihedral",
+      "deviceType": "SCADA",
+      "model": "VTScada 12",
+      "series": "VTScada",
+      "version": "12.0.12",
+      "sectionId": "overview",
+      "sectionTitle": "VTScada Overview",
+      "sectionContent": "Tag-based SCADA with integrated historian, alarming, reporting. Single executable (~100MB). No SQL database required (built-in historian). Unlimited tags/clients licensing. Runs on Windows. Web Client (HTML5), Mobile app. Hot redundancy. PLC drivers: 150+ protocols.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "vt-scada",
+      "manualTitle": "VTScada Reference Manual",
+      "manufacturer": "Trihedral",
+      "deviceType": "SCADA",
+      "model": "VTScada 12",
+      "series": "VTScada",
+      "version": "12.0.12",
+      "sectionId": "tag-system",
+      "sectionTitle": "Tag System",
+      "sectionContent": "Tag types: analog, digital, string, array, structure. Tag properties: scaling, alarming, logging, security, scripting. Tag groups for scan rates. Derived tags with expressions. Tag import/export (CSV, Excel). Online tag browsing for supported drivers.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "vt-scada",
+      "manualTitle": "VTScada Reference Manual",
+      "manufacturer": "Trihedral",
+      "deviceType": "SCADA",
+      "model": "VTScada 12",
+      "series": "VTScada",
+      "version": "12.0.12",
+      "sectionId": "application",
+      "sectionTitle": "Application Development",
+      "sectionContent": "Pages: graphics, trends, alarms, reports. Widgets: 200+ built-in. Scripting: VBScript, JavaScript, Python. Faceplates with parameters. Multi-language (runtime switching). Security: 32 levels, area-based. Version control integration.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "vt-scada",
+      "manualTitle": "VTScada Reference Manual",
+      "manufacturer": "Trihedral",
+      "deviceType": "SCADA",
+      "model": "VTScada 12",
+      "series": "VTScada",
+      "version": "12.0.12",
+      "sectionId": "historian",
+      "sectionTitle": "Integrated Historian",
+      "sectionContent": "Proprietary time-series database. Compression algorithms. Automatic partitioning. Retention policies. Fast retrieval: raw, calculated. Historian tags auto-configured. Redundancy with sync. Export to CSV/Excel. OPC HDA not required.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "vt-scada",
+      "manualTitle": "VTScada Reference Manual",
+      "manufacturer": "Trihedral",
+      "deviceType": "SCADA",
+      "model": "VTScada 12",
+      "series": "VTScada",
+      "version": "12.0.12",
+      "sectionId": "iot",
+      "sectionTitle": "IoT & Cloud Integration",
+      "sectionContent": "MQTT client (publisher/subscriber). Sparkplug B support. REST API for tag read/write. Cloud connectors: AWS IoT, Azure IoT, Google Cloud. Edge gateway for store-and-forward. OPC UA server/client. Data historian replication to cloud.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "ifm-io-link",
+      "manualTitle": "IO-Link Master & Sensor Portfolio Manual",
+      "manufacturer": "ifm electronic",
+      "deviceType": "Sensor",
+      "model": "AL1100, AL1120, AL1140, AL1300 Series",
+      "series": "IO-Link Masters & Sensors",
+      "version": "Rev 4.0",
+      "sectionId": "overview",
+      "sectionTitle": "IO-Link System Overview",
+      "sectionContent": "IO-Link: point-to-point communication (IEC 61131-9). Master connects to PLC via fieldbus (PROFINET, EtherNet/IP, EtherCAT). Up to 8 ports per master. Sensors/actuators with IO-Link interface. Parameter server for automatic backup/restore. LR DEVICE for device description (IODD). LR AGENT for master configuration.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "ifm-io-link",
+      "manualTitle": "IO-Link Master & Sensor Portfolio Manual",
+      "manufacturer": "ifm electronic",
+      "deviceType": "Sensor",
+      "model": "AL1100, AL1120, AL1140, AL1300 Series",
+      "series": "IO-Link Masters & Sensors",
+      "version": "Rev 4.0",
+      "sectionId": "master-types",
+      "sectionTitle": "Master Types",
+      "sectionContent": "Compact: AL1100 (4-port, IP67), AL1120 (8-port, IP67). Cabinet: AL1140 (8-port, IP20), AL1300 (16-port, IP20). Fieldbus: PROFINET (IRT/RT), EtherNet/IP, EtherCAT, CC-Link IE Field. Power: Class A (24V), Class B (24V + actuator supply). Diagnostics: per-port LED, web server, JSON REST API.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "ifm-io-link",
+      "manualTitle": "IO-Link Master & Sensor Portfolio Manual",
+      "manufacturer": "ifm electronic",
+      "deviceType": "Sensor",
+      "model": "AL1100, AL1120, AL1140, AL1300 Series",
+      "series": "IO-Link Masters & Sensors",
+      "version": "Rev 4.0",
+      "sectionId": "sensor-types",
+      "sectionTitle": "Smart Sensor Portfolio",
+      "sectionContent": "Position: inductive, capacitive, magnetic, photoelectric. Process: pressure, temperature, flow, level. Identification: RFID, 1D/2D code readers. Condition monitoring: vibration, oil quality. All with IO-Link: parameterization, diagnostics, process data, events. IODD files for integration.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "ifm-io-link",
+      "manualTitle": "IO-Link Master & Sensor Portfolio Manual",
+      "manufacturer": "ifm electronic",
+      "deviceType": "Sensor",
+      "model": "AL1100, AL1120, AL1140, AL1300 Series",
+      "series": "IO-Link Masters & Sensors",
+      "version": "Rev 4.0",
+      "sectionId": "parameter-server",
+      "sectionTitle": "Parameter Server & Data Storage",
+      "sectionContent": "Automatic parameter backup when device connected. Restore on device replacement (plug & play). Data storage index (0-3) for multiple configurations. Vendor-specific vs standard parameters. Block parameterization for commissioning. LR AGENT for bulk configuration.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "ifm-io-link",
+      "manualTitle": "IO-Link Master & Sensor Portfolio Manual",
+      "manufacturer": "ifm electronic",
+      "deviceType": "Sensor",
+      "model": "AL1100, AL1120, AL1140, AL1300 Series",
+      "series": "IO-Link Masters & Sensors",
+      "version": "Rev 4.0",
+      "sectionId": "moneo",
+      "sectionTitle": "moneo Software Suite",
+      "sectionContent": "moneo|configure: parameter management, IODD library. moneo|monitor: real-time visualization, dashboards. moneo|analyze: historical analysis, reports. moneo|remote: secure remote access. Cloud or on-premise. Integration with IT systems via REST API, OPC UA, MQTT.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "sick-sensors",
+      "manualTitle": "SICK Sensor Intelligence Reference Manual",
+      "manufacturer": "SICK AG",
+      "deviceType": "Sensor",
+      "model": "Various Series",
+      "series": "Sensor Portfolio",
+      "version": "2024.1",
+      "sectionId": "overview",
+      "sectionTitle": "SICK Sensor Portfolio",
+      "sectionContent": "Comprehensive industrial sensors: photoelectric, proximity, registration, distance, vision, LiDAR, RFID, safety. Communication: IO-Link, PROFINET, EtherNet/IP, EtherCAT, PROFIsafe, CIP Safety. Software: SOPAS ET (Engineering Tool), SICK AppSpace, SICK AppPool. Cloud: SICK Cloud Services.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "sick-sensors",
+      "manualTitle": "SICK Sensor Intelligence Reference Manual",
+      "manufacturer": "SICK AG",
+      "deviceType": "Sensor",
+      "model": "Various Series",
+      "series": "Sensor Portfolio",
+      "version": "2024.1",
+      "sectionId": "vision",
+      "sectionTitle": "Vision Sensors & Cameras",
+      "sectionContent": "Inspector series: 2D vision (Inspector P, I, 83x). Lector series: code reading (1D/2D/DPM). Ranger: 3D vision. InspectorP: deep learning. Configuration: SOPAS ET, web server. Interface: EtherNet/IP, PROFINET, EtherCAT, TCP/IP. Trigger: hardware, software, free-run. Output: results, images, statistics.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "sick-sensors",
+      "manualTitle": "SICK Sensor Intelligence Reference Manual",
+      "manufacturer": "SICK AG",
+      "deviceType": "Sensor",
+      "model": "Various Series",
+      "series": "Sensor Portfolio",
+      "version": "2024.1",
+      "sectionId": "lidar",
+      "sectionTitle": "LiDAR Sensors",
+      "sectionContent": "TiM series: 2D LiDAR (indoor/outdoor). LMS: industrial 2D. MRS: multi-layer 3D. OutdoorScan: long-range. Navigation, collision avoidance, area monitoring. Interface: Ethernet, CAN, USB. ROS driver. Safe variants (SIL 2/PL d). Configuration: SOPAS ET.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "sick-sensors",
+      "manualTitle": "SICK Sensor Intelligence Reference Manual",
+      "manufacturer": "SICK AG",
+      "deviceType": "Sensor",
+      "model": "Various Series",
+      "series": "Sensor Portfolio",
+      "version": "2024.1",
+      "sectionId": "safety",
+      "sectionTitle": "Safe Sensors & Systems",
+      "sectionContent": "Safety light curtains (deTec, C4000). Safety laser scanners (S3000, microScan3). Safety switches (i100, i110). Safety controllers (Flexi Soft, FX3-CPU). PROFIsafe, CIP Safety, FSoE. Safety Designer for configuration. Safe networking via safety PLC or safety gateway.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "sick-sensors",
+      "manualTitle": "SICK Sensor Intelligence Reference Manual",
+      "manufacturer": "SICK AG",
+      "deviceType": "Sensor",
+      "model": "Various Series",
+      "series": "Sensor Portfolio",
+      "version": "2024.1",
+      "sectionId": "app-space",
+      "sectionTitle": "SICK AppSpace & AppPool",
+      "sectionContent": "AppSpace: develop custom sensor apps (C++, Python). Run on sensor (edge computing). AppPool: marketplace for pre-built apps. Apps for: quality inspection, logistics, robotics, condition monitoring. Deployment via SOPAS ET or cloud. Licensing per sensor/app.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "banner-engineering",
+      "manualTitle": "Banner Engineering Sensor Catalog & Integration Guide",
+      "manufacturer": "Banner Engineering",
+      "deviceType": "Sensor",
+      "model": "Q4X, Q3X, Q2X, R-GAGE, QS18, QS30 Series",
+      "series": "Photoelectric & Measurement Sensors",
+      "version": "Rev 3.1",
+      "sectionId": "overview",
+      "sectionTitle": "Sensor Portfolio",
+      "sectionContent": "Photoelectric: opposed, retro-reflective, diffuse, background suppression. Measurement: laser distance (Q4X, R-GAGE), ultrasonic, radar. Vision: iVu, VE series. Wireless: SureCross (900 MHz, 2.4 GHz). Safety: light curtains, E-stops. IO-Link on most models. Banner CDS (Configuration & Diagnostic Software).",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "banner-engineering",
+      "manualTitle": "Banner Engineering Sensor Catalog & Integration Guide",
+      "manufacturer": "Banner Engineering",
+      "deviceType": "Sensor",
+      "model": "Q4X, Q3X, Q2X, R-GAGE, QS18, QS30 Series",
+      "series": "Photoelectric & Measurement Sensors",
+      "version": "Rev 3.1",
+      "sectionId": "q4x",
+      "sectionTitle": "Q4X Laser Distance Sensor",
+      "sectionContent": "Time-of-flight laser: 300mm-10m (class 1), 300mm-50m (class 2). mm resolution. IO-Link, 4-20mA, NPN/PNP. Background suppression. Multi-segment display. Teach-in via button or IO-Link. Applications: positioning, level, loop control, web break detection. Temperature compensation.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "banner-engineering",
+      "manualTitle": "Banner Engineering Sensor Catalog & Integration Guide",
+      "manufacturer": "Banner Engineering",
+      "deviceType": "Sensor",
+      "model": "Q4X, Q3X, Q2X, R-GAGE, QS18, QS30 Series",
+      "series": "Photoelectric & Measurement Sensors",
+      "version": "Rev 3.1",
+      "sectionId": "radar",
+      "sectionTitle": "Radar Sensors (R-GAGE)",
+      "sectionContent": "FMCW radar: 24 GHz (ISM band). Range: 0.3-40m. Penetrates: rain, fog, dust, plastic, glass. IO-Link, CAN, Modbus. Configurable field of view. Multi-target tracking. Applications: vehicle detection, level (solids/liquids), collision avoidance, bulk solids. No moving parts.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "banner-engineering",
+      "manualTitle": "Banner Engineering Sensor Catalog & Integration Guide",
+      "manufacturer": "Banner Engineering",
+      "deviceType": "Sensor",
+      "model": "Q4X, Q3X, Q2X, R-GAGE, QS18, QS30 Series",
+      "series": "Photoelectric & Measurement Sensors",
+      "version": "Rev 3.1",
+      "sectionId": "wireless",
+      "sectionTitle": "SureCross Wireless",
+      "sectionContent": "Industrial wireless I/O. Gateway (DX80) + Nodes (inputs/outputs). 900 MHz (long range) or 2.4 GHz (global). FHSS (frequency hopping). Range: up to 3km (900 MHz), 1km (2.4 GHz). Self-healing mesh. Battery life: years. Security: AES-128. Modbus/TCP, EtherNet/IP gateway.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "ab-pf755",
+      "manualTitle": "PowerFlex 755 AC Drive Programming Manual",
+      "manufacturer": "Allen-Bradley (Rockwell Automation)",
+      "deviceType": "VFD",
+      "model": "20G/21G Series",
+      "series": "PowerFlex 755",
+      "version": "Rev 5.0",
+      "sectionId": "overview",
+      "sectionTitle": "Drive Overview",
+      "sectionContent": "PowerFlex 755 is a high-performance AC drive (0.75-2000 HP). Features: integrated EtherNet/IP, DeviceLogix (embedded logic), Safe Torque Off (STO SIL 3), positioning/indexing, predictive diagnostics, automatic device configuration (ADC). Frame sizes 1-10. Input: 200-690V AC.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "ab-pf755",
+      "manualTitle": "PowerFlex 755 AC Drive Programming Manual",
+      "manufacturer": "Allen-Bradley (Rockwell Automation)",
+      "deviceType": "VFD",
+      "model": "20G/21G Series",
+      "series": "PowerFlex 755",
+      "version": "Rev 5.0",
+      "sectionId": "device-logix",
+      "sectionTitle": "DeviceLogix Embedded Logic",
+      "sectionContent": "Programmable logic inside the drive (no PLC needed). 50 function blocks: boolean, math, compare, timer, counter, latch, multiplexer. 1ms scan time. Access to drive parameters, I/O, network data. Programmed via DriveExplorer or CCW. Use for: local control, sequencing, protection logic, pump/ fan staging.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "ab-pf755",
+      "manualTitle": "PowerFlex 755 AC Drive Programming Manual",
+      "manufacturer": "Allen-Bradley (Rockwell Automation)",
+      "deviceType": "VFD",
+      "model": "20G/21G Series",
+      "series": "PowerFlex 755",
+      "version": "Rev 5.0",
+      "sectionId": "safety",
+      "sectionTitle": "Integrated Safety",
+      "sectionContent": "Safe Torque Off (STO) SIL 3/PLe standard. Optional: Safe Speed Monitor (SSM), Safe Stop 1 (SS1), Safe Brake Control (SBC), Safe Direction (SDI). Safety option module 20-750-S. Safety configuration via DriveExplorer. Safety signature. Reaction time: <10ms for STO.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "ab-pf755",
+      "manualTitle": "PowerFlex 755 AC Drive Programming Manual",
+      "manufacturer": "Allen-Bradley (Rockwell Automation)",
+      "deviceType": "VFD",
+      "model": "20G/21G Series",
+      "series": "PowerFlex 755",
+      "version": "Rev 5.0",
+      "sectionId": "positioning",
+      "sectionTitle": "Positioning & Indexing",
+      "sectionContent": "Point-to-point positioning with encoder feedback. Modes: absolute, relative, registration, homing. Profile: trapezoidal, S-curve. Electronic gearing (follower ratio). Camming with profile tables. Encoder: incremental, absolute (Hiperface, EnDat, SSI). Position capture (latch).",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "ab-pf755",
+      "manualTitle": "PowerFlex 755 AC Drive Programming Manual",
+      "manufacturer": "Allen-Bradley (Rockwell Automation)",
+      "deviceType": "VFD",
+      "model": "20G/21G Series",
+      "series": "PowerFlex 755",
+      "version": "Rev 5.0",
+      "sectionId": "predictive",
+      "sectionTitle": "Predictive Diagnostics",
+      "sectionContent": "Drive health monitoring: heatsink temp, bus capacitor life, fan hours, bearing hours, IGBT thermal model. Remaining life estimation. Alarm thresholds configurable. Data logged to internal memory. Access via EtherNet/IP or web server. Integration with FactoryTalk Analytics.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "ab-pf755",
+      "manualTitle": "PowerFlex 755 AC Drive Programming Manual",
+      "manufacturer": "Allen-Bradley (Rockwell Automation)",
+      "deviceType": "VFD",
+      "model": "20G/21G Series",
+      "series": "PowerFlex 755",
+      "version": "Rev 5.0",
+      "sectionId": "communication",
+      "sectionTitle": "Communication & Configuration",
+      "sectionContent": "Dual-port EtherNet/IP (DLR, linear, star). Device Level Ring (DLR) for redundancy. Embedded web server for configuration. ADC (Automatic Device Configuration) from Logix controller. Parameter groups: motor, speed, torque, position, I/O, communication, safety, application.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "siemens-g120",
+      "manualTitle": "SINAMICS G120 Operating Instructions",
+      "manufacturer": "Siemens",
+      "deviceType": "VFD",
+      "model": "CU250S-2, CU250S-2 DP, CU250S-2 PN",
+      "series": "SINAMICS G120",
+      "version": "V5.2",
+      "sectionId": "overview",
+      "sectionTitle": "G120 Overview",
+      "sectionContent": "Modular drive system: Control Unit (CU) + Power Module (PM). Power range 0.37-250 kW. Control Units: CU250S-2 (EtherNet/IP), CU250S-2 DP (PROFIBUS), CU250S-2 PN (PROFINET). Safety Integrated: STO, SS1, SBC, SSM, SDI, SLS (SIL 2/PL d). Basic Positioner (EPos) included.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "siemens-g120",
+      "manualTitle": "SINAMICS G120 Operating Instructions",
+      "manufacturer": "Siemens",
+      "deviceType": "VFD",
+      "model": "CU250S-2, CU250S-2 DP, CU250S-2 PN",
+      "series": "SINAMICS G120",
+      "version": "V5.2",
+      "sectionId": "startdrive",
+      "sectionTitle": "Startdrive Commissioning Tool",
+      "sectionContent": "Integrated in TIA Portal. Wizard-based commissioning. Motor identification (rotating/standstill). Speed controller optimization. Safety commissioning with validation. Trace function for diagnostics. Parameter comparison. Offline/online modes. Project download/upload.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "siemens-g120",
+      "manualTitle": "SINAMICS G120 Operating Instructions",
+      "manufacturer": "Siemens",
+      "deviceType": "VFD",
+      "model": "CU250S-2, CU250S-2 DP, CU250S-2 PN",
+      "series": "SINAMICS G120",
+      "version": "V5.2",
+      "sectionId": "safety",
+      "sectionTitle": "Safety Integrated",
+      "sectionContent": "Functions: STO, SS1, SBC, SSM, SDI, SLS (up to 4 speed stages). Safe Brake Test. PROFIsafe via PROFINET/PROFIBUS. Safety parameters password-protected. Forced dormant error detection. Safety logbook. Acceptance test wizard with report generation.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "siemens-g120",
+      "manualTitle": "SINAMICS G120 Operating Instructions",
+      "manufacturer": "Siemens",
+      "deviceType": "VFD",
+      "model": "CU250S-2, CU250S-2 DP, CU250S-2 PN",
+      "series": "SINAMICS G120",
+      "version": "V5.2",
+      "sectionId": "epos",
+      "sectionTitle": "Basic Positioner (EPos)",
+      "sectionContent": "Positioning modes: absolute, relative, referencing, flying referencing, jog. Traversing blocks (up to 64). Traversing profiles: trapezoidal, S-curve. Jerk limitation. Direct setpoint specification (MDI). Modulo offset for rotary axes. Encoder: HTL/TTL, DRIVE-CLiQ, SSI.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "siemens-g120",
+      "manualTitle": "SINAMICS G120 Operating Instructions",
+      "manufacturer": "Siemens",
+      "deviceType": "VFD",
+      "model": "CU250S-2, CU250S-2 DP, CU250S-2 PN",
+      "series": "SINAMICS G120",
+      "version": "V5.2",
+      "sectionId": "communication",
+      "sectionTitle": "Fieldbus Communication",
+      "sectionContent": "PROFINET (IRT/RT), PROFIBUS DP, EtherNet/IP, CANopen, USS, Modbus RTU. Telegram selection (standard/safety). Shared device. Media Redundancy Protocol (MRP). Isochronous mode for motion. Web server for diagnostics. OPC UA server (CU250S-2 PN).",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "schneider-altivar",
+      "manualTitle": "Altivar Process ATV900 Programming Manual",
+      "manufacturer": "Schneider Electric",
+      "deviceType": "VFD",
+      "model": "ATV930, ATV950, ATV980",
+      "series": "Altivar Process",
+      "version": "Rev 2.3",
+      "sectionId": "overview",
+      "sectionTitle": "Altivar Process Overview",
+      "sectionContent": "Process drives for pumps, fans, compressors (0.75-2500 kW). Services-oriented: energy monitoring, asset management, process optimization. Embedded Ethernet (dual port). Web server. Device Type Manager (DTM) for FDT frameworks. Cybersecurity: Achilles Level 2.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "schneider-altivar",
+      "manualTitle": "Altivar Process ATV900 Programming Manual",
+      "manufacturer": "Schneider Electric",
+      "deviceType": "VFD",
+      "model": "ATV930, ATV950, ATV980",
+      "series": "Altivar Process",
+      "version": "Rev 2.3",
+      "sectionId": "services",
+      "sectionTitle": "Embedded Services",
+      "sectionContent": "Energy: consumption, efficiency, kWh, CO2. Asset: operating hours, starts, temperature, vibration. Process: flow, pressure, level control (PID). Pump: multi-pump staging, anti-jam, pipe fill, dry run. Fan: stall detection, filter monitoring. Compressor: load/unload, sequencing.",
+      "sectionLevel": 1
+    },
+    {
+      "manualId": "schneider-altivar",
+      "manualTitle": "Altivar Process ATV900 Programming Manual",
+      "manufacturer": "Schneider Electric",
+      "deviceType": "VFD",
+      "model": "ATV930, ATV950, ATV980",
+      "series": "Altivar Process",
+      "version": "Rev 2.3",
+      "sectionId": "dtm",
+      "sectionTitle": "Device Type Manager (DTM)",
+      "sectionContent": "FDT/DTM standard for configuration. Works with: EcoStruxure Control Expert, PACTware, FieldCare, other FDT frames. Online/offline parameterization. Diagnostics: oscilloscope, trending, alarm history. Firmware update via DTM. DTMs available for all Altivar models.",
+      "sectionLevel": 1
+    }
+  ],
+  "generatedAt": "2026-08-29T07:20:38.658Z"
+}
