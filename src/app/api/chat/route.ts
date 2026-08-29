@@ -1,49 +1,48 @@
+type > src\app\api\chat\route.ts <<'EOF'
+// src/app/api/chat/route.ts
 import { NextRequest, NextResponse } from 'next/server';
 import { queryAI, AIResponse } from '@/lib/ai';
 import { ChatMessage } from '@/types';
 
+export const runtime = 'edge';
+export const maxDuration = 60;
+
 export async function POST(request: NextRequest) {
   try {
-    const { messages, stream } = await request.json();
-    
-    if (!messages || !Array.isArray(messages)) {
-      return NextResponse.json(
-        { error: 'Invalid messages format' },
-        { status: 400 }
-      );
+    const { messages, stream = true } = await request.json();
+
+    if (!Array.isArray(messages) || messages.length === 0) {
+      return NextResponse.json({ error: '`messages` must be a non‑empty array' }, { status: 400 });
     }
-    
-    const formattedMessages: ChatMessage[] = messages.map((m, i) => ({
-      id: m.id || `msg-${i}`,
+
+    const formatted: ChatMessage[] = messages.map((m, i) => ({
+      id: m.id ?? `msg-${i}`,
       role: m.role,
-      content: m.content,
+      content: typeof m.content === 'string' ? m.content : '',
       timestamp: m.timestamp ? new Date(m.timestamp) : new Date(),
-      sources: m.sources
+      sources: m.sources,
     }));
-    
+
     if (stream) {
-      const streamResult = await queryAI(formattedMessages, true) as ReadableStream;
-      
+      const streamResult = await queryAI(formatted, true) as ReadableStream;
       return new NextResponse(streamResult, {
         headers: {
           'Content-Type': 'text/plain; charset=utf-8',
           'Transfer-Encoding': 'chunked',
+          'X-Accel-Buffering': 'no',
         },
       });
     }
-    
-    const result = await queryAI(formattedMessages, false) as AIResponse;
-    
+
+    const result = await queryAI(formatted, false) as AIResponse;
     return NextResponse.json({
       content: result.content,
-      sources: result.sources,
-      timestamp: new Date().toISOString()
+      sources: result.sources ?? [],
+      timestamp: new Date().toISOString(),
     });
-  } catch (error) {
-    console.error('Chat API error:', error);
-    return NextResponse.json(
-      { error: 'Failed to process chat request' },
-      { status: 500 }
-    );
+  } catch (err: any) {
+    console.error('[chat API] ❌', err);
+    return NextResponse.json({ error: err?.message ?? 'Internal server error' }, { status: 500 });
   }
 }
+EOF
