@@ -1,0 +1,206 @@
+{
+  "manuals": [
+    {
+      "id": "ignition-scada",
+      "title": "Ignition SCADA Platform Reference Manual",
+      "manufacturer": "Inductive Automation",
+      "deviceType": "SCADA",
+      "model": "Ignition 8.1",
+      "series": "Ignition Platform",
+      "version": "8.1.30",
+      "language": "English",
+      "pages": 624,
+      "category": "Platform Architecture & Configuration",
+      "tags": ["Perspective", "Vision", "Tag Historian", "MQTT", "OPC UA", "Docker", "Kubernetes"],
+      "lastUpdated": "2024-04-01",
+      "content": [
+        {
+          "id": "overview",
+          "title": "Platform Overview",
+          "level": 1,
+          "content": "Ignition is a cross-platform SCADA system built on Java. Unlimited licensing model (tags, clients, servers). Modules: Perspective (web), Vision (desktop), Tag Historian, Alarm Notification, Reporting, OPC UA, MQTT Engine, Device Drivers. Runs on Windows, Linux, macOS. Docker/Kubernetes deployment ready.",
+          "pageStart": 1,
+          "pageEnd": 28
+        },
+        {
+          "id": "architecture",
+          "title": "System Architecture",
+          "level": 1,
+          "content": "Gateway (central server) + Designer (development) + Clients (Perspective/Vision/Mobile). Gateway: web server (Jetty), servlet container, tag providers, alarm pipelines, historian, device connections. Clustering for HA/load balancing. Gateway backup/restore (.gwbk). Module system for extensibility.",
+          "pageStart": 29,
+          "pageEnd": 76
+        },
+        {
+          "id": "perspective",
+          "title": "Perspective Module (Web/Mobile)",
+          "level": 1,
+          "content": "React-based web framework for modern HMIs. Runs in browser (no client install). Responsive design (mobile/desktop/tablet). Components: charts, tables, maps, gauges, input. Session management, authentication (IdP/SAML/OIDC). Offline mode with service workers. WebSockets for real-time updates.",
+          "pageStart": 77,
+          "pageEnd": 189,
+          "subsections": [
+            {
+              "id": "views",
+              "title": "Views & Layouts",
+              "level": 2,
+              "content": "Coordinate, flex, breakpoint, column, tab containers. View parameters for reusable views. Navigation: tabs, menus, drawer, breadcrumbs. Popups, docked views. URL-based deep linking. Browser history integration.",
+              "pageStart": 85,
+              "pageEnd": 112
+            },
+            {
+              "id": "binding",
+              "title": "Property Binding System",
+              "level": 2,
+              "content": "Declarative bindings: tag, expression, transform, script. Transforms: map, format, script, expression. Structure bindings for arrays/objects. Bidirectional bindings for input. Polling vs subscription modes.",
+              "pageStart": 113,
+              "pageEnd": 145
+            }
+          ]
+        },
+        {
+          "id": "tag-system",
+          "title": "Tag System & Historian",
+          "level": 1,
+          "content": "Unified tag model: OPC, memory, expression, query, UDT. UDTs with inheritance, parameters, overrides. Tag historian: partitioned storage, compression, aggregation. SQL backend (PostgreSQL, MySQL, MSSQL, Oracle, SQLite). Tag groups for scan classes. Derived tags.",
+          "pageStart": 190,
+          "pageEnd": 267
+        },
+        {
+          "id": "alarming",
+          "title": "Alarm Notification",
+          "level": 1,
+          "content": "Alarm pipelines with drop-down design. Notification profiles: email, SMS, voice, push, webhook. Escalation, acknowledgment, shelving. Alarm shelving with auto-unshelve. Alarm history with query API. ISA-18.2 compliance features.",
+          "pageStart": 268,
+          "pageEnd": 334
+        },
+        {
+          "id": "mqtt",
+          "title": "MQTT Engine & Sparkplug B",
+          "level": 1,
+          "content": "Native MQTT broker (Mosquitto) or external. Sparkplug B spec for state management. Edge-of-network nodes, devices, metrics. Birth/death certificates. Tag provider integration. MQTT Transmission for store-and-forward. TLS authentication.",
+          "pageStart": 335,
+          "pageEnd": 389
+        },
+        {
+          "id": "deployment",
+          "title": "Deployment & DevOps",
+          "level": 1,
+          "content": "Docker images (official). Kubernetes Helm charts. Gateway backup/restore automation. Project export/import (.zip). Git integration for projects. CI/CD pipelines. Blue-green deployments. Gateway network for multi-site.",
+          "pageStart": 390,
+          "pageEnd": 445
+        }
+      ]
+    },
+    {
+      "id": "aveva-system-platform",
+      "title": "AVEVA System Platform (Wonderware) Reference",
+      "manufacturer": "AVEVA",
+      "deviceType": "SCADA",
+      "model": "System Platform 2023",
+      "series": "AVEVA System Platform",
+      "version": "2023 R2",
+      "language": "English",
+      "pages": 589,
+      "category": "Platform Configuration & Deployment",
+      "tags": ["ArchestrA", "InTouch", "Historian", "MES", "Galaxy", "Deployment Server"],
+      "lastUpdated": "2024-03-28",
+      "content": [
+        {
+          "id": "overview",
+          "title": "System Platform Overview",
+          "level": 1,
+          "content": "Industrial software platform with ArchestrA object-based architecture. Components: Galaxy (object repository), InTouch (HMI/SCADA), Historian, MES, Communication Drivers. Single namespace for all objects. .NET-based with COM interop. Windows Server deployment.",
+          "pageStart": 1,
+          "pageEnd": 22
+        },
+        {
+          "id": "archestra",
+          "title": "ArchestrA IDE & Object Model",
+          "level": 1,
+          "content": "Object-oriented automation: templates, instances, inheritance, containment. Graphic symbols linked to objects. Scripting: C#/.NET in ArchestrA IDE. Attributes: intrinsic, custom, reference. Alarm/Event integration. Security model with areas, roles, users.",
+          "pageStart": 23,
+          "pageEnd": 134
+        },
+        {
+          "id": "intouch",
+          "title": "InTouch HMI/SCADA",
+          "level": 1,
+          "content": "Situational awareness graphics (high-performance). Symbol library with Situational Awareness Library. Trending, alarming, reporting built-in. Web Client for browser access. Mobile app. QuickScript for logic. Window management: replace, overlay, popup, tile.",
+          "pageStart": 135,
+          "pageEnd": 234
+        },
+        {
+          "id": "historian",
+          "title": "AVEVA Historian",
+          "level": 1,
+          "content": "High-performance time-series database. Compression: swinging door, Box-Car. Collection: unsolicited, polled, calculated. Retrieval: raw, interpolated, aggregated (avg, min, max, count). OPC HDA server. Redundancy. Integration with PI System.",
+          "pageStart": 235,
+          "pageEnd": 312
+        },
+        {
+          "id": "deployment",
+          "title": "Deployment Server & Galaxy",
+          "level": 1,
+          "content": "Centralized deployment: Galaxy repository, Deployment Server, Console. Version control for objects. Check-in/check-out. Remote deployment to nodes. Rollback capability. Disaster recovery. Multi-site Galaxy replication.",
+          "pageStart": 313,
+          "pageEnd": 389
+        }
+      ]
+    },
+    {
+      "id": "vt-scada",
+      "title": "VTScada Reference Manual",
+      "manufacturer": "Trihedral",
+      "deviceType": "SCADA",
+      "model": "VTScada 12",
+      "series": "VTScada",
+      "version": "12.0.12",
+      "language": "English",
+      "pages": 412,
+      "category": "Configuration & Application Development",
+      "tags": ["Tag-based", "Historian", "Alarm", "Web Client", "Mobile", "IoT"],
+      "lastUpdated": "2024-02-15",
+      "content": [
+        {
+          "id": "overview",
+          "title": "VTScada Overview",
+          "level": 1,
+          "content": "Tag-based SCADA with integrated historian, alarming, reporting. Single executable (~100MB). No SQL database required (built-in historian). Unlimited tags/clients licensing. Runs on Windows. Web Client (HTML5), Mobile app. Hot redundancy. PLC drivers: 150+ protocols.",
+          "pageStart": 1,
+          "pageEnd": 18
+        },
+        {
+          "id": "tag-system",
+          "title": "Tag System",
+          "level": 1,
+          "content": "Tag types: analog, digital, string, array, structure. Tag properties: scaling, alarming, logging, security, scripting. Tag groups for scan rates. Derived tags with expressions. Tag import/export (CSV, Excel). Online tag browsing for supported drivers.",
+          "pageStart": 19,
+          "pageEnd": 78
+        },
+        {
+          "id": "application",
+          "title": "Application Development",
+          "level": 1,
+          "content": "Pages: graphics, trends, alarms, reports. Widgets: 200+ built-in. Scripting: VBScript, JavaScript, Python. Faceplates with parameters. Multi-language (runtime switching). Security: 32 levels, area-based. Version control integration.",
+          "pageStart": 79,
+          "pageEnd": 189
+        },
+        {
+          "id": "historian",
+          "title": "Integrated Historian",
+          "level": 1,
+          "content": "Proprietary time-series database. Compression algorithms. Automatic partitioning. Retention policies. Fast retrieval: raw, calculated. Historian tags auto-configured. Redundancy with sync. Export to CSV/Excel. OPC HDA not required.",
+          "pageStart": 190,
+          "pageEnd": 245
+        },
+        {
+          "id": "iot",
+          "title": "IoT & Cloud Integration",
+          "level": 1,
+          "content": "MQTT client (publisher/subscriber). Sparkplug B support. REST API for tag read/write. Cloud connectors: AWS IoT, Azure IoT, Google Cloud. Edge gateway for store-and-forward. OPC UA server/client. Data historian replication to cloud.",
+          "pageStart": 246,
+          "pageEnd": 289
+        }
+      ]
+    }
+  ]
+}

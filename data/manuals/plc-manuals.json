@@ -1,0 +1,264 @@
+{
+  "manuals": [
+    {
+      "id": "ab-controllogix-5000",
+      "title": "ControlLogix 5000 Series Reference Manual",
+      "manufacturer": "Allen-Bradley (Rockwell Automation)",
+      "deviceType": "PLC",
+      "model": "1756-L7x, 1756-L8x",
+      "series": "ControlLogix 5570/5580",
+      "version": "Rev 3.2",
+      "language": "English",
+      "pages": 452,
+      "category": "Programming & Configuration",
+      "tags": ["ladder logic", "structured text", "function block", "motion control", "safety", "EtherNet/IP"],
+      "lastUpdated": "2024-01-15",
+      "content": [
+        {
+          "id": "overview",
+          "title": "System Overview",
+          "level": 1,
+          "content": "The ControlLogix 5000 series is a high-performance modular PLC platform designed for complex automation applications. It supports up to 32,000 I/O points, 100+ communication modules, and integrated motion control. The platform uses a common control engine across all controllers, enabling seamless migration and code reuse.",
+          "pageStart": 1,
+          "pageEnd": 12
+        },
+        {
+          "id": "hardware-architecture",
+          "title": "Hardware Architecture",
+          "level": 1,
+          "content": "The ControlLogix chassis uses a high-speed backplane (1.5 Gbps) supporting up to 17 slots. Controllers (1756-L7x/L8x) feature dual-core processors, 4-80 MB user memory, and integrated EtherNet/IP ports. I/O modules are hot-swappable with electronic keying. Redundancy modules (1756-RM2) provide bumpless failover.",
+          "pageStart": 13,
+          "pageEnd": 45,
+          "subsections": [
+            {
+              "id": "chassis-types",
+              "title": "Chassis Types",
+              "level": 2,
+              "content": "Available chassis: 1756-A4 (4-slot), 1756-A7 (7-slot), 1756-A10 (10-slot), 1756-A13 (13-slot), 1756-A17 (17-slot). All support standard and controlled environment ratings.",
+              "pageStart": 15,
+              "pageEnd": 18
+            },
+            {
+              "id": "controller-comparison",
+              "title": "Controller Comparison",
+              "level": 2,
+              "content": "1756-L71 (2MB), L72 (4MB), L73 (8MB), L74 (16MB), L75 (32MB) - 5570 series. 1756-L81E (4MB), L82E (8MB), L83E (16MB), L84E (32MB), L85E (80MB) - 5580 series with integrated safety.",
+              "pageStart": 19,
+              "pageEnd": 28
+            }
+          ]
+        },
+        {
+          "id": "programming-languages",
+          "title": "Supported Programming Languages",
+          "level": 1,
+          "content": "ControlLogix supports four IEC 61131-3 languages: Ladder Diagram (LD), Structured Text (ST), Function Block Diagram (FBD), and Sequential Function Chart (SFC). Also supports C/C++ via the Open Development Kit (ODK) for custom algorithms.",
+          "pageStart": 46,
+          "pageEnd": 89,
+          "subsections": [
+            {
+              "id": "ladder-logic",
+              "title": "Ladder Diagram (LD)",
+              "level": 2,
+              "content": "Primary language for boolean logic. Supports branches, subroutines, AOI (Add-On Instructions), and online editing. Use XIC, XIO, OTE, OTL, OTU, TON, TOF, RTO, CTU, CTD, RES instructions.",
+              "pageStart": 48,
+              "pageEnd": 62
+            },
+            {
+              "id": "structured-text",
+              "title": "Structured Text (ST)",
+              "level": 2,
+              "content": "Pascal-like language for complex math, string handling, and algorithms. Supports IF-THEN-ELSE, CASE, FOR, WHILE, REPEAT loops. Ideal for recipes, data manipulation, and motion profiles.",
+              "pageStart": 63,
+              "pageEnd": 75
+            }
+          ]
+        },
+        {
+          "id": "communication",
+          "title": "Communication Protocols",
+          "level": 1,
+          "content": "Native EtherNet/IP (CIP) on controller. Supports DeviceNet, ControlNet, DH+, Remote I/O via communication modules. CIP Motion, CIP Safety, CIP Sync for time synchronization. OPC UA server built-in (5580 series).",
+          "pageStart": 90,
+          "pageEnd": 134
+        },
+        {
+          "id": "motion-control",
+          "title": "Integrated Motion Control",
+          "level": 1,
+          "content": "CIP Motion supports up to 100 axes per controller. Supports servo, stepper, and induction motors. Features: electronic gearing, camming, position capture, coordinated motion (linear/circular interpolation), safety-rated monitored stop.",
+          "pageStart": 135,
+          "pageEnd": 198
+        },
+        {
+          "id": "safety",
+          "title": "Integrated Safety (GuardLogix)",
+          "level": 1,
+          "content": "5580 series controllers (L8xE) include SIL 3 / PLe safety. Separate safety memory, safety task, and safety I/O. Safety instructions: E-stop, guard monitoring, safety mat, two-hand control, speed monitoring. Safety signature for validation.",
+          "pageStart": 199,
+          "pageEnd": 267
+        },
+        {
+          "id": "troubleshooting",
+          "title": "Troubleshooting & Diagnostics",
+          "level": 1,
+          "content": "Controller status indicators: RUN (green), I/O (green), FORCE (amber), FAULT (red). Major faults: Type 01-0F (hardware), Type 10-1F (I/O), Type 20-2F (communication), Type 30-3F (program). Use GSV/SSV for system values. Fault routine executes on major faults.",
+          "pageStart": 268,
+          "pageEnd": 312
+        },
+        {
+          "id": "best-practices",
+          "title": "Best Practices",
+          "level": 1,
+          "content": "Use AOIs for reusable code. Organize with programs/routines. Use UDTs for structured data. Enable keying on I/O modules. Document with rung comments. Version control with Studio 5000 project files. Regular backup with .ACD files.",
+          "pageStart": 313,
+          "pageEnd": 345
+        }
+      ]
+    },
+    {
+      "id": "siemens-s7-1500",
+      "title": "SIMATIC S7-1500 System Manual",
+      "manufacturer": "Siemens",
+      "deviceType": "PLC",
+      "model": "CPU 151x, 152x, 153x",
+      "series": "S7-1500",
+      "version": "V3.0",
+      "language": "English",
+      "pages": 512,
+      "category": "System Configuration & Programming",
+      "tags": ["TIA Portal", "PROFINET", "PROFIBUS", "OPC UA", "Web Server", "Motion Control"],
+      "lastUpdated": "2024-02-20",
+      "content": [
+        {
+          "id": "overview",
+          "title": "System Overview",
+          "level": 1,
+          "content": "The S7-1500 is Siemens' high-end modular controller for demanding automation tasks. Features: up to 20 MB program memory, 1 ns bit processing, integrated PROFINET (2-port switch), web server, OPC UA server, display, and SIMATIC memory card. Scalable from compact to high-performance CPUs.",
+          "pageStart": 1,
+          "pageEnd": 18
+        },
+        {
+          "id": "cpu-portfolio",
+          "title": "CPU Portfolio",
+          "level": 1,
+          "content": "Standard CPUs: 1511-1 PN (150 KB), 1513-1 PN (300 KB), 1515-2 PN (500 KB), 1516-3 PN/DP (1 MB), 1517-3 PN/DP (2 MB), 1518-4 PN/DP (4 MB). Compact CPUs: 1511C, 1512C with onboard I/O. Technology CPUs: 1511T, 1515T, 1517T with motion control. F-CPU variants for safety (SIL 3).",
+          "pageStart": 19,
+          "pageEnd": 56
+        },
+        {
+          "id": "tia-portal",
+          "title": "TIA Portal Engineering",
+          "level": 1,
+          "content": "Total Integrated Automation Portal for unified engineering. Hardware configuration, programming (LAD, FBD, STL, SCL, GRAPH), diagnostics, commissioning. Multi-user engineering, version control integration, libraries, hardware detection.",
+          "pageStart": 57,
+          "pageEnd": 124
+        },
+        {
+          "id": "profinet",
+          "title": "PROFINET Communication",
+          "level": 1,
+          "content": "Integrated 2-port PROFINET switch (RT/IRT). Supports: IO Controller, IO Device, I-Device, Media Redundancy Protocol (MRP), Shared Device, Isochronous Real Time (IRT) for motion. Up to 256 IO Devices. Topology: line, star, ring.",
+          "pageStart": 125,
+          "pageEnd": 189
+        },
+        {
+          "id": "web-server",
+          "title": "Integrated Web Server",
+          "level": 1,
+          "content": "Access via standard browser (HTTP/HTTPS). Features: CPU status, diagnostics buffer, module info, firmware update, file browser, user pages (HTML/JavaScript), watch tables, trace. Custom web applications via Web API. Authentication: user management with roles.",
+          "pageStart": 190,
+          "pageEnd": 234
+        },
+        {
+          "id": "opc-ua",
+          "title": "OPC UA Server",
+          "level": 1,
+          "content": "Built-in OPC UA server (DA/HA/AC). Companion specifications: ADI, Robotics, PackML. Security: certificates, signing, encryption. Information modeling with nodesets. Alarms & Conditions, Historical Access, PubSub. Performance: up to 10,000 monitored items.",
+          "pageStart": 235,
+          "pageEnd": 289
+        },
+        {
+          "id": "motion-control",
+          "title": "Technology Objects & Motion Control",
+          "level": 1,
+          "content": "Technology objects: positioning axis, synchronous axis, external encoder, measuring input, output cam, cam track. PLCopen Motion Control instructions (MC_Power, MC_MoveAbsolute, MC_GearIn, MC_CamIn). Up to 128 axes (CPU dependent). Kinematics for robots.",
+          "pageStart": 290,
+          "pageEnd": 367
+        },
+        {
+          "id": "safety",
+          "title": "Safety Integrated (F-CPU)",
+          "level": 1,
+          "content": "Fail-safe CPUs up to SIL 3 (IEC 61508) / PL e (ISO 13849). Safety program in separate memory area. PROFIsafe for distributed safety I/O. Safety instructions: ESTOP, Two-Hand, Safety Door, Light Curtain, Muting, Speed Monitoring. Safety administration: password, validation, CRC.",
+          "pageStart": 368,
+          "pageEnd": 432
+        }
+      ]
+    },
+    {
+      "id": "schneider-m580",
+      "title": "Modicon M580 ePAC Reference Manual",
+      "manufacturer": "Schneider Electric",
+      "deviceType": "PLC",
+      "model": "BMEP58xxxx",
+      "series": "M580",
+      "version": "Rev 4.1",
+      "language": "English",
+      "pages": 398,
+      "category": "Programming & Network Configuration",
+      "tags": ["Unity Pro", "EcoStruxure", "EtherNet/IP", "Modbus TCP", "Hot Standby", "Cybersecurity"],
+      "lastUpdated": "2024-03-10",
+      "content": [
+        {
+          "id": "overview",
+          "title": "M580 ePAC Overview",
+          "level": 1,
+          "content": "The Modicon M580 is an Ethernet PAC (Programmable Automation Controller) with unified Ethernet backbone. Features: dual-core CPU, 16-64 MB memory, integrated Ethernet switch, cybersecurity (Achilles Level 2), hot standby redundancy, 4000+ I/O. Programmed with Unity Pro / EcoStruxure Control Expert.",
+          "pageStart": 1,
+          "pageEnd": 15
+        },
+        {
+          "id": "ethernet-architecture",
+          "title": "Ethernet Architecture",
+          "level": 1,
+          "content": "Single Ethernet network for I/O, HMI, SCADA, IT. RSTP ring topology (<50ms recovery). DIO (Distributed I/O) via EtherNet/IP and Modbus TCP. CIP Safety for safety I/O. QoS for traffic prioritization. Network Time Protocol (NTP) synchronization.",
+          "pageStart": 16,
+          "pageEnd": 67
+        },
+        {
+          "id": "hot-standby",
+          "title": "Hot Standby Redundancy",
+          "level": 1,
+          "content": "Primary/Standby CPU pair with automatic switchover (<50ms). Shared memory for state synchronization. Redundant Ethernet modules (BMEH582040). Supports: bumpless transfer, configuration sync, online modification. Requires: matched CPUs, same firmware, redundant power supplies.",
+          "pageStart": 68,
+          "pageEnd": 112
+        },
+        {
+          "id": "unity-pro",
+          "title": "Unity Pro / EcoStruxure Control Expert",
+          "level": 1,
+          "content": "IEC 61131-3 languages: Ladder (LD), Structured Text (ST), Function Block (FBD), Instruction List (IL), Sequential Function Chart (SFC). Advanced: DFBs (Derived Function Blocks), EFBs (Elementary Function Blocks), DDTs (Derived Data Types). Features: simulation, online changes, cross-references, documentation generator.",
+          "pageStart": 113,
+          "pageEnd": 178
+        },
+        {
+          "id": "cybersecurity",
+          "title": "Cybersecurity Features",
+          "level": 1,
+          "content": "Achilles Level 2 certified. Features: signed firmware, secure boot, port disabling, IP filtering, user authentication (local/RADIUS/LDAP), role-based access (RBAC), audit logging, encrypted communication (TLS), certificate management. Compliance: IEC 62443, NERC CIP.",
+          "pageStart": 179,
+          "pageEnd": 223
+        },
+        {
+          "id": "safety",
+          "title": "Integrated Safety",
+          "level": 1,
+          "content": "M580 Safety (BMEP58xx040) with SIL 3 / PL e. Separate safety CPU core. Safety I/O via CIP Safety on Ethernet. Safety programming in Unity Pro with safety library. Safety functions: E-stop, guard monitoring, safety mat, two-hand, speed/position monitoring. Safety signature and validation.",
+          "pageStart": 224,
+          "pageEnd": 278
+        }
+      ]
+    }
+  ]
+}

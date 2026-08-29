@@ -1,0 +1,10 @@
+# dependencies 
+node_modules/ 
+out/ 
+.next/ 
+out/ 
+build/ 
+*.log 
+npm-debug.log* 
+.DS_Store 
+*.local 

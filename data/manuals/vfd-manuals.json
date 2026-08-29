@@ -1,0 +1,164 @@
+{
+  "manuals": [
+    {
+      "id": "ab-pf755",
+      "title": "PowerFlex 755 AC Drive Programming Manual",
+      "manufacturer": "Allen-Bradley (Rockwell Automation)",
+      "deviceType": "VFD",
+      "model": "20G/21G Series",
+      "series": "PowerFlex 755",
+      "version": "Rev 5.0",
+      "language": "English",
+      "pages": 367,
+      "category": "Programming & Configuration",
+      "tags": ["DriveExplorer", "Connected Components Workbench", "EtherNet/IP", "DeviceLogix", "Safe Torque Off", "Positioning"],
+      "lastUpdated": "2024-01-28",
+      "content": [
+        {
+          "id": "overview",
+          "title": "Drive Overview",
+          "level": 1,
+          "content": "PowerFlex 755 is a high-performance AC drive (0.75-2000 HP). Features: integrated EtherNet/IP, DeviceLogix (embedded logic), Safe Torque Off (STO SIL 3), positioning/indexing, predictive diagnostics, automatic device configuration (ADC). Frame sizes 1-10. Input: 200-690V AC.",
+          "pageStart": 1,
+          "pageEnd": 18
+        },
+        {
+          "id": "device-logix",
+          "title": "DeviceLogix Embedded Logic",
+          "level": 1,
+          "content": "Programmable logic inside the drive (no PLC needed). 50 function blocks: boolean, math, compare, timer, counter, latch, multiplexer. 1ms scan time. Access to drive parameters, I/O, network data. Programmed via DriveExplorer or CCW. Use for: local control, sequencing, protection logic, pump/ fan staging.",
+          "pageStart": 19,
+          "pageEnd": 78
+        },
+        {
+          "id": "safety",
+          "title": "Integrated Safety",
+          "level": 1,
+          "content": "Safe Torque Off (STO) SIL 3/PLe standard. Optional: Safe Speed Monitor (SSM), Safe Stop 1 (SS1), Safe Brake Control (SBC), Safe Direction (SDI). Safety option module 20-750-S. Safety configuration via DriveExplorer. Safety signature. Reaction time: <10ms for STO.",
+          "pageStart": 79,
+          "pageEnd": 134
+        },
+        {
+          "id": "positioning",
+          "title": "Positioning & Indexing",
+          "level": 1,
+          "content": "Point-to-point positioning with encoder feedback. Modes: absolute, relative, registration, homing. Profile: trapezoidal, S-curve. Electronic gearing (follower ratio). Camming with profile tables. Encoder: incremental, absolute (Hiperface, EnDat, SSI). Position capture (latch).",
+          "pageStart": 135,
+          "pageEnd": 198
+        },
+        {
+          "id": "predictive",
+          "title": "Predictive Diagnostics",
+          "level": 1,
+          "content": "Drive health monitoring: heatsink temp, bus capacitor life, fan hours, bearing hours, IGBT thermal model. Remaining life estimation. Alarm thresholds configurable. Data logged to internal memory. Access via EtherNet/IP or web server. Integration with FactoryTalk Analytics.",
+          "pageStart": 199,
+          "pageEnd": 245
+        },
+        {
+          "id": "communication",
+          "title": "Communication & Configuration",
+          "level": 1,
+          "content": "Dual-port EtherNet/IP (DLR, linear, star). Device Level Ring (DLR) for redundancy. Embedded web server for configuration. ADC (Automatic Device Configuration) from Logix controller. Parameter groups: motor, speed, torque, position, I/O, communication, safety, application.",
+          "pageStart": 246,
+          "pageEnd": 298
+        }
+      ]
+    },
+    {
+      "id": "siemens-g120",
+      "title": "SINAMICS G120 Operating Instructions",
+      "manufacturer": "Siemens",
+      "deviceType": "VFD",
+      "model": "CU250S-2, CU250S-2 DP, CU250S-2 PN",
+      "series": "SINAMICS G120",
+      "version": "V5.2",
+      "language": "English",
+      "pages": 423,
+      "category": "Commissioning & Parameterization",
+      "tags": ["Startdrive", "TIA Portal", "PROFINET", "PROFIBUS", "EtherNet/IP", "Safety Integrated", "Basic Positioner"],
+      "lastUpdated": "2024-02-10",
+      "content": [
+        {
+          "id": "overview",
+          "title": "G120 Overview",
+          "level": 1,
+          "content": "Modular drive system: Control Unit (CU) + Power Module (PM). Power range 0.37-250 kW. Control Units: CU250S-2 (EtherNet/IP), CU250S-2 DP (PROFIBUS), CU250S-2 PN (PROFINET). Safety Integrated: STO, SS1, SBC, SSM, SDI, SLS (SIL 2/PL d). Basic Positioner (EPos) included.",
+          "pageStart": 1,
+          "pageEnd": 22
+        },
+        {
+          "id": "startdrive",
+          "title": "Startdrive Commissioning Tool",
+          "level": 1,
+          "content": "Integrated in TIA Portal. Wizard-based commissioning. Motor identification (rotating/standstill). Speed controller optimization. Safety commissioning with validation. Trace function for diagnostics. Parameter comparison. Offline/online modes. Project download/upload.",
+          "pageStart": 23,
+          "pageEnd": 89
+        },
+        {
+          "id": "safety",
+          "title": "Safety Integrated",
+          "level": 1,
+          "content": "Functions: STO, SS1, SBC, SSM, SDI, SLS (up to 4 speed stages). Safe Brake Test. PROFIsafe via PROFINET/PROFIBUS. Safety parameters password-protected. Forced dormant error detection. Safety logbook. Acceptance test wizard with report generation.",
+          "pageStart": 90,
+          "pageEnd": 156
+        },
+        {
+          "id": "epos",
+          "title": "Basic Positioner (EPos)",
+          "level": 1,
+          "content": "Positioning modes: absolute, relative, referencing, flying referencing, jog. Traversing blocks (up to 64). Traversing profiles: trapezoidal, S-curve. Jerk limitation. Direct setpoint specification (MDI). Modulo offset for rotary axes. Encoder: HTL/TTL, DRIVE-CLiQ, SSI.",
+          "pageStart": 157,
+          "pageEnd": 223
+        },
+        {
+          "id": "communication",
+          "title": "Fieldbus Communication",
+          "level": 1,
+          "content": "PROFINET (IRT/RT), PROFIBUS DP, EtherNet/IP, CANopen, USS, Modbus RTU. Telegram selection (standard/safety). Shared device. Media Redundancy Protocol (MRP). Isochronous mode for motion. Web server for diagnostics. OPC UA server (CU250S-2 PN).",
+          "pageStart": 224,
+          "pageEnd": 289
+        }
+      ]
+    },
+    {
+      "id": "schneider-altivar",
+      "title": "Altivar Process ATV900 Programming Manual",
+      "manufacturer": "Schneider Electric",
+      "deviceType": "VFD",
+      "model": "ATV930, ATV950, ATV980",
+      "series": "Altivar Process",
+      "version": "Rev 2.3",
+      "language": "English",
+      "pages": 334,
+      "category": "Programming & Services",
+      "tags": ["EcoStruxure", "Device Type Manager", "EtherNet/IP", "Modbus TCP", "PROFINET", "Web Server", "Pump/Fan"],
+      "lastUpdated": "2024-03-18",
+      "content": [
+        {
+          "id": "overview",
+          "title": "Altivar Process Overview",
+          "level": 1,
+          "content": "Process drives for pumps, fans, compressors (0.75-2500 kW). Services-oriented: energy monitoring, asset management, process optimization. Embedded Ethernet (dual port). Web server. Device Type Manager (DTM) for FDT frameworks. Cybersecurity: Achilles Level 2.",
+          "pageStart": 1,
+          "pageEnd": 15
+        },
+        {
+          "id": "services",
+          "title": "Embedded Services",
+          "level": 1,
+          "content": "Energy: consumption, efficiency, kWh, CO2. Asset: operating hours, starts, temperature, vibration. Process: flow, pressure, level control (PID). Pump: multi-pump staging, anti-jam, pipe fill, dry run. Fan: stall detection, filter monitoring. Compressor: load/unload, sequencing.",
+          "pageStart": 16,
+          "pageEnd": 89
+        },
+        {
+          "id": "dtm",
+          "title": "Device Type Manager (DTM)",
+          "level": 1,
+          "content": "FDT/DTM standard for configuration. Works with: EcoStruxure Control Expert, PACTware, FieldCare, other FDT frames. Online/offline parameterization. Diagnostics: oscilloscope, trending, alarm history. Firmware update via DTM. DTMs available for all Altivar models.",
+          "pageStart": 90,
+          "pageEnd": 145
+        }
+      ]
+    }
+  ]
+}

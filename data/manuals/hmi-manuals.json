@@ -1,0 +1,200 @@
+{
+  "manuals": [
+    {
+      "id": "ab-panelview-5000",
+      "title": "PanelView 5000 Series Reference Manual",
+      "manufacturer": "Allen-Bradley (Rockwell Automation)",
+      "deviceType": "HMI",
+      "model": "2715P-B7CD, 2715P-B10CD, 2715P-B12CD, 2715P-B15CD",
+      "series": "PanelView 5000",
+      "version": "Rev 2.1",
+      "language": "English",
+      "pages": 287,
+      "category": "Configuration & Runtime",
+      "tags": ["FactoryTalk View", "Studio 5000", "EtherNet/IP", "VNC", "PDF Viewer", "Alarm/Events"],
+      "lastUpdated": "2024-01-20",
+      "content": [
+        {
+          "id": "overview",
+          "title": "Product Overview",
+          "level": 1,
+          "content": "PanelView 5000 terminals are industrial operator interfaces with 7\", 10\", 12\", and 15\" widescreen displays. Capacitive multi-touch, 1280x800 resolution. Runs Windows 10 IoT Enterprise. FactoryTalk View Site Edition (SE) runtime pre-installed. Dual EtherNet/IP ports with switch. No moving parts (fanless).",
+          "pageStart": 1,
+          "pageEnd": 14
+        },
+        {
+          "id": "factorytalk-view-se",
+          "title": "FactoryTalk View SE Runtime",
+          "level": 1,
+          "content": "Full-featured HMI/SCADA runtime. Features: vector graphics, faceplates, parameterized displays, alarm & event server, historical trending, recipes, security (Windows/FT), redundancy, VNC remote access. Supports 150+ drivers for PLC connectivity. Tag-based architecture with direct controller tag browsing.",
+          "pageStart": 15,
+          "pageEnd": 67,
+          "subsections": [
+            {
+              "id": "displays",
+              "title": "Display Types",
+              "level": 2,
+              "content": "Base displays, popup displays, faceplates (reusable parametric), global objects. Animation: visibility, color, position, rotation, fill, text. VBA scripting for complex logic. State-based visibility for security.",
+              "pageStart": 20,
+              "pageEnd": 35
+            },
+            {
+              "id": "alarms",
+              "title": "Alarm & Event System",
+              "level": 2,
+              "content": "Server-based alarming with acknowledgment, shelving, escalation. Alarm areas for organization. Rich alarm attributes: priority, category, help URL, custom fields. Alarm banner, summary, history displays. Email/SMS notification via FactoryTalk Notification.",
+              "pageStart": 36,
+              "pageEnd": 50
+            }
+          ]
+        },
+        {
+          "id": "connectivity",
+          "title": "PLC Connectivity",
+          "level": 1,
+          "content": "Direct tag browsing for ControlLogix/CompactLogix (EtherNet/IP). Supports: MicroLogix, SLC, PLC-5 via drivers. Tag substitution for scalable displays. Data logging to local SQL Express or remote SQL Server. Recipe management with PLC tag synchronization.",
+          "pageStart": 68,
+          "pageEnd": 112
+        },
+        {
+          "id": "security",
+          "title": "Security & User Management",
+          "level": 1,
+          "content": "Integrated with FactoryTalk Security. Windows authentication or FT Directory. Roles: Operator, Maintenance, Engineer, Administrator. Area-based security for displays. Electronic signatures for critical actions (21 CFR Part 11). Audit trail for all operator actions.",
+          "pageStart": 113,
+          "pageEnd": 145
+        },
+        {
+          "id": "remote-access",
+          "title": "Remote Access & Mobility",
+          "level": 1,
+          "content": "Built-in VNC server for remote desktop. FactoryTalk ViewPoint for web/mobile access (HTML5). Mobile app for iOS/Android. Remote expert assistance with screen sharing. Secure connectivity via FactoryTalk Remote Access (VPN).",
+          "pageStart": 146,
+          "pageEnd": 178
+        },
+        {
+          "id": "installation",
+          "title": "Installation & Maintenance",
+          "level": 1,
+          "content": "Panel cutout dimensions: 7\" (172x112mm), 10\" (258x168mm), 12\" (306x198mm), 15\" (368x238mm). IP66 front, IP20 rear. Operating temp: 0-55°C. DC power (18-32 VDC). SD card for backup/restore. Factory reset via hardware button.",
+          "pageStart": 179,
+          "pageEnd": 203
+        }
+      ]
+    },
+    {
+      "id": "siemens-tp1500",
+      "title": "SIMATIC TP1500 Comfort Manual",
+      "manufacturer": "Siemens",
+      "deviceType": "HMI",
+      "model": "6AV2124-0QC02-0AX1",
+      "series": "Comfort Panels",
+      "version": "V18",
+      "language": "English",
+      "pages": 312,
+      "category": "Configuration & Operation",
+      "tags": ["WinCC Unified", "TIA Portal", "PROFINET", "OPC UA", "HTML5", "PDF Viewer"],
+      "lastUpdated": "2024-02-25",
+      "content": [
+        {
+          "id": "overview",
+          "title": "TP1500 Comfort Overview",
+          "level": 1,
+          "content": "15.6\" widescreen multi-touch (capacitive), 1366x768 resolution. Windows 10 IoT Enterprise LTSC. WinCC Unified PC Runtime pre-installed. 2x PROFINET (IRT), 2x USB, 1x SD, 1x DisplayPort. Fanless, IP65 front. Extended temperature: 0-50°C.",
+          "pageStart": 1,
+          "pageEnd": 12
+        },
+        {
+          "id": "wincc-unified",
+          "title": "WinCC Unified System",
+          "level": 1,
+          "content": "Next-gen visualization in TIA Portal. Web-based (HTML5/JS/CSS3) - runs in any modern browser. Unified engineering for panels, PC, web. Features: faceplates, screen window, user administration, alarms, logging, recipes, reports. Client-server architecture. High-performance graphics with SVG.",
+          "pageStart": 13,
+          "pageEnd": 78,
+          "subsections": [
+            {
+              "id": "faceplates",
+              "title": "Faceplates & Types",
+              "level": 2,
+              "content": "Reusable typed faceplates with interface parameters. Inheritance and composition. Dynamic faceplate instances. Faceplate types in project library. Versioning and change management.",
+              "pageStart": 25,
+              "pageEnd": 42
+            },
+            {
+              "id": "scripts",
+              "title": "JavaScript Scripting",
+              "level": 2,
+              "content": "Client-side and server-side JavaScript. Access to tags, alarms, logs, recipes via API. Async/await support. Custom widgets via Web Components. Debugging in browser DevTools.",
+              "pageStart": 43,
+              "pageEnd": 58
+            }
+          ]
+        },
+        {
+          "id": "connectivity",
+          "title": "Connectivity & Communication",
+          "level": 1,
+          "content": "Native S7 protocol (optimized block access). OPC UA client/server (DA/HA/AC). MQTT client for IoT. HTTP/REST API for third-party. PROFINET IO Device for HMI as device. Shared device for multiple controllers. S7 routing through HMI.",
+          "pageStart": 79,
+          "pageEnd": 134
+        },
+        {
+          "id": "edge",
+          "title": "Edge Computing",
+          "level": 1,
+          "content": "WinCC Unified PC Runtime on same hardware. Edge apps via Docker containers. Siemens Industrial Edge integration. Data preprocessing, analytics, ML inference at edge. Secure connectivity to cloud (MindSphere, Azure, AWS).",
+          "pageStart": 135,
+          "pageEnd": 189
+        },
+        {
+          "id": "security",
+          "title": "Security Hardening",
+          "level": 1,
+          "content": "Secure boot, TPM 2.0, BitLocker encryption. User management: local, LDAP, RADIUS. Role-based access control (RBAC). Communication: HTTPS, OPC UA security, certificate management. Audit trail, electronic signature. Compliance: IEC 62443, ISA/IEC 62443-4-2.",
+          "pageStart": 190,
+          "pageEnd": 234
+        }
+      ]
+    },
+    {
+      "id": "schneider-hmi-gto",
+      "title": "Magelis GT/GTU Series Advanced HMI Manual",
+      "manufacturer": "Schneider Electric",
+      "deviceType": "HMI",
+      "model": "HMIGTO1300, HMIGTO2310, HMIGTO3310",
+      "series": "Magelis GT Advanced",
+      "version": "Rev 3.0",
+      "language": "English",
+      "pages": 256,
+      "category": "Configuration & Runtime",
+      "tags": ["Vijeo Designer", "EtherNet/IP", "Modbus", "FTP", "Email", "Video"],
+      "lastUpdated": "2024-03-05",
+      "content": [
+        {
+          "id": "overview",
+          "title": "Magelis GT Advanced Overview",
+          "level": 1,
+          "content": "Advanced HMIs with 5.7\" to 15\" displays. Resistive touch (GT) or capacitive multi-touch (GTU). Windows Embedded Compact 7. Vijeo Designer runtime. Video input (1 channel composite/HDMI). 2x Ethernet, 2x USB, SD card, CFast. Fanless, IP66 front.",
+          "pageStart": 1,
+          "pageEnd": 18
+        },
+        {
+          "id": "vijeo-designer",
+          "title": "Vijeo Designer Software",
+          "level": 1,
+          "content": "HMI development environment. Features: vector graphics, animations, scripts (JavaScript/VB), recipes, alarms, trends, reports. Multi-language with runtime switching. Project simulation on PC. Version control integration. Library of 4000+ symbols.",
+          "pageStart": 19,
+          "pageEnd": 89
+        },
+        {
+          "id": "video",
+          "title": "Video Integration",
+          "level": 1,
+          "content": "Single video input (NTSC/PAL/HDMI). Display camera feeds on HMI. Picture-in-picture, full-screen, quad view. Snapshot to SD card. Motion detection trigger. Supports IP cameras via Ethernet (MJPEG/H.264). Recording to local storage.",
+          "pageStart": 90,
+          "pageEnd": 123
+        }
+      ]
+    }
+  ]
+}

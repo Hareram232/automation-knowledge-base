@@ -1,0 +1,196 @@
+{
+  "manuals": [
+    {
+      "id": "emerson-delta-v",
+      "title": "DeltaV Distributed Control System Reference Manual",
+      "manufacturer": "Emerson",
+      "deviceType": "Controller",
+      "model": "DeltaV v15",
+      "series": "DeltaV DCS",
+      "version": "15.3",
+      "language": "English",
+      "pages": 712,
+      "category": "System Architecture & Configuration",
+      "tags": ["DeltaV Live", "SIS", "Historian", "OPC", "Batch", "Advanced Control", "Cybersecurity"],
+      "lastUpdated": "2024-03-15",
+      "content": [
+        {
+          "id": "overview",
+          "title": "DeltaV System Overview",
+          "level": 1,
+          "content": "DeltaV is a distributed control system for process industries. Architecture: controllers (MX, PK, SX), I/O cards (CHARMs, traditional), workstations, servers, network. DeltaV Live: HTML5 web interface. DeltaV SIS: separate safety system (SIL 3). Integrated historian, batch, advanced control. Cybersecurity: DeltaV Secure.",
+          "pageStart": 1,
+          "pageEnd": 34
+        },
+        {
+          "id": "controllers",
+          "title": "Controller Platform",
+          "level": 1,
+          "content": "MX Controller: high-capacity, redundancy (hot standby), 4000 I/O per pair. PK Controller: process, 1600 I/O. SX Controller: small systems, 400 I/O. All: function blocks (Control, Logic, Arithmetic, Signal Processing), sequential function charts, custom algorithms (C/C++). Deterministic scan: 100ms-1s.",
+          "pageStart": 35,
+          "pageEnd": 98
+        },
+        {
+          "id": "charm",
+          "title": "CHARMs I/O",
+          "level": 1,
+          "content": "Characterization Module (CHARM): one per field device. Universal I/O: AI, AO, DI, DO, HART, pulse, RTD, TC. Electronic marshalling: software-defined wiring. HART pass-through. Intrinsically safe options. Hot-swappable. Reduces wiring by 50%. Auto-discovery.",
+          "pageStart": 99,
+          "pageEnd": 167
+        },
+        {
+          "id": "delta-v-live",
+          "title": "DeltaV Live (HTML5 Interface)",
+          "level": 1,
+          "content": "Web-based operations interface. No client install. Responsive design. Graphics: SVGs, situational awareness. Faceplates: standard, custom. Alarm management: ISA-18.2. Trends, historian integration. Mobile: iOS/Android app. Authentication: Windows, LDAP, SAML. Role-based access.",
+          "pageStart": 168,
+          "pageEnd": 245
+        },
+        {
+          "id": "sis",
+          "title": "DeltaV SIS (Safety Instrumented System)",
+          "level": 1,
+          "content": "Separate safety architecture. SLS 1508 controller (SIL 3). SISnet protocol (deterministic, redundant). SIF: Safety Instrumented Functions. Proof testing wizard. Bypass management. Integration with DeltaV for alarms, events, historian. Partial stroke testing. SIL verification.",
+          "pageStart": 246,
+          "pageEnd": 323
+        },
+        {
+          "id": "batch",
+          "title": "DeltaV Batch",
+          "level": 1,
+          "content": "ISA-88 compliant batch management. Recipe: procedures, unit procedures, operations, phases. Equipment model: units, equipment modules, control modules. Recipe editor: graphical (SFC-based). Execution: promoter, operator prompts, electronic signatures. Material tracking. Integration with MES/ERP.",
+          "pageStart": 324,
+          "pageEnd": 389
+        },
+        {
+          "id": "advanced-control",
+          "title": "Advanced Control (MPC)",
+          "level": 1,
+          "content": "DeltaV PredictPro: Model Predictive Control. Dynamic matrix control (DMC). Constraint handling: manipulated, controlled, auxiliary. Adaptive models. Integration with DeltaV controls. Configuration: Identify, Test, Implement, Monitor. Applications: distillation, reactor, FCC, blending.",
+          "pageStart": 390,
+          "pageEnd": 456
+        },
+        {
+          "id": "cybersecurity",
+          "title": "DeltaV Cybersecurity",
+          "level": 1,
+          "content": "DeltaV Secure: whitelisting, patch management, antivirus, backup, audit. Defense-in-depth: network segmentation, firewalls, DMZ. IEC 62443 compliance. User authentication: Windows, PKI, smart cards. Privilege management. Security zones. Incident response. Patch validation on test system.",
+          "pageStart": 457,
+          "pageEnd": 523
+        }
+      ]
+    },
+    {
+      "id": "honeywell-experion",
+      "title": "Experion PKS Reference Manual",
+      "manufacturer": "Honeywell Process Solutions",
+      "deviceType": "Controller",
+      "model": "C300, C200, FIM, LIM",
+      "series": "Experion PKS",
+      "version": "R520",
+      "language": "English",
+      "pages": 689,
+      "category": "System Configuration & Operations",
+      "tags": ["Station", "Server", "Historian", "Safety Manager", "Batch", "APC", "Cybersecurity"],
+      "lastUpdated": "2024-02-20",
+      "content": [
+        {
+          "id": "overview",
+          "title": "Experion PKS Overview",
+          "level": 1,
+          "content": "Process Knowledge System (PKS) for process automation. Architecture: C300 controller, FIM (Fieldbus Interface Module), LIM (Local I/O Module), Server, Station (HMI), Historian. Experion Station: unified operations interface. Safety Manager: SIL 3 separate system. APC: Advanced Process Control. Uniformance: integration platform.",
+          "pageStart": 1,
+          "pageEnd": 28
+        },
+        {
+          "id": "c300",
+          "title": "C300 Controller",
+          "level": 1,
+          "content": "High-performance redundant controller. 1000+ function blocks. Control: PID, cascade, ratio, override, split-range. Logic: IEC 61131-3 (FBD, LD, ST, SFC). Redundancy: hot standby <1s switchover. Peer-to-peer communication. OPC UA server. Cybersecurity: signed firmware, secure boot.",
+          "pageStart": 29,
+          "pageEnd": 98
+        },
+        {
+          "id": "station",
+          "title": "Experion Station (HMI/SCADA)",
+          "level": 1,
+          "content": "Unified operations: process, safety, batch, APC, historian. HTML5 web client (Station Web). Situational awareness graphics. Alarm management: ISA-18.2, EEMUA 191. Faceplates: standard library, custom. Trends: real-time, historical, comparison. Reports: automatic, on-demand. Mobile: Station Mobile app.",
+          "pageStart": 99,
+          "pageEnd": 189
+        },
+        {
+          "id": "safety-manager",
+          "title": "Safety Manager",
+          "level": 1,
+          "content": "Separate safety system (SIL 3). TMR (Triple Modular Redundancy) or duplex. Safety logic: FBD, LD. SIF management. Proof test wizard. Bypass/override management. Integration: Experion Station for alarms, faceplates. Fieldbus: Safety Fieldbus (Honeywell), PROFIsafe. Partial stroke testing.",
+          "pageStart": 190,
+          "pageEnd": 267
+        },
+        {
+          "id": "uniformance",
+          "title": "Uniformance Platform",
+          "level": 1,
+          "content": "Integration platform: historian (PHD), analytics, reporting, MES connectivity. PHD: high-performance time-series. Analytics: Golden Batch, PCA, anomaly detection. Reporting: automated, web-based. Connectors: PI, SQL, OPC, REST. Pharma: 21 CFR Part 11 compliance.",
+          "pageStart": 268,
+          "pageEnd": 345
+        }
+      ]
+    },
+    {
+      "id": "yokogawa-centum",
+      "title": "CENTUM VP DCS Reference Manual",
+      "manufacturer": "Yokogawa Electric Corporation",
+      "deviceType": "Controller",
+      "model": "FCN/FCJ, FCS, FIO, Vnet/IP",
+      "series": "CENTUM VP",
+      "version": "R6.10",
+      "language": "English",
+      "pages": 567,
+      "category": "System Architecture & Engineering",
+      "tags": ["FCN/FCJ", "FCS", "Vnet/IP", "Exaopc", "Exapilot", "ProSafe-RS", "PRM"],
+      "lastUpdated": "2024-01-30",
+      "content": [
+        {
+          "id": "overview",
+          "title": "CENTUM VP Overview",
+          "level": 1,
+          "content": "Integrated production control system. Architecture: FCN/FCJ (control), FCS (safety), FIO (I/O), Vnet/IP (plant network), HIS (historian), ENG (engineering station), OPS (operator station). ProSafe-RS: separate safety system. Exaopc: OPC server. Exapilot: HMI/SCADA. PRM: Plant Resource Manager (asset management).",
+          "pageStart": 1,
+          "pageEnd": 22
+        },
+        {
+          "id": "fcn-fcj",
+          "title": "FCN/FCJ Controllers",
+          "level": 1,
+          "content": "FCN-RTU: field controller. FCN-DCS: DCS controller. FCJ: high-performance. Function blocks: control, logic, sequence, arithmetic. Redundancy: hot standby (FCN), TMR (FCJ). Vnet/IP: dual redundant Ethernet. Scan: 100ms-1s. Online download. Capacity: 10,000 blocks (FCJ).",
+          "pageStart": 23,
+          "pageEnd": 89
+        },
+        {
+          "id": "prosafe-rs",
+          "title": "ProSafe-RS (Safety System)",
+          "level": 1,
+          "content": "Separate safety architecture (SIL 3). TMR controllers. Safety logic: FBD, SFC. Vnet/IP safety network. Integration with CENTUM VP: shared engineering, unified HMI. Proof testing. Bypass management. Partial stroke testing. Field devices: PROFIsafe, HART safety.",
+          "pageStart": 90,
+          "pageEnd": 156
+        },
+        {
+          "id": "exapilot",
+          "title": "Exapilot HMI/SCADA",
+          "level": 1,
+          "content": "Web-based operator interface. Graphics: vector, situational awareness. Alarm: ISA-18.2, EEMUA 191. Faceplates: standard, custom. Trends: real-time, historical. Reports. Mobile: Exapilot Mobile. Security: Windows, LDAP, SAML. Redundancy: hot standby servers.",
+          "pageStart": 157,
+          "pageEnd": 234
+        },
+        {
+          "id": "prm",
+          "title": "PRM (Plant Resource Manager)",
+          "level": 1,
+          "content": "Asset management: device configuration, diagnostics, calibration, maintenance. HART, FOUNDATION Fieldbus, PROFIBUS PA. Device DTMs. Calibration management. Maintenance scheduling. Integration with CMMS/EAM. Mobile: PRM Mobile. Cloud: PRM Cloud.",
+          "pageStart": 235,
+          "pageEnd": 312
+        }
+      ]
+    }
+  ]
+}

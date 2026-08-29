@@ -1,0 +1,164 @@
+{
+  "manuals": [
+    {
+      "id": "ifm-io-link",
+      "title": "IO-Link Master & Sensor Portfolio Manual",
+      "manufacturer": "ifm electronic",
+      "deviceType": "Sensor",
+      "model": "AL1100, AL1120, AL1140, AL1300 Series",
+      "series": "IO-Link Masters & Sensors",
+      "version": "Rev 4.0",
+      "language": "English",
+      "pages": 278,
+      "category": "Configuration & Integration",
+      "tags": ["IO-Link", "Profinet", "EtherNet/IP", "EtherCAT", "LR DEVICE", "LR AGENT", "moneo"],
+      "lastUpdated": "2024-03-22",
+      "content": [
+        {
+          "id": "overview",
+          "title": "IO-Link System Overview",
+          "level": 1,
+          "content": "IO-Link: point-to-point communication (IEC 61131-9). Master connects to PLC via fieldbus (PROFINET, EtherNet/IP, EtherCAT). Up to 8 ports per master. Sensors/actuators with IO-Link interface. Parameter server for automatic backup/restore. LR DEVICE for device description (IODD). LR AGENT for master configuration.",
+          "pageStart": 1,
+          "pageEnd": 22
+        },
+        {
+          "id": "master-types",
+          "title": "Master Types",
+          "level": 1,
+          "content": "Compact: AL1100 (4-port, IP67), AL1120 (8-port, IP67). Cabinet: AL1140 (8-port, IP20), AL1300 (16-port, IP20). Fieldbus: PROFINET (IRT/RT), EtherNet/IP, EtherCAT, CC-Link IE Field. Power: Class A (24V), Class B (24V + actuator supply). Diagnostics: per-port LED, web server, JSON REST API.",
+          "pageStart": 23,
+          "pageEnd": 67
+        },
+        {
+          "id": "sensor-types",
+          "title": "Smart Sensor Portfolio",
+          "level": 1,
+          "content": "Position: inductive, capacitive, magnetic, photoelectric. Process: pressure, temperature, flow, level. Identification: RFID, 1D/2D code readers. Condition monitoring: vibration, oil quality. All with IO-Link: parameterization, diagnostics, process data, events. IODD files for integration.",
+          "pageStart": 68,
+          "pageEnd": 134
+        },
+        {
+          "id": "parameter-server",
+          "title": "Parameter Server & Data Storage",
+          "level": 1,
+          "content": "Automatic parameter backup when device connected. Restore on device replacement (plug & play). Data storage index (0-3) for multiple configurations. Vendor-specific vs standard parameters. Block parameterization for commissioning. LR AGENT for bulk configuration.",
+          "pageStart": 135,
+          "pageEnd": 189
+        },
+        {
+          "id": "moneo",
+          "title": "moneo Software Suite",
+          "level": 1,
+          "content": "moneo|configure: parameter management, IODD library. moneo|monitor: real-time visualization, dashboards. moneo|analyze: historical analysis, reports. moneo|remote: secure remote access. Cloud or on-premise. Integration with IT systems via REST API, OPC UA, MQTT.",
+          "pageStart": 190,
+          "pageEnd": 234
+        }
+      ]
+    },
+    {
+      "id": "sick-sensors",
+      "title": "SICK Sensor Intelligence Reference Manual",
+      "manufacturer": "SICK AG",
+      "deviceType": "Sensor",
+      "model": "Various Series",
+      "series": "Sensor Portfolio",
+      "version": "2024.1",
+      "language": "English",
+      "pages": 445,
+      "category": "Selection & Integration",
+      "tags": ["IO-Link", "PROFINET", "EtherNet/IP", "EtherCAT", "Safety", "Vision", "LiDAR", "RFID"],
+      "lastUpdated": "2024-04-05",
+      "content": [
+        {
+          "id": "overview",
+          "title": "SICK Sensor Portfolio",
+          "level": 1,
+          "content": "Comprehensive industrial sensors: photoelectric, proximity, registration, distance, vision, LiDAR, RFID, safety. Communication: IO-Link, PROFINET, EtherNet/IP, EtherCAT, PROFIsafe, CIP Safety. Software: SOPAS ET (Engineering Tool), SICK AppSpace, SICK AppPool. Cloud: SICK Cloud Services.",
+          "pageStart": 1,
+          "pageEnd": 28
+        },
+        {
+          "id": "vision",
+          "title": "Vision Sensors & Cameras",
+          "level": 1,
+          "content": "Inspector series: 2D vision (Inspector P, I, 83x). Lector series: code reading (1D/2D/DPM). Ranger: 3D vision. InspectorP: deep learning. Configuration: SOPAS ET, web server. Interface: EtherNet/IP, PROFINET, EtherCAT, TCP/IP. Trigger: hardware, software, free-run. Output: results, images, statistics.",
+          "pageStart": 29,
+          "pageEnd": 134
+        },
+        {
+          "id": "lidar",
+          "title": "LiDAR Sensors",
+          "level": 1,
+          "content": "TiM series: 2D LiDAR (indoor/outdoor). LMS: industrial 2D. MRS: multi-layer 3D. OutdoorScan: long-range. Navigation, collision avoidance, area monitoring. Interface: Ethernet, CAN, USB. ROS driver. Safe variants (SIL 2/PL d). Configuration: SOPAS ET.",
+          "pageStart": 135,
+          "pageEnd": 212
+        },
+        {
+          "id": "safety",
+          "title": "Safe Sensors & Systems",
+          "level": 1,
+          "content": "Safety light curtains (deTec, C4000). Safety laser scanners (S3000, microScan3). Safety switches (i100, i110). Safety controllers (Flexi Soft, FX3-CPU). PROFIsafe, CIP Safety, FSoE. Safety Designer for configuration. Safe networking via safety PLC or safety gateway.",
+          "pageStart": 213,
+          "pageEnd": 312
+        },
+        {
+          "id": "app-space",
+          "title": "SICK AppSpace & AppPool",
+          "level": 1,
+          "content": "AppSpace: develop custom sensor apps (C++, Python). Run on sensor (edge computing). AppPool: marketplace for pre-built apps. Apps for: quality inspection, logistics, robotics, condition monitoring. Deployment via SOPAS ET or cloud. Licensing per sensor/app.",
+          "pageStart": 313,
+          "pageEnd": 378
+        }
+      ]
+    },
+    {
+      "id": "banner-engineering",
+      "title": "Banner Engineering Sensor Catalog & Integration Guide",
+      "manufacturer": "Banner Engineering",
+      "deviceType": "Sensor",
+      "model": "Q4X, Q3X, Q2X, R-GAGE, QS18, QS30 Series",
+      "series": "Photoelectric & Measurement Sensors",
+      "version": "Rev 3.1",
+      "language": "English",
+      "pages": 234,
+      "category": "Selection & Application",
+      "tags": ["IO-Link", "EtherNet/IP", "Modbus TCP", "PROFINET", "Wireless", "Radar", "Lidar"],
+      "lastUpdated": "2024-02-28",
+      "content": [
+        {
+          "id": "overview",
+          "title": "Sensor Portfolio",
+          "level": 1,
+          "content": "Photoelectric: opposed, retro-reflective, diffuse, background suppression. Measurement: laser distance (Q4X, R-GAGE), ultrasonic, radar. Vision: iVu, VE series. Wireless: SureCross (900 MHz, 2.4 GHz). Safety: light curtains, E-stops. IO-Link on most models. Banner CDS (Configuration & Diagnostic Software).",
+          "pageStart": 1,
+          "pageEnd": 24
+        },
+        {
+          "id": "q4x",
+          "title": "Q4X Laser Distance Sensor",
+          "level": 1,
+          "content": "Time-of-flight laser: 300mm-10m (class 1), 300mm-50m (class 2). mm resolution. IO-Link, 4-20mA, NPN/PNP. Background suppression. Multi-segment display. Teach-in via button or IO-Link. Applications: positioning, level, loop control, web break detection. Temperature compensation.",
+          "pageStart": 25,
+          "pageEnd": 78
+        },
+        {
+          "id": "radar",
+          "title": "Radar Sensors (R-GAGE)",
+          "level": 1,
+          "content": "FMCW radar: 24 GHz (ISM band). Range: 0.3-40m. Penetrates: rain, fog, dust, plastic, glass. IO-Link, CAN, Modbus. Configurable field of view. Multi-target tracking. Applications: vehicle detection, level (solids/liquids), collision avoidance, bulk solids. No moving parts.",
+          "pageStart": 79,
+          "pageEnd": 134
+        },
+        {
+          "id": "wireless",
+          "title": "SureCross Wireless",
+          "level": 1,
+          "content": "Industrial wireless I/O. Gateway (DX80) + Nodes (inputs/outputs). 900 MHz (long range) or 2.4 GHz (global). FHSS (frequency hopping). Range: up to 3km (900 MHz), 1km (2.4 GHz). Self-healing mesh. Battery life: years. Security: AES-128. Modbus/TCP, EtherNet/IP gateway.",
+          "pageStart": 135,
+          "pageEnd": 189
+        }
+      ]
+    }
+  ]
+}
