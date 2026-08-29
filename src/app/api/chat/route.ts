@@ -1,4 +1,3 @@
-type > src\app\api\chat\route.ts <<'EOF'
 // src/app/api/chat/route.ts
 import { NextRequest, NextResponse } from 'next/server';
 import { queryAI, AIResponse } from '@/lib/ai';
@@ -45,4 +44,3 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: err?.message ?? 'Internal server error' }, { status: 500 });
   }
 }
-EOF

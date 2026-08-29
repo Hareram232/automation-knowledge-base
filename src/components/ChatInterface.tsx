@@ -1,5 +1,4 @@
-﻿powershell -NoProfile -Command "$path='src\components\ChatInterface.tsx'; $newFunc=@'
-  const handleSubmit = async (e: React.FormEvent) => {
+﻿  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!input.trim() || isLoading) return;
 
@@ -35,7 +34,7 @@
 
       if (!resp.ok) {
         const err = await resp.json().catch(() => ({ error: resp.statusText }));
-        throw new Error(err.error ?? \`HTTP \${resp.status}\`);
+        throw new Error(err.error ?? `HTTP ${resp.status}`);
       }
 
       const reader = resp.body?.getReader();
@@ -72,7 +71,7 @@
       if (err.name !== 'AbortError') {
         setMessages(prev => prev.map(m =>
           m.id === assistantMessage.id
-            ? { ...m, content: \`⚠️ \${err.message}\`, isStreaming: false }
+            ? { ...m, content: `⚠️ ${err.message}`, isStreaming: false }
             : m
         ));
       }
@@ -82,4 +81,3 @@
       abortControllerRef.current = null;
     }
   };
-'@ ; $path='src\components\ChatInterface.tsx'; $c=Get-Content \$path -Raw; \$pattern='(?s)const handleSubmit = async \(e: React\.FormEvent\) => \{.*?\n  \};'; \$new=\$c -replace \$pattern,\$newFunc; Set-Content \$path -Value \$new -Encoding UTF8"

@@ -1,4 +1,3 @@
-type > src\lib\knowledge-base.ts <<'EOF'
 import fs from 'fs';
 import path from 'path';
 import { Manual, ManualSection, SearchResult, KnowledgeBaseStats } from '@/types';
@@ -135,4 +134,3 @@ export function getAllSections(manual: Manual): ManualSection[] {
   collect(manual.content);
   return sections;
 }
-EOF

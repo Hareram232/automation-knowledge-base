@@ -1,5 +1,4 @@
 
-type > src\lib\ai.ts <<'EOF'
 import OpenAI from 'openai';
 import { ChatMessage, SourceReference } from '@/types';
 import { getRelevantContext } from './knowledge-base';
@@ -40,7 +39,6 @@ export async function queryAI(
       max_tokens: 4096,
       stream: true,
     });
-    // Convert OpenAI async iterator to ReadableStream for Edge runtime
     const encoder = new TextEncoder();
     return new ReadableStream({
       async start(controller) {
@@ -62,7 +60,6 @@ export async function queryAI(
 
   const content = completion.choices[0]?.message?.content ?? '';
 
-  // Extract sources from context (simplified)
   const sources: SourceReference[] = [];
   if (context) {
     const lines = context.split('--- Source: ');
@@ -93,6 +90,5 @@ export async function generateTitle(message: string): Promise<string> {
     temperature: 0.3,
     max_tokens: 60,
   });
-return completion.choices[0]?.message?.content?.trim() || 'New Conversation';
+  return completion.choices[0]?.message?.content?.trim() || 'New Conversation';
 }
-EOF
